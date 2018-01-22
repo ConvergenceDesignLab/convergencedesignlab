@@ -11,6 +11,7 @@
     "gatsby-plugin-create-client-paths": "^1.0.3",
     "gatsby-plugin-react-helmet": "^2.0.3",
     "gatsby-plugin-sass": "^1.0.15",
+    "gh-pages": "^1.1.0",
     "lodash.get": "^4.4.2",
     "modularscale-sass": "^3.0.4",
     "opn-cli": "^3.1.0",
@@ -19,17 +20,18 @@
     "typeface-open-sans": "0.0.45",
     "typi": "^3.1.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "prettier": {
     "printWidth": 100
   },
   "scripts": {
+    "clean": "rm -rf public .cache",
     "build": "gatsby build",
-    "develop": "concurrently \"gatsby develop\" \"opn http:\\\\localhost:8000\""
+    "dev": "concurrently \"gatsby develop\" \"opn http:\\\\localhost:8000\"",
+    "predeploy": "npm run clean && gatsby build --prefix-paths",
+    "deploy": "gh-pages --dist public --branch gh-pages"
   },
   "devDependencies": {
     "prettier": "^1.10.2"
