@@ -1,0 +1,55 @@
+a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: $convergence-orange;
+
+  &:before {
+    content: "";
+    background-color: $convergence-orange;
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.25s ease-in-out;
+    width: 100%;
+  }
+
+  &:hover {
+    &:before {
+      width: 0;
+    }
+  }
+
+  &:visited {
+    color: darken($convergence-orange, 15%);
+
+    &:before {
+      background-color: darken($convergence-orange, 15%);
+    }
+  }
+
+  &:active {
+    color: darken($convergence-orange, 25%);
+
+    &:before {
+      background-color: darken($convergence-orange, 25%);
+    }
+  }
+}
+
+%unstyle-link {
+  color: inherit;
+  display: inline;
+  position: static;
+
+  &:visited,
+  &:active {
+    color: inherit;
+  }
+
+  &:before {
+    display: none;
+  }
+}

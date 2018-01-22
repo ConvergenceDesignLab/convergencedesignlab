@@ -1,0 +1,112 @@
+.dropdown-nav {
+  height: $nav-height;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .dropdown-nav__open,
+  .dropdown-nav__close {
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .dropdown-nav__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+    pointer-events: none;
+  }
+
+  &.is-open {
+    .dropdown-nav__overlay {
+      visibility: visible;
+      opacity: 0.7;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .dropdown-nav__slide-out {
+      transform: translate(-100%, 0);
+    }
+  }
+
+  .dropdown-nav__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .dropdown-nav__links > li {
+    padding: vr(1);
+  }
+
+  .dropdown-nav__close {
+    font-size: 2rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .dropdown-nav__links a {
+    @extend %unstyle-link;
+    font-size: 2.25rem;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+
+    &:before {
+      content: "";
+      background-color: $convergence-orange;
+      height: 2px;
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width 0.25s ease-in-out;
+      width: 0%;
+    }
+
+    &:hover,
+    &.active-link {
+      &:before {
+        width: 100%;
+      }
+    }
+
+    &:active {
+      color: darken(white, 25%);
+
+      &:before {
+        background-color: darken($convergence-orange, 25%);
+      }
+    }
+
+    &:visited {
+      color: inherit;
+    }
+  }
+
+  .dropdown-nav__slide-out {
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    background-color: $convergence-orange;
+    transition: transform 0.5s ease-in-out;
+    padding: 0 vr(2);
+  }
+}
+
+@media (min-width: 750px) {
+  .dropdown-nav {
+    display: none;
+  }
+}

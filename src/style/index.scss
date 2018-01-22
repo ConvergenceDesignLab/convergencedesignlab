@@ -1,0 +1,24 @@
+@import "reset";
+
+@import "variables";
+
+@import "typi-init";
+@import "modular-scale-init";
+@import "typography";
+$grid-gutter-width: vr(1);
+
+@import "blockquote";
+@import "breakpoints";
+@import "grid";
+@import "section";
+@import "links";
+@import "footer";
+@import "social-links";
+@import "utils";
+
+$fa-font-path: "~font-awesome/fonts/";
+@import "~font-awesome/scss/font-awesome.scss";
+
+@import "home-page/_index";
+@import "nav/_index";
+@import "project-page/_index";

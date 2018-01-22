@@ -1,0 +1,68 @@
+.social-links {
+  display: flex;
+  justify-content: center;
+
+  a {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend %unstyle-link;
+
+    .icon-background {
+      color: $convergence-orange;
+      transition: color 0.1s ease-in-out;
+    }
+
+    &:hover .icon-background {
+      color: darken($convergence-orange, 15%);
+    }
+
+    &:active .icon-background {
+      color: darken($convergence-orange, 25%);
+    }
+
+    &:nth-of-type(2n) {
+      .icon-background {
+        color: $convergence-purple;
+      }
+
+      &:hover .icon-background {
+        color: darken($convergence-purple, 15%);
+      }
+
+      &:active .icon-background {
+        color: darken($convergence-purple, 25%);
+      }
+    }
+
+    &:nth-of-type(3n) {
+      .icon-background {
+        color: $convergence-green;
+      }
+
+      &:hover .icon-background {
+        color: darken($convergence-green, 15%);
+      }
+
+      &:active .icon-background {
+        color: darken($convergence-green, 25%);
+      }
+    }
+  }
+
+  .stacked-icon {
+    position: relative;
+    margin: 0 2px;
+    font-size: 1.7rem;
+
+    .icon-foreground {
+      color: white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.45em;
+    }
+  }
+}

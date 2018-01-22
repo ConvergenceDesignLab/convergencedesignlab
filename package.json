@@ -1,0 +1,37 @@
+{
+  "name": "convergencedesignlab",
+  "description": "Convergence Design Lab",
+  "version": "1.0.0",
+  "author": "Michael Hadley <mhadley@colum.edu>",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "font-awesome": "^4.7.0",
+    "gatsby": "^1.9.153",
+    "gatsby-link": "^1.6.34",
+    "gatsby-plugin-create-client-paths": "^1.0.3",
+    "gatsby-plugin-react-helmet": "^2.0.3",
+    "gatsby-plugin-sass": "^1.0.15",
+    "lodash.get": "^4.4.2",
+    "modularscale-sass": "^3.0.4",
+    "opn-cli": "^3.1.0",
+    "react-helmet": "^5.2.0",
+    "typeface-montserrat": "0.0.45",
+    "typeface-open-sans": "0.0.45",
+    "typi": "^3.1.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "prettier": {
+    "printWidth": 100
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "concurrently \"gatsby develop\" \"opn http:\\\\localhost:8000\""
+  },
+  "devDependencies": {
+    "prettier": "^1.10.2"
+  }
+}

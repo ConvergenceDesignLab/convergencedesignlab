@@ -1,0 +1,47 @@
+.no-overflow {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: vr(1);
+  padding-right: vr(1);
+}
+
+.subtle-background {
+  background-color: #f5f5f5;
+}
+
+.orange-background {
+  background-color: $convergence-orange;
+}
+
+.green-background {
+  background-color: $convergence-green;
+}
+
+.purple-background {
+  background-color: $convergence-purple;
+}
+
+.light-text {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@each $breakpoint, $width in $breakpoints {
+  @include media-breakpoint-up($breakpoint) {
+    .display-none--#{$breakpoint}-up {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down($breakpoint) {
+    .display-none--#{$breakpoint}-down {
+      display: none;
+    }
+  }
+}
