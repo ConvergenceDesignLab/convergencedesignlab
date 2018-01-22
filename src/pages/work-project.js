@@ -68,6 +68,9 @@ export default class Work extends React.Component {
       return <div className="nav-offset container">Loading...</div>;
     }
 
+    let narrative = get(data, "narrative"); // Defaults to false
+    if (!narrative) narrative = [];
+
     return (
       <div className="nav-offset">
         <div className="container project-header">
@@ -108,7 +111,7 @@ export default class Work extends React.Component {
           </div>
         </div>
 
-        {get(data, "narrative", []).map(block => {
+        {narrative.map(block => {
           if (block.acf_fc_layout === "text") {
             return <TextBlock title={block.title} htmlText={block.text} />;
           } else if (block.acf_fc_layout === "quote") {
