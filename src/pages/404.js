@@ -1,9 +1,13 @@
 import React from "react";
 
 const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  <div className="nav-offset">
+    <div className="container">
+      <div className="section">
+        <h1>Page not found!</h1>
+        <p>You just accessed a URL that doesn&#39;t exist on the site.</p>
+      </div>
+    </div>
   </div>
 );
 
