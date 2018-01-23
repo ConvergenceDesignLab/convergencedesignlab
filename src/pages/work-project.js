@@ -73,19 +73,23 @@ export default class Work extends React.Component {
 
     return (
       <div className="nav-offset">
+        <div className="project-cover">
+          <img
+            className="project-cover__image"
+            src={get(data, "banner.image.url", "")}
+            alt={get(data, "banner.image.title", "")}
+          />
+          <div className="project-cover__question">
+            <div
+              className="project-cover__question-text"
+              dangerouslySetInnerHTML={{ __html: get(data, "question", "") }}
+            />
+          </div>
+        </div>
+
         <div className="container project-header">
           <h1 className="project-header__title">{get(data, "heading.headline", "")}</h1>
           <h2 className="project-header__subtitle">{get(data, "heading.subtitle", "")}</h2>
-        </div>
-
-        <div className="container">
-          <div className="project-banner">
-            <img
-              className="project-banner__image"
-              src={get(data, "banner.image.url", "")}
-              alt={get(data, "banner.image.title", "")}
-            />
-          </div>
         </div>
 
         <div className="container">
