@@ -1,7 +1,8 @@
 // https://github.com/airesvsg/acf-to-rest-api
 // https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress
 
-const baseUrl = "http://api.convergencedesignlab.org/wp-json";
+// const baseUrl = "http://api.convergencedesignlab.org/wp-json";
+const baseUrl = "http://localhost/cdl/wp-json";
 const projectEndpoint = `${baseUrl}/wp/v2/projects`;
 const acfProjectEndpoint = `${baseUrl}/acf/v3/projects`;
 const partnersEndpoint = `${baseUrl}/wp/v2/partners`;
