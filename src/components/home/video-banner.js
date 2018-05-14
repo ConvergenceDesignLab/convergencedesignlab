@@ -1,19 +1,19 @@
 import React from "react";
-
+import style from "./video-banner.module.scss";
 import video from "../../assets/video/banner.mp4";
 
 export default function VideoBanner() {
   return (
-    <div className="container video-banner">
-      <div className="video-background">
-        <div className="overlay" />
-        <video autoPlay loop muted playsInline>
+    <div className={`container ${style.banner}`}>
+      <div className={style.background}>
+        <div className={style.overlay} />
+        <video className={style.video} autoPlay loop muted playsInline>
           <source src={video} type="video/mp4" />
         </video>
       </div>
-      <div className="banner-text">
-        <div className="title">Convergence Design Lab</div>
-        <div className="sub-title">
+      <div className={style.text}>
+        <div className={style.title}>Convergence Design Lab</div>
+        <div className={style.subtitle}>
           Advancing Equity and Engagement Through Learner-Centered Design
         </div>
       </div>

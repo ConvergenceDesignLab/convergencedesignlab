@@ -1,9 +1,11 @@
-.video-banner {
+@import "../../style/shared/_variables.scss";
+
+.banner {
   width: 100%;
   height: 100vh;
   font-family: $heading-font-family;
 
-  .video-background {
+  .background {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,13 +26,13 @@
     z-index: 1;
   }
 
-  video {
+  .video {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .banner-text {
+  .text {
     width: 100%;
     height: 100%;
     display: flex;
@@ -42,24 +44,33 @@
       font-weight: 900;
       color: white;
       font-size: 80px;
-      font-size: 2.2rem;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
 
-      @media (min-width: 425px) {
-        font-size: 3.2rem;
+      @media (min-width: 600px) {
+        font-size: 2.5rem;
+      }
+
+      @media (min-width: 800px) {
+        font-size: 3rem;
       }
 
       @media (min-width: 1200px) {
-        font-size: 3.7rem;
+        font-size: 3.5rem;
       }
     }
 
-    .sub-title {
+    .subtitle {
       font-weight: 300;
       color: white;
-      font-size: 1.9rem;
+      font-size: 1.5rem;
 
-      @media (min-width: 425px) {
-        font-size: 2.4rem;
+      @media (min-width: 600px) {
+        font-size: 2rem;
+      }
+
+      @media (min-width: 800px) {
+        font-size: 2.25rem;
       }
 
       @media (min-width: 1200px) {
