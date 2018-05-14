@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import navLinks from "./nav-links";
 
 export default class ExpandedNav extends React.Component {
   constructor(props) {
@@ -27,26 +28,13 @@ export default class ExpandedNav extends React.Component {
         <div className="dropdown-nav__slide-out">
           <i className="dropdown-nav__close fa fa-close" onClick={this.close} />
           <ul className="dropdown-nav__links">
-            <li>
-              <Link to="/" activeClassName="active-link" exact>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/work/" activeClassName="active-link">
-                Work
-              </Link>
-            </li>
-            <li>
-              <Link to="/publications/" activeClassName="active-link">
-                Publications
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact/" activeClassName="active-link">
-                Contact
-              </Link>
-            </li>
+            {navLinks.map(({ text, to, ...otherProps }) => (
+              <li key={"dropdown-nav-" + text}>
+                <Link activeClassName="active-link" to={to} {...otherProps}>
+                  {text}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
