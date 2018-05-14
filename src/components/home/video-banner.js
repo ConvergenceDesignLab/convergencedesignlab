@@ -4,7 +4,7 @@ import video from "../../assets/video/banner.mp4";
 
 export default function VideoBanner() {
   return (
-    <div className="video-banner">
+    <div className="container video-banner">
       <div className="video-background">
         <div className="overlay" />
         <video autoPlay loop muted playsInline>
