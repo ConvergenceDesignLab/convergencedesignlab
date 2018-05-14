@@ -13,7 +13,9 @@ export default function VideoBanner() {
       </div>
       <div className="banner-text">
         <div className="title">Convergence Design Lab</div>
-        <div className="sub-title">Designing the future of participation</div>
+        <div className="sub-title">
+          Advancing Equity and Engagement Through Learner-Centered Design
+        </div>
       </div>
     </div>
   );
