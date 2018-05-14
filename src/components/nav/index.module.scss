@@ -1,0 +1,20 @@
+@import "../../style/shared/_variables.scss";
+
+.nav {
+  color: white;
+  height: $nav-height;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  font-family: $heading-font-family;
+  font-weight: 500;
+
+  &.isWhite {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+}

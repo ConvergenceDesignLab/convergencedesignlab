@@ -1,51 +1,30 @@
-.nav-offset {
-  margin-top: $nav-height;
-  padding-top: 1px; // Prevent margin collapsing
-}
+@import "../../style/shared/_variables.scss";
+@import "../../style/shared/_unstyle-link.scss";
 
-.main-nav {
-  color: white;
-  height: $nav-height;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999999;
-  transition: background-color 0.2s ease-in, color 0.2s ease-in;
-  font-family: $heading-font-family;
-  font-weight: 500;
-
-  &.is-white {
-    background-color: white;
-    color: black;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  }
-}
-
-.nav-logo {
+.logo {
   height: $nav-height;
 }
 
-.nav-logo__link {
+.link {
   @extend %unstyle-link;
 }
 
-.nav-logo__container {
+.container {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.nav-logo__rings {
+.rings {
   height: 55%;
   padding-right: 2px;
 }
 
-.nav-logo__text {
+.text {
   font-size: 20px; /* Hard-coded because base size of site will change */
 }
 
-.nav-logo__text-top {
+.textTop {
   margin-top: -0.12em;
   text-transform: lowercase;
   font-weight: 600;
@@ -53,7 +32,7 @@
   line-height: 1;
 }
 
-.nav-logo__text-bottom {
+.textBottom {
   margin-top: -0.12em;
   text-transform: lowercase;
   font-weight: 300;
@@ -63,11 +42,11 @@
 }
 
 @media (min-width: 425px) {
-  .nav-logo__text {
+  .text {
     font-size: 25px;
   }
 
-  .nav-logo__rings {
+  .rings {
     height: 70%;
     padding-right: 5px;
   }

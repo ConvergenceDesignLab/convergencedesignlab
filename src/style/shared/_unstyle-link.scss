@@ -1,0 +1,14 @@
+%unstyle-link {
+  color: inherit;
+  display: inline;
+  position: static;
+
+  &:visited,
+  &:active {
+    color: inherit;
+  }
+
+  &:before {
+    display: none;
+  }
+}

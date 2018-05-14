@@ -1,16 +1,23 @@
-.dropdown-nav {
+@import "../../style/shared/_variables.scss";
+@import "../../style/shared/_unstyle-link.scss";
+
+.nav {
   height: $nav-height;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
-  .dropdown-nav__open,
-  .dropdown-nav__close {
+  @media (min-width: 750px) {
+    display: none;
+  }
+
+  .open,
+  .close {
     font-size: 1.8rem;
     cursor: pointer;
   }
 
-  .dropdown-nav__overlay {
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,36 +30,36 @@
     pointer-events: none;
   }
 
-  &.is-open {
-    .dropdown-nav__overlay {
+  &.isOpen {
+    .overlay {
       visibility: visible;
       opacity: 0.7;
       transition: opacity 0.5s ease-in-out;
     }
-    .dropdown-nav__slide-out {
+    .slider {
       transform: translate(-100%, 0);
     }
   }
 
-  .dropdown-nav__links {
+  .links {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
   }
 
-  .dropdown-nav__links > li {
-    padding: vr(1);
+  .links > li {
+    margin: 2rem 0;
   }
 
-  .dropdown-nav__close {
+  .close {
     font-size: 2rem;
     position: absolute;
     top: 20px;
     right: 20px;
   }
 
-  .dropdown-nav__links a {
+  .links a {
     @extend %unstyle-link;
     font-size: 2.25rem;
     display: inline-block;
@@ -92,7 +99,7 @@
     }
   }
 
-  .dropdown-nav__slide-out {
+  .slider {
     color: white;
     position: fixed;
     top: 0;
@@ -101,12 +108,6 @@
     height: 100vh;
     background-color: $convergence-orange;
     transition: transform 0.5s ease-in-out;
-    padding: 0 vr(2);
-  }
-}
-
-@media (min-width: 750px) {
-  .dropdown-nav {
-    display: none;
+    padding: 0 4rem;
   }
 }

@@ -19,5 +19,9 @@ $fa-font-path: "~font-awesome/fonts/";
 @import "~font-awesome/scss/font-awesome.scss";
 
 @import "home-page/_index";
-@import "nav/_index";
 @import "project-page/_index";
+
+.nav-offset {
+  margin-top: $nav-height;
+  padding-top: 1px; // Prevent margin collapsing
+}

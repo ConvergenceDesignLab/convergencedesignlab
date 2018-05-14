@@ -5,11 +5,12 @@ import ScrollProvider from "../scroll-provider";
 import NavLogo from "./nav-logo";
 import ExpandedNav from "./expanded-nav";
 import DropdownNav from "./dropdown-nav";
+import style from "./index.module.scss";
 
 function Nav({ isHomePage, scrollY }) {
   const isWhite = !isHomePage || scrollY !== 0;
   return (
-    <nav className={`main-nav ${isWhite ? "is-white" : ""}`}>
+    <nav className={`${style.nav} ${isWhite ? style.isWhite : ""}`}>
       <div className="container">
         <div className="row">
           <NavLogo />
