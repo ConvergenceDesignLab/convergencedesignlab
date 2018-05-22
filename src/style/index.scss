@@ -20,8 +20,3 @@ $fa-font-path: "~font-awesome/fonts/";
 
 @import "home-page/_index";
 @import "project-page/_index";
-
-.nav-offset {
-  margin-top: $nav-height;
-  padding-top: 1px; // Prevent margin collapsing
-}
