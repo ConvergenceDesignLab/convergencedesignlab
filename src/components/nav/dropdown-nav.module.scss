@@ -48,10 +48,6 @@
     min-height: 100vh;
   }
 
-  .links > li {
-    margin: 2rem 0;
-  }
-
   .close {
     font-size: 2rem;
     position: absolute;
@@ -59,43 +55,59 @@
     right: 20px;
   }
 
-  .links a {
-    @extend %unstyle-link;
-    font-size: 2.25rem;
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    color: inherit;
-
-    &:before {
-      content: "";
-      background-color: $convergence-orange;
-      height: 2px;
-      position: absolute;
-      bottom: -1px;
-      left: 50%;
-      transform: translateX(-50%);
-      transition: width 0.25s ease-in-out;
-      width: 0%;
+  .links {
+    & > li {
+      margin: 1.25rem 0;
     }
 
-    &:hover,
-    &.active-link {
-      &:before {
-        width: 100%;
-      }
-    }
-
-    &:active {
-      color: darken(white, 25%);
-
-      &:before {
-        background-color: darken($convergence-orange, 25%);
-      }
-    }
-
-    &:visited {
+    a {
+      @extend %unstyle-link;
+      font-size: 1.5rem;
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
       color: inherit;
+
+      &:before {
+        content: "";
+        background-color: $convergence-orange;
+        height: 2px;
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: width 0.25s ease-in-out;
+        width: 0%;
+      }
+
+      &:hover,
+      &.active-link {
+        &:before {
+          width: 100%;
+        }
+      }
+
+      &:active {
+        color: darken(white, 25%);
+
+        &:before {
+          background-color: darken($convergence-orange, 25%);
+        }
+      }
+
+      &:visited {
+        color: inherit;
+      }
+    }
+
+    @media (min-height: 500px) {
+      a {
+        font-size: 1.75rem;
+      }
+
+      & > li {
+        margin: 1.5rem 0;
+      }
     }
   }
 
@@ -106,6 +118,7 @@
     left: 100%;
     max-width: 100vw;
     height: 100vh;
+    overflow: auto;
     background-color: $convergence-orange;
     transition: transform 0.5s ease-in-out;
     padding: 0 4rem;
