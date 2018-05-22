@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Michael Hadley <mhadley@colum.edu>",
   "dependencies": {
+    "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
     "gatsby": "^1.9.153",
     "gatsby-link": "^1.6.34",
