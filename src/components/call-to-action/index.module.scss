@@ -1,0 +1,20 @@
+@import "../../style/shared/_variables.scss";
+@import "../../style/shared/_unstyle-link.scss";
+
+.banner {
+  background-color: $convergence-purple;
+  color: white;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.title {
+  font-family: $heading-font-family;
+  font-size: 2rem;
+  margin: 0.6rem 0;
+  font-weight: 600;
+}
+
+.text {
+  margin: 0.6rem 0;
+}
