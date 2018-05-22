@@ -1,0 +1,32 @@
+@import "../../../style/shared/_variables.scss";
+
+.showcase {
+  margin: 2.5rem 0;
+}
+
+.projectDetails {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.projectImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.projectTitle {
+  font-family: $heading-font-family;
+  font-weight: 500;
+}
+
+.projectCaption,
+.projectLink {
+  font-style: italic;
+}
+
+.projectImage,
+.projectTitle,
+.projectCaption {
+  margin-bottom: 0.25rem;
+}

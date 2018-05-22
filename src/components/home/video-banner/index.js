@@ -1,6 +1,6 @@
 import React from "react";
-import style from "./video-banner.module.scss";
-import video from "../../assets/video/banner.mp4";
+import style from "./index.module.scss";
+import video from "../../../assets/video/banner.mp4";
 
 export default function VideoBanner() {
   return (

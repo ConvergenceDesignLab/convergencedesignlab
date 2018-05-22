@@ -1,19 +1,23 @@
 import React from "react";
 
-import Approach from "./approach";
-import VideoBanner from "./video-banner";
-import Parnters from "./partners";
-import Columbia from "./columbia";
-import Team from "./team";
+import VideoBanner from "./video-banner/";
+import About from "./about/";
+import WorkShowcase from "./work-showcase/";
+import Parnters from "./partners/";
+import ResourcesShowcase from "./resources-showcase/";
+import SocialFeeds from "./social-feeds/";
+import CallToAction from "../call-to-action/";
 
 export default function Home() {
   return (
     <div>
       <VideoBanner />
-      <Approach />
+      <About />
+      <WorkShowcase />
       <Parnters />
-      <Columbia />
-      <Team />
+      <ResourcesShowcase />
+      <SocialFeeds />
+      <CallToAction />
     </div>
   );
 }
