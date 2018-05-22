@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Michael Hadley <mhadley@colum.edu>",
   "dependencies": {
-    "concurrently": "^3.5.1",
     "font-awesome": "^4.7.0",
     "gatsby": "^1.9.153",
     "gatsby-link": "^1.6.34",
@@ -14,7 +13,6 @@
     "gh-pages": "^1.1.0",
     "lodash.get": "^4.4.2",
     "modularscale-sass": "^3.0.4",
-    "opn-cli": "^3.1.0",
     "react-helmet": "^5.2.0",
     "react-select": "^1.2.1",
     "react-twitter-widgets": "^1.7.1",
@@ -33,7 +31,7 @@
   "scripts": {
     "clean": "rm -rf public .cache",
     "build": "gatsby build",
-    "dev": "concurrently \"gatsby develop\" \"opn http:\\\\localhost:8000\"",
+    "dev": "gatsby develop --open",
     "predeploy": "npm run clean && gatsby build --prefix-paths",
     "deploy": "gh-pages --dist public --branch gh-pages"
   },
