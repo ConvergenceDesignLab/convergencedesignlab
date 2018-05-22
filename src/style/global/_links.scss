@@ -38,3 +38,27 @@ a {
     }
   }
 }
+
+a.white-link {
+  color: white;
+
+  &:before {
+    background-color: white;
+  }
+
+  &:visited {
+    color: white;
+
+    &:before {
+      background-color: darken(white, 15%);
+    }
+  }
+
+  &:active {
+    color: darken(white, 10%);
+
+    &:before {
+      background-color: darken(white, 10%);
+    }
+  }
+}
