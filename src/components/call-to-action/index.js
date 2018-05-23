@@ -6,10 +6,11 @@ import classNames from "classnames";
 export default function CallToAction({
   title = "Interested in learning more?",
   body = "Let's have a conversation.",
-  linkText = "Get in touch"
+  linkText = "Get in touch",
+  alternateColor = false
 } = {}) {
   return (
-    <div className={style.banner}>
+    <div className={classNames(style.banner, { [style.orangeBanner]: alternateColor })}>
       <div className="container">
         <div className="section">
           <div className={style.title}>{title}</div>
