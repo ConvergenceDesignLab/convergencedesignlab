@@ -8,7 +8,7 @@ export default function ExpandedNav() {
     <ul className={`${style.nav} col--xs`}>
       {navLinks.map(({ text, to, ...otherProps }) => (
         <li key={"expanded-nav-" + text}>
-          <Link activeClassName="active-link" to={to} {...otherProps}>
+          <Link activeClassName={style.activeLink} to={to} {...otherProps}>
             {text}
           </Link>
         </li>
