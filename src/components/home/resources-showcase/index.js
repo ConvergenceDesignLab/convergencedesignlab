@@ -34,7 +34,7 @@ export default function ResourcesShowcase() {
         </div>
       </div>
 
-      <CallToActionLink to="/work/">See all resources →</CallToActionLink>
+      <CallToActionLink to="/resources/">See all resources →</CallToActionLink>
     </Section>
   );
 }
