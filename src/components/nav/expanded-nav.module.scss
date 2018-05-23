@@ -43,16 +43,4 @@
       width: 100%;
     }
   }
-
-  &:active {
-    color: darken(white, 25%);
-
-    &:before {
-      background-color: darken($convergence-orange, 25%);
-    }
-  }
-
-  &:visited {
-    color: inherit;
-  }
 }
