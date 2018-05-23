@@ -10,11 +10,9 @@ $grid-gutter-width: vr(1);
 @import "breakpoints";
 @import "grid";
 @import "section";
-// @import "links";
 @import "utils";
 
 $fa-font-path: "~font-awesome/fonts/";
 @import "~font-awesome/scss/font-awesome.scss";
 
-@import "home-page/_index";
 @import "project-page/_index";
