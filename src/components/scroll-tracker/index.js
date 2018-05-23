@@ -1,16 +1,10 @@
 import React from "react";
+import scrollEvent from "./scroll-event";
 
 export default class ScrollProvider extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { scrollY: 0 };
+  state = { scrollY: 0 };
 
-    this.onScroll = this.onScroll.bind(this);
-  }
-
-  onScroll() {
-    this.setState({ scrollY: window.scrollY });
-  }
+  updateScroll = () => this.setState({ scrollY: window.scrollY });
 
   componentDidUpdate(prevProps) {
     if (prevProps.enabled && !this.props.enabled) this.unsubscribe();
@@ -18,11 +12,11 @@ export default class ScrollProvider extends React.Component {
   }
 
   subscribe() {
-    window.addEventListener("scroll", this.onScroll);
+    scrollEvent.addListener(this.updateScroll);
   }
 
   unsubscribe() {
-    window.removeEventListener("scroll", this.onScroll);
+    scrollEvent.removeListener(this.updateScroll);
   }
 
   componentDidMount() {

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 
-import ScrollProvider from "../scroll-provider";
+import ScrollTracker from "../scroll-tracker/";
 import NavLogo from "./nav-logo";
 import ExpandedNav from "./expanded-nav";
 import DropdownNav from "./dropdown-nav";
@@ -23,9 +23,9 @@ function Nav({ isHomePage, isScrolled }) {
 }
 
 export default function Header({ isHomePage }) {
-  // Pass in flag to ScrollProvider instead of removing from DOM to prevent unmounting nav
+  // Pass in flag to ScrollTracker instead of removing from DOM to prevent unmounting nav
   return (
-    <ScrollProvider
+    <ScrollTracker
       enabled={isHomePage}
       render={({ scrollY }) => <Nav isScrolled={scrollY !== 0} isHomePage={isHomePage} />}
     />
