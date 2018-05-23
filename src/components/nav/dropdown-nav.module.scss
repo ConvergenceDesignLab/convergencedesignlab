@@ -61,7 +61,6 @@
     }
 
     a {
-      @extend %unstyle-link;
       font-size: 1.5rem;
       display: inline-block;
       position: relative;
@@ -70,7 +69,7 @@
 
       &:before {
         content: "";
-        background-color: $convergence-orange;
+        background-color: white;
         height: 2px;
         position: absolute;
         bottom: -1px;
@@ -85,18 +84,6 @@
         &:before {
           width: 100%;
         }
-      }
-
-      &:active {
-        color: darken(white, 25%);
-
-        &:before {
-          background-color: darken($convergence-orange, 25%);
-        }
-      }
-
-      &:visited {
-        color: inherit;
       }
     }
 
