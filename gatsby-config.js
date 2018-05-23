@@ -3,5 +3,5 @@ module.exports = {
     title: "Convergence Design Lab"
   },
   pathPrefix: "/convergencedesignlab",
-  plugins: ["gatsby-plugin-sass", "gatsby-plugin-react-helmet"]
+  plugins: ["gatsby-plugin-react-next", "gatsby-plugin-sass", "gatsby-plugin-react-helmet"]
 };
