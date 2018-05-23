@@ -31,7 +31,7 @@ export default class DropdownNav extends React.Component {
           <ul className={style.links}>
             {navLinks.map(({ text, to, ...otherProps }) => (
               <li key={"dropdown-nav-" + text}>
-                <Link activeClassName="active-link" to={to} {...otherProps}>
+                <Link activeClassName={style.activeLink} to={to} {...otherProps}>
                   {text}
                 </Link>
               </li>
