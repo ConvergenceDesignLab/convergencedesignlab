@@ -1,0 +1,94 @@
+@import "../../style/shared/_variables.scss";
+@import "../../style/shared/_unstyle-link.scss";
+
+$gutter: 1.2rem;
+$caption-offset: 0.75rem;
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 2rem 0 0 0;
+  color: $convergence-orange;
+}
+
+.projectGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem - $gutter;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+  margin-bottom: 2rem - $gutter + $caption-offset;
+}
+
+.projectContainer {
+  flex: 0 0 100%;
+  height: 350px;
+  padding: $gutter;
+  padding-bottom: $gutter + $caption-offset;
+  padding-right: $gutter + $caption-offset;
+}
+
+.projectLinkWrapper {
+  width: 100%;
+  height: 100%;
+  @extend %unstyle-link;
+}
+
+.projectFigure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.projectCaption {
+  position: absolute;
+  bottom: -$caption-offset;
+  right: -$caption-offset;
+  height: 6rem;
+  width: 100%;
+  padding: 0.75rem;
+  font-style: italic;
+  color: white;
+  background-color: $convergence-purple;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 550px) {
+  .projectContainer {
+    flex: 0 0 50%;
+    height: 300px;
+  }
+  .projectCaption {
+    height: 5rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .projectContainer {
+    flex: 0 0 33.33%;
+    height: 350px;
+  }
+  .projectCaption {
+    font-size: 0.7rem;
+    height: 4rem;
+  }
+}
