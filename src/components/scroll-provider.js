@@ -12,12 +12,25 @@ export default class ScrollProvider extends React.Component {
     this.setState({ scrollY: window.scrollY });
   }
 
-  componentDidMount() {
+  componentDidUpdate(prevProps) {
+    if (prevProps.enabled && !this.props.enabled) this.unsubscribe();
+    else if (!prevProps.enabled && this.props.enabled) this.subscribe();
+  }
+
+  subscribe() {
     window.addEventListener("scroll", this.onScroll);
   }
 
-  componentWillUnmount() {
+  unsubscribe() {
     window.removeEventListener("scroll", this.onScroll);
+  }
+
+  componentDidMount() {
+    if (this.props.enabled) this.subscribe();
+  }
+
+  componentWillUnmount() {
+    if (this.props.enabled) this.unsubscribe();
   }
 
   render() {

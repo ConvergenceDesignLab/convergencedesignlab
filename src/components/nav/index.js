@@ -7,8 +7,8 @@ import ExpandedNav from "./expanded-nav";
 import DropdownNav from "./dropdown-nav";
 import style from "./index.module.scss";
 
-function Nav({ isHomePage, scrollY }) {
-  const isWhite = !isHomePage || scrollY !== 0;
+function Nav({ isHomePage, isScrolled }) {
+  const isWhite = !isHomePage || isScrolled;
   return (
     <nav className={`${style.nav} ${isWhite ? style.isWhite : ""}`}>
       <div className="container">
@@ -23,9 +23,11 @@ function Nav({ isHomePage, scrollY }) {
 }
 
 export default function Header({ isHomePage }) {
-  return isHomePage ? (
-    <ScrollProvider render={({ scrollY }) => <Nav scrollY={scrollY} isHomePage={true} />} />
-  ) : (
-    <Nav isHomePage={false} />
+  // Pass in flag to ScrollProvider instead of removing from DOM to prevent unmounting nav
+  return (
+    <ScrollProvider
+      enabled={isHomePage}
+      render={({ scrollY }) => <Nav isScrolled={scrollY !== 0} isHomePage={isHomePage} />}
+    />
   );
 }
