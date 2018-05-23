@@ -12,7 +12,7 @@ import Footer from "../components/footer/";
 import style from "./index.module.scss";
 
 export default function TemplateWrapper({ children, location }) {
-  const isHomePage = location.pathname === "/";
+  const isHomePage = location.pathname === process.env.BASE_PATH;
   return (
     <div>
       <Helmet
