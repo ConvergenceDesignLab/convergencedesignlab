@@ -1,0 +1,57 @@
+.blockquote {
+  font-family: $heading-font-family;
+}
+
+.blockquote__quote {
+  position: relative;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  font-size: ms(2);
+  text-align: center;
+  padding-top: vr(2);
+
+  &:before {
+    font-size: ms(7);
+    content: "\201C \201D";
+    position: absolute;
+    top: -(vr(1));
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: vr(0.5);
+  }
+
+  @media (min-width: 400px) {
+    position: relative;
+    font-size: ms(3);
+    padding-top: 0;
+    margin-left: 3rem;
+    margin-right: 3rem;
+
+    &:before {
+      font-size: 6rem;
+      content: open-quote;
+      position: absolute;
+      top: -2rem;
+      left: -2.5rem;
+      transform: none;
+    }
+
+    &:after {
+      font-size: 6rem;
+      content: close-quote;
+      position: absolute;
+      top: -2rem;
+      right: -2.5rem;
+    }
+  }
+}
+
+.blockquote__citation {
+  margin-top: vr(1);
+  text-align: center;
+  font-size: ms(1);
+  font-style: italic;
+
+  @media (min-width: 400px) {
+    font-size: ms(2);
+  }
+}

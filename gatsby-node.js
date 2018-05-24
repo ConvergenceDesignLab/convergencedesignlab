@@ -9,11 +9,11 @@ const path = require("path");
 exports.onCreatePage = ({ page, store, boundActionCreators }, { prefixes }) => {
   const { createPage } = boundActionCreators;
 
-  // Intercept the work-project.js component and make it match anything at /work/:path
-  if (page.path.match(/^\/work-project/)) {
+  // Intercept the project.js component and make it match anything at /work/:project
+  if (page.path.match(/^\/project/)) {
     // page.matchPath is a special key that's used for matching pages only on the client
-    page.matchPath = "/work/:path";
-    page.component = path.resolve("./src/pages/work-project.js");
+    page.matchPath = "/work/:project";
+    page.component = path.resolve("./src/pages/project.js");
     createPage(page);
   }
 };
