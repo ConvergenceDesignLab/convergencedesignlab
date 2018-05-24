@@ -16,6 +16,7 @@
     "lodash.get": "^4.4.2",
     "lodash.throttle": "^4.1.1",
     "modularscale-sass": "^3.0.4",
+    "react-autosize-textarea": "^3.0.3",
     "react-helmet": "^5.2.0",
     "react-twitter-widgets": "^1.7.1",
     "typeface-montserrat": "0.0.54",
