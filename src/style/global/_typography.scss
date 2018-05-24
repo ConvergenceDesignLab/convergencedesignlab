@@ -1,0 +1,43 @@
+@import "../shared/_variables.scss";
+
+body {
+  font-family: $text-font-family;
+  color: $font-dark-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+}
+
+h1 {
+  font-size: ms(2);
+}
+
+h2 {
+  font-size: ms(1);
+}
+
+h3 {
+  font-size: ms(0);
+}
+
+h4 {
+  font-size: ms(-1);
+}
+
+h5 {
+  font-size: ms(-2);
+}
+
+h6 {
+  font-size: ms(-3);
+}
+
+p {
+  font-size: ms(0);
+}
