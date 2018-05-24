@@ -23,10 +23,10 @@ a {
   }
 
   &:visited {
-    color: darken($convergence-orange, 15%);
+    // color: darken($convergence-orange, 15%);
 
     &:before {
-      background-color: darken($convergence-orange, 15%);
+      // background-color: darken($convergence-orange, 15%);
     }
   }
 

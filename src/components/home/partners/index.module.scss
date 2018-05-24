@@ -1,6 +1,6 @@
 @import "../../../style/shared/_variables.scss";
 @import "../../../style/shared/_unstyle-link.scss";
-@import "../../../style/_grid.scss";
+@import "../../../style/global/_grid.scss";
 
 .col {
   @include column-style(6, 12);

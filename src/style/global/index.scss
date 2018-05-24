@@ -6,8 +6,13 @@ $modularscale: (
 );
 
 @import "../../../node_modules/modularscale-sass/stylesheets/_modularscale.scss";
+$fa-font-path: "~font-awesome/fonts/";
+@import "~font-awesome/scss/font-awesome.scss";
+@import "typi-init";
 @import "structure";
 @import "social-links";
 @import "links";
 @import "text-helpers";
 @import "typography";
+@import "utils";
+@import "grid";

@@ -1,6 +1,5 @@
 import "typeface-open-sans";
 import "typeface-montserrat";
-import "../style/index.scss";
 import "../style/global/index.scss";
 
 import React from "react";
