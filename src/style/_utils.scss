@@ -22,10 +22,6 @@
   color: white;
 }
 
-.text-center {
-  text-align: center;
-}
-
 @each $breakpoint, $width in $breakpoints {
   @include media-breakpoint-up($breakpoint) {
     .display-none--#{$breakpoint}-up {
