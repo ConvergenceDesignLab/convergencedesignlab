@@ -1,13 +1,14 @@
 import React from "react";
 import classNames from "classnames";
 import TextareaAutosize from "react-autosize-textarea";
+import CoverImage from "../cover-image/";
 import style from "./index.module.scss";
 import image from "../../assets/images/tilden-hands-cropped.png";
 
-export default function Contact() {
+export default function About() {
   return (
     <div>
-      <img className={style.cover} src={image} />
+      <CoverImage src={image} className={style.cover} />
 
       <div className="container">
         <div className={style.section}>
