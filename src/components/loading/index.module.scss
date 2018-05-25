@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  display: inline-block;
+  vertical-align: top;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.1rem;
+  border-radius: 50%;
+  background-color: white;
+  animation: shrink 1s infinite ease-in-out alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  background-color: #ff9a21;
+  animation-delay: 0s;
+  transform: scale(0);
+}
+
+.circle:nth-child(2) {
+  background-color: #97cf3e;
+  animation-delay: 0.2s;
+  transform: scale(0);
+}
+
+.circle:nth-child(3) {
+  background-color: #d43ccd;
+  animation-delay: 0.4s;
+  transform: scale(0);
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1);
+  }
+  85%,
+  to {
+    transform: scale(0);
+  }
+}

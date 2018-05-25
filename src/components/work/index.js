@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import get from "lodash.get";
 import CallToAction from "../call-to-action/";
+import Loading from "../loading/";
 import { fetchAcfProjects, fetchProjects, fetchTaxonomies } from "../../utils/fetch-wp";
 import style from "./index.module.scss";
 
@@ -14,8 +15,6 @@ class Work extends React.Component {
 
   render() {
     const { projects } = this.state;
-
-    if (!projects) return <div className={style.title}>Loading...</div>;
 
     let projectGrid = null;
     if (projects) {
@@ -43,10 +42,13 @@ class Work extends React.Component {
         </div>
 
         <div className="container">
-          <div className={style.projectGrid}>
-            {projects ? projectGrid : <div className={style.title}>Loading...</div>}
-          </div>
+          {projects ? (
+            <div className={style.projectGrid}>{projectGrid}</div>
+          ) : (
+            <Loading height="65vh" />
+          )}
         </div>
+
         <CallToAction alternateColor={true} />
       </div>
     );
