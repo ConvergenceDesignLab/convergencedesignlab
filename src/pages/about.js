@@ -1,15 +1,8 @@
 import React from "react";
-import CallToAction from "../components/call-to-action/";
+import Link from "gatsby-link";
 
-const About = () => (
-  <div>
-    <div className="container">
-      <div className="section" style={{ minHeight: "800px" }}>
-        <h1>About</h1>
-      </div>
-    </div>
-    <CallToAction />
-  </div>
-);
+import About from "../components/about/";
 
-export default About;
+const AboutPage = () => <About />;
+
+export default AboutPage;
