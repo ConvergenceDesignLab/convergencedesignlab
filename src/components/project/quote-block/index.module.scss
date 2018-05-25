@@ -1,0 +1,74 @@
+@import "../../../style/shared/_variables.scss";
+
+.quote {
+  font-family: $heading-font-family;
+}
+
+.text {
+  position: relative;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 3.5rem;
+
+  &:before {
+    color: $convergence-purple;
+    font-size: 5rem;
+    content: "\201C \201D";
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 0.5rem;
+  }
+}
+
+.attribution {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@media (min-width: 550px) {
+  .text {
+    position: relative;
+    padding-top: 0;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    font-size: 1.7rem;
+
+    &:before {
+      color: $convergence-purple;
+      font-size: 5rem;
+      content: open-quote;
+      position: absolute;
+      top: -2rem;
+      left: -3.5rem;
+      transform: none;
+    }
+
+    &:after {
+      color: $convergence-purple;
+      font-size: 5rem;
+      content: close-quote;
+      position: absolute;
+      top: -2rem;
+      right: -3.5rem;
+    }
+  }
+
+  .attribution {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .text {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

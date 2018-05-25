@@ -6,29 +6,40 @@ import { Redirect } from "react-router-dom";
 import classNames from "classnames";
 import Cover from "./cover/";
 import ImageBlock from "./image-block/";
+import QuoteBlock from "./quote-block/";
+import RelatedWork from "./related-work/";
+import CallToAction from "../call-to-action/";
 import style from "./index.module.scss";
 
-const TextBlock = ({ title, htmlText }) => (
-  <div className="container">
-    <div className="section">
-      <h2 className="project-text-block__title">{title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: htmlText }} />
+const TextBlock = ({ title, text, imageName, imageUrl, reverseOrder }) => {
+  const textSection = (
+    <div
+      key={`text-block-text-${title}`}
+      className={classNames(style.blockText, "col--sm-12 col--md-6")}
+    >
+      <div className={style.sectionTitle}>{title}</div>
+      <div className={style.sectionText} dangerouslySetInnerHTML={{ __html: text }} />
     </div>
-  </div>
-);
+  );
+  const imageSection = (
+    <div
+      key={`text-block-image-${title}`}
+      className={classNames(style.blockImage, "col--sm-12 col--md-6")}
+    >
+      <img className={style.sectionImage} src={imageUrl} alt={imageName} />
+    </div>
+  );
 
-const QuoteBlock = ({ quote, attribution }) => (
-  <div className="subtle-background">
+  return (
     <div className="container">
       <div className="section">
-        <blockquote className="blockquote">
-          <div className="blockquote__quote">{quote}</div>
-          <div className="blockquote__citation">&mdash; {attribution}</div>
-        </blockquote>
+        <div className="row--space-between">
+          {reverseOrder ? [textSection, imageSection] : [imageSection, textSection]}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default class Work extends React.Component {
   constructor(props) {
@@ -73,6 +84,8 @@ export default class Work extends React.Component {
     const partners = get(data, "meta.partners", []);
     const tags = get(data, "meta.tags", []);
 
+    let blockNum = 0;
+
     return (
       <div>
         <Cover imageUrl={imageUrl} imageTitle={imageTitle} questionHtml={question} />
@@ -80,22 +93,22 @@ export default class Work extends React.Component {
           <div className="section">
             <div className={style.title}>{title}</div>
             <div className="row--space-between">
-              <div className="col--xs-12 col--sm-9">
+              <div className="col--sm-12 col--md-6">
                 <div className={style.sectionTitle}>Challenge</div>
                 <div
                   className={style.sectionText}
                   dangerouslySetInnerHTML={{ __html: challenge }}
                 />
               </div>
-              <div className="col--xs-12 col--sm-3">
+              <div className={classNames(style.meta, "col--sm-12 col--md-5")}>
                 <div>
-                  <div className={classNames("text-align-right", style.sectionTitle)}>Partners</div>
+                  <div className={style.sectionTitle}>Partners</div>
                   <ul className={style.metaList}>
                     {partners.map(({ name }) => <li key={name}>{name}</li>)}
                   </ul>
                 </div>
                 <div>
-                  <div className={classNames("text-align-right", style.sectionTitle)}>Tags</div>
+                  <div className={style.sectionTitle}>Tags</div>
                   <ul className={style.metaList}>
                     {tags.map(({ name }) => <li key={name}>{name}</li>)}
                   </ul>
@@ -107,13 +120,26 @@ export default class Work extends React.Component {
 
         {narrative.map(block => {
           if (block.acf_fc_layout === "text") {
-            return <TextBlock title={block.title} htmlText={block.text} />;
+            blockNum++;
+            return (
+              <TextBlock
+                title={block.title}
+                text={block.text}
+                imageName={block.image.name}
+                imageUrl={block.image.sizes.medium_large}
+                reverseOrder={blockNum % 2 === 0}
+              />
+            );
           } else if (block.acf_fc_layout === "quote") {
             return <QuoteBlock quote={block.quote} attribution={block.attribution} />;
           } else if (block.acf_fc_layout === "image") {
             return <ImageBlock src={block.image.url} caption={block.caption} />;
           }
         })}
+
+        <RelatedWork data={data} />
+
+        <CallToAction title="Interested in partnering?" />
       </div>
     );
   }
