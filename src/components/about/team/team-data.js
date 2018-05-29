@@ -19,7 +19,7 @@ const team = {
     {
       name: "Eric Freedman",
       image: require("../../../assets/images/team/eric-freedman.jpg"),
-      title: "Dean of the Media School",
+      title: "Dean of the School of Media Arts",
       email: "efreedman@colum.edu",
       twitter: "https://twitter.com/ericmfreedman",
       linkedin: "https://www.linkedin.com/in/erfreedman"
