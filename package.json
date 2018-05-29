@@ -32,10 +32,10 @@
     "printWidth": 100
   },
   "scripts": {
-    "build": "gatsby build",
     "clean": "rm -rf public/* .cache",
+    "build": "gatsby build --prefix-paths",
     "dev": "gatsby develop --open",
-    "predeploy": "npm run clean && gatsby build --prefix-paths",
+    "predeploy": "npm run clean && npm run build",
     "deploy": "gh-pages --dist public --branch gh-pages"
   },
   "devDependencies": {
