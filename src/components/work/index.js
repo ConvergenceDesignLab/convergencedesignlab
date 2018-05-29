@@ -38,7 +38,7 @@ class Work extends React.Component {
     return (
       <div>
         <div className="container">
-          <div className={style.title}>Our Work</div>
+          <div className={style.title}>Selected Work</div>
         </div>
 
         <div className="container">
