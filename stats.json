@@ -13,8 +13,8 @@
       "component---src-pages-index-js-76c4a558b1f7614f678c.js.map"
     ],
     "path---": [
-      "path----557518bd178906f8d58a.js",
-      "path----557518bd178906f8d58a.js.map"
+      "path----131f9aef94525eeb6ecd.js",
+      "path----131f9aef94525eeb6ecd.js.map"
     ],
     "component---src-pages-contact-js": [
       "component---src-pages-contact-js-6868e3f2a157aec99a24.js",
@@ -33,8 +33,8 @@
       "component---src-pages-project-js-816ffc4eee699d681777.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-3dafb8df02100493ccf8.js",
-      "component---src-layouts-index-js-3dafb8df02100493ccf8.js.map"
+      "component---src-layouts-index-js-b68d183c1f0f8cc02cf6.js",
+      "component---src-layouts-index-js-b68d183c1f0f8cc02cf6.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
@@ -63,10 +63,14 @@
       "path---contact-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-9743616cf365f7212e68.js",
+      "app-c391179476e9c0753d4f.js",
       "build-js-styles.css",
-      "app-9743616cf365f7212e68.js.map",
+      "app-c391179476e9c0753d4f.js.map",
       "build-js-styles.css.map"
+    ],
+    "component---src-layouts-home-js": [
+      "component---src-layouts-home-js-74b678fc01730421ada5.js",
+      "component---src-layouts-home-js-74b678fc01730421ada5.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
