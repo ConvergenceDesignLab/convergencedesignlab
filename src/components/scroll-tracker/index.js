@@ -12,6 +12,7 @@ export default class ScrollProvider extends React.Component {
   }
 
   subscribe() {
+    this.updateScroll();
     scrollEvent.addListener(this.updateScroll);
   }
 
