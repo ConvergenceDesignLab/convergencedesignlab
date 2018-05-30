@@ -65,31 +65,29 @@ webpackJsonp([231608221292675],{
 	};
 	
 	exports.components = {
-	  "component---cache-dev-404-page-js": __webpack_require__(336),
-	  "component---src-pages-404-js": __webpack_require__(338),
-	  "component---src-pages-about-js": __webpack_require__(339),
-	  "component---src-pages-contact-js": __webpack_require__(340),
-	  "component---src-pages-index-js": __webpack_require__(341),
-	  "component---src-pages-project-js": __webpack_require__(342),
-	  "component---src-pages-resources-js": __webpack_require__(343),
-	  "component---src-pages-work-js": __webpack_require__(344)
+	  "component---src-pages-404-js": __webpack_require__(336),
+	  "component---src-pages-about-js": __webpack_require__(337),
+	  "component---src-pages-contact-js": __webpack_require__(338),
+	  "component---src-pages-index-js": __webpack_require__(339),
+	  "component---src-pages-project-js": __webpack_require__(340),
+	  "component---src-pages-resources-js": __webpack_require__(341),
+	  "component---src-pages-work-js": __webpack_require__(342)
 	};
 	
 	exports.json = {
-	  "layout-index.json": __webpack_require__(345),
-	  "dev-404-page.json": __webpack_require__(350),
-	  "404.json": __webpack_require__(346),
-	  "about.json": __webpack_require__(348),
-	  "contact.json": __webpack_require__(349),
-	  "index.json": __webpack_require__(351),
-	  "project.json": __webpack_require__(352),
-	  "resources.json": __webpack_require__(353),
-	  "work.json": __webpack_require__(354),
-	  "404-html.json": __webpack_require__(347)
+	  "layout-index.json": __webpack_require__(343),
+	  "404.json": __webpack_require__(344),
+	  "about.json": __webpack_require__(346),
+	  "contact.json": __webpack_require__(347),
+	  "index.json": __webpack_require__(348),
+	  "project.json": __webpack_require__(349),
+	  "resources.json": __webpack_require__(350),
+	  "work.json": __webpack_require__(351),
+	  "404-html.json": __webpack_require__(345)
 	};
 	
 	exports.layouts = {
-	  "layout---index": __webpack_require__(337)
+	  "layout---index": __webpack_require__(335)
 	};
 
 /***/ }),
@@ -121,7 +119,7 @@ webpackJsonp([231608221292675],{
 	
 	var _apiRunnerBrowser = __webpack_require__(62);
 	
-	var _shallowCompare = __webpack_require__(489);
+	var _shallowCompare = __webpack_require__(485);
 	
 	var _shallowCompare2 = _interopRequireDefault(_shallowCompare);
 	
@@ -288,31 +286,12 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 336:
-/***/ (function(module, exports, __webpack_require__) {
-
-	__webpack_require__(
-	      3
-	    );
-	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(63035248922600, function(_, error) {
-	        if (error) {
-	          console.log('bundle loading error', error)
-	          cb(true)
-	        } else {
-	          cb(null, function() { return __webpack_require__(177) })
-	        }
-	      });
-	     }
-	    
-
-/***/ }),
-
 /***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var _mitt = __webpack_require__(452);
+	var _mitt = __webpack_require__(448);
 	
 	var _mitt2 = _interopRequireDefault(_mitt);
 	
@@ -323,7 +302,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 178:
+/***/ 177:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -403,7 +382,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 179:
+/***/ 178:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -423,7 +402,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 347:
+/***/ 345:
 /***/ (function(module, exports, __webpack_require__) {
 
 	__webpack_require__(
@@ -434,7 +413,26 @@ webpackJsonp([231608221292675],{
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__(363) })
+	          cb(null, function() { return __webpack_require__(360) })
+	        }
+	      });
+	     }
+	    
+
+/***/ }),
+
+/***/ 344:
+/***/ (function(module, exports, __webpack_require__) {
+
+	__webpack_require__(
+	      3
+	    );
+	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(254022195166212, function(_, error) {
+	        if (error) {
+	          console.log('bundle loading error', error)
+	          cb(true)
+	        } else {
+	          cb(null, function() { return __webpack_require__(361) })
 	        }
 	      });
 	     }
@@ -448,12 +446,31 @@ webpackJsonp([231608221292675],{
 	__webpack_require__(
 	      3
 	    );
-	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(254022195166212, function(_, error) {
+	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(273950069227526, function(_, error) {
 	        if (error) {
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__(364) })
+	          cb(null, function() { return __webpack_require__(362) })
+	        }
+	      });
+	     }
+	    
+
+/***/ }),
+
+/***/ 347:
+/***/ (function(module, exports, __webpack_require__) {
+
+	__webpack_require__(
+	      3
+	    );
+	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(184662623972074, function(_, error) {
+	        if (error) {
+	          console.log('bundle loading error', error)
+	          cb(true)
+	        } else {
+	          cb(null, function() { return __webpack_require__(363) })
 	        }
 	      });
 	     }
@@ -467,69 +484,12 @@ webpackJsonp([231608221292675],{
 	__webpack_require__(
 	      3
 	    );
-	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(273950069227526, function(_, error) {
-	        if (error) {
-	          console.log('bundle loading error', error)
-	          cb(true)
-	        } else {
-	          cb(null, function() { return __webpack_require__(365) })
-	        }
-	      });
-	     }
-	    
-
-/***/ }),
-
-/***/ 349:
-/***/ (function(module, exports, __webpack_require__) {
-
-	__webpack_require__(
-	      3
-	    );
-	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(184662623972074, function(_, error) {
-	        if (error) {
-	          console.log('bundle loading error', error)
-	          cb(true)
-	        } else {
-	          cb(null, function() { return __webpack_require__(366) })
-	        }
-	      });
-	     }
-	    
-
-/***/ }),
-
-/***/ 350:
-/***/ (function(module, exports, __webpack_require__) {
-
-	__webpack_require__(
-	      3
-	    );
-	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(249642918573919, function(_, error) {
-	        if (error) {
-	          console.log('bundle loading error', error)
-	          cb(true)
-	        } else {
-	          cb(null, function() { return __webpack_require__(367) })
-	        }
-	      });
-	     }
-	    
-
-/***/ }),
-
-/***/ 351:
-/***/ (function(module, exports, __webpack_require__) {
-
-	__webpack_require__(
-	      3
-	    );
 	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(142629428675168, function(_, error) {
 	        if (error) {
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__(368) })
+	          cb(null, function() { return __webpack_require__(364) })
 	        }
 	      });
 	     }
@@ -537,7 +497,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 345:
+/***/ 343:
 /***/ (function(module, exports, __webpack_require__) {
 
 	__webpack_require__(
@@ -556,7 +516,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 352:
+/***/ 349:
 /***/ (function(module, exports, __webpack_require__) {
 
 	__webpack_require__(
@@ -567,7 +527,7 @@ webpackJsonp([231608221292675],{
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__(369) })
+	          cb(null, function() { return __webpack_require__(365) })
 	        }
 	      });
 	     }
@@ -575,7 +535,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 353:
+/***/ 350:
 /***/ (function(module, exports, __webpack_require__) {
 
 	__webpack_require__(
@@ -586,7 +546,7 @@ webpackJsonp([231608221292675],{
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__(370) })
+	          cb(null, function() { return __webpack_require__(366) })
 	        }
 	      });
 	     }
@@ -594,7 +554,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 354:
+/***/ 351:
 /***/ (function(module, exports, __webpack_require__) {
 
 	__webpack_require__(
@@ -605,7 +565,7 @@ webpackJsonp([231608221292675],{
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__(371) })
+	          cb(null, function() { return __webpack_require__(367) })
 	        }
 	      });
 	     }
@@ -613,7 +573,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 337:
+/***/ 335:
 /***/ (function(module, exports, __webpack_require__) {
 
 	__webpack_require__(
@@ -624,7 +584,7 @@ webpackJsonp([231608221292675],{
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__(180) })
+	          cb(null, function() { return __webpack_require__(179) })
 	        }
 	      });
 	     }
@@ -644,7 +604,7 @@ webpackJsonp([231608221292675],{
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _findPage = __webpack_require__(178);
+	var _findPage = __webpack_require__(177);
 	
 	var _findPage2 = _interopRequireDefault(_findPage);
 	
@@ -686,7 +646,7 @@ webpackJsonp([231608221292675],{
 	
 	// Prefetcher logic
 	if (true) {
-	  prefetcher = __webpack_require__(181)({
+	  prefetcher = __webpack_require__(180)({
 	    getNextQueuedResources: function getNextQueuedResources() {
 	      return resourcesArray.slice(-1)[0];
 	    },
@@ -1065,18 +1025,18 @@ webpackJsonp([231608221292675],{
 	};
 	
 	exports.default = queue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(454)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(450)))
 
 /***/ }),
 
-/***/ 372:
+/***/ 368:
 /***/ (function(module, exports) {
 
-	module.exports = [{"componentChunkName":"component---cache-dev-404-page-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"dev-404-page.json","path":"/dev-404-page/"},{"componentChunkName":"component---src-pages-404-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"404.json","path":"/404/"},{"componentChunkName":"component---src-pages-about-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"about.json","path":"/about/"},{"componentChunkName":"component---src-pages-contact-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"contact.json","path":"/contact/"},{"componentChunkName":"component---src-pages-index-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"index.json","path":"/"},{"componentChunkName":"component---src-pages-project-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"project.json","path":"/project/","matchPath":"/work/:project"},{"componentChunkName":"component---src-pages-resources-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"resources.json","path":"/resources/"},{"componentChunkName":"component---src-pages-work-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"work.json","path":"/work/"},{"componentChunkName":"component---src-pages-404-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"404-html.json","path":"/404.html"}]
+	module.exports = [{"componentChunkName":"component---src-pages-404-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"404.json","path":"/404/"},{"componentChunkName":"component---src-pages-about-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"about.json","path":"/about/"},{"componentChunkName":"component---src-pages-contact-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"contact.json","path":"/contact/"},{"componentChunkName":"component---src-pages-index-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"index.json","path":"/"},{"componentChunkName":"component---src-pages-project-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"project.json","path":"/project/","matchPath":"/work/:project"},{"componentChunkName":"component---src-pages-resources-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"resources.json","path":"/resources/"},{"componentChunkName":"component---src-pages-work-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"work.json","path":"/work/"},{"componentChunkName":"component---src-pages-404-js","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"404-html.json","path":"/404.html"}]
 
 /***/ }),
 
-/***/ 181:
+/***/ 180:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -1178,15 +1138,15 @@ webpackJsonp([231608221292675],{
 	
 	var _reactRouterDom = __webpack_require__(40);
 	
-	var _gatsbyReactRouterScroll = __webpack_require__(360);
+	var _gatsbyReactRouterScroll = __webpack_require__(357);
 	
-	var _domready = __webpack_require__(303);
+	var _domready = __webpack_require__(302);
 	
 	var _domready2 = _interopRequireDefault(_domready);
 	
 	var _history = __webpack_require__(97);
 	
-	var _history2 = __webpack_require__(179);
+	var _history2 = __webpack_require__(178);
 	
 	var _history3 = _interopRequireDefault(_history2);
 	
@@ -1194,11 +1154,11 @@ webpackJsonp([231608221292675],{
 	
 	var _emitter2 = _interopRequireDefault(_emitter);
 	
-	var _pages = __webpack_require__(372);
+	var _pages = __webpack_require__(368);
 	
 	var _pages2 = _interopRequireDefault(_pages);
 	
-	var _redirects = __webpack_require__(373);
+	var _redirects = __webpack_require__(369);
 	
 	var _redirects2 = _interopRequireDefault(_redirects);
 	
@@ -1217,7 +1177,7 @@ webpackJsonp([231608221292675],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	if (true) {
-	  __webpack_require__(227);
+	  __webpack_require__(226);
 	}
 	
 	window.___history = _history3.default;
@@ -1255,7 +1215,7 @@ webpackJsonp([231608221292675],{
 	  // Let plugins register a service worker. The plugin just needs
 	  // to return true.
 	  if ((0, _apiRunnerBrowser.apiRunner)("registerServiceWorker").length > 0) {
-	    __webpack_require__(182);
+	    __webpack_require__(181);
 	  }
 	
 	  var navigateTo = function navigateTo(to) {
@@ -1404,14 +1364,14 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 373:
+/***/ 369:
 /***/ (function(module, exports) {
 
 	module.exports = []
 
 /***/ }),
 
-/***/ 182:
+/***/ 181:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1487,7 +1447,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 303:
+/***/ 302:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*!
@@ -1613,7 +1573,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 452:
+/***/ 448:
 /***/ (function(module, exports) {
 
 	function n(n){return n=n||Object.create(null),{on:function(c,e){(n[c]||(n[c]=[])).push(e)},off:function(c,e){n[c]&&n[c].splice(n[c].indexOf(e)>>>0,1)},emit:function(c,e){(n[c]||[]).slice().map(function(n){n(e)}),(n["*"]||[]).slice().map(function(n){n(c,e)})}}}module.exports=n;
@@ -1621,7 +1581,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 454:
+/***/ 450:
 /***/ (function(module, exports) {
 
 	// shim for using process in browser
@@ -1812,7 +1772,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 489:
+/***/ 485:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -1836,7 +1796,7 @@ webpackJsonp([231608221292675],{
 
 /***/ }),
 
-/***/ 338:
+/***/ 336:
 /***/ (function(module, exports, __webpack_require__) {
 
 	__webpack_require__(
@@ -1847,7 +1807,45 @@ webpackJsonp([231608221292675],{
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
+	          cb(null, function() { return __webpack_require__(209) })
+	        }
+	      });
+	     }
+	    
+
+/***/ }),
+
+/***/ 337:
+/***/ (function(module, exports, __webpack_require__) {
+
+	__webpack_require__(
+	      3
+	    );
+	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(263791100135453, function(_, error) {
+	        if (error) {
+	          console.log('bundle loading error', error)
+	          cb(true)
+	        } else {
 	          cb(null, function() { return __webpack_require__(210) })
+	        }
+	      });
+	     }
+	    
+
+/***/ }),
+
+/***/ 338:
+/***/ (function(module, exports, __webpack_require__) {
+
+	__webpack_require__(
+	      3
+	    );
+	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(70144966829960, function(_, error) {
+	        if (error) {
+	          console.log('bundle loading error', error)
+	          cb(true)
+	        } else {
+	          cb(null, function() { return __webpack_require__(211) })
 	        }
 	      });
 	     }
@@ -1861,12 +1859,12 @@ webpackJsonp([231608221292675],{
 	__webpack_require__(
 	      3
 	    );
-	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(263791100135453, function(_, error) {
+	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(35783957827783, function(_, error) {
 	        if (error) {
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__(211) })
+	          cb(null, function() { return __webpack_require__(212) })
 	        }
 	      });
 	     }
@@ -1880,12 +1878,12 @@ webpackJsonp([231608221292675],{
 	__webpack_require__(
 	      3
 	    );
-	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(70144966829960, function(_, error) {
+	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(111930841657428, function(_, error) {
 	        if (error) {
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__(212) })
+	          cb(null, function() { return __webpack_require__(213) })
 	        }
 	      });
 	     }
@@ -1899,12 +1897,12 @@ webpackJsonp([231608221292675],{
 	__webpack_require__(
 	      3
 	    );
-	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(35783957827783, function(_, error) {
+	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(79718873386587, function(_, error) {
 	        if (error) {
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__(213) })
+	          cb(null, function() { return __webpack_require__(214) })
 	        }
 	      });
 	     }
@@ -1918,26 +1916,7 @@ webpackJsonp([231608221292675],{
 	__webpack_require__(
 	      3
 	    );
-	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(111930841657428, function(_, error) {
-	        if (error) {
-	          console.log('bundle loading error', error)
-	          cb(true)
-	        } else {
-	          cb(null, function() { return __webpack_require__(214) })
-	        }
-	      });
-	     }
-	    
-
-/***/ }),
-
-/***/ 343:
-/***/ (function(module, exports, __webpack_require__) {
-
-	__webpack_require__(
-	      3
-	    );
-	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(79718873386587, function(_, error) {
+	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(23899280101116, function(_, error) {
 	        if (error) {
 	          console.log('bundle loading error', error)
 	          cb(true)
@@ -1948,26 +1927,7 @@ webpackJsonp([231608221292675],{
 	     }
 	    
 
-/***/ }),
-
-/***/ 344:
-/***/ (function(module, exports, __webpack_require__) {
-
-	__webpack_require__(
-	      3
-	    );
-	    module.exports = function(cb) { return __webpack_require__.e/* nsure */(23899280101116, function(_, error) {
-	        if (error) {
-	          console.log('bundle loading error', error)
-	          cb(true)
-	        } else {
-	          cb(null, function() { return __webpack_require__(216) })
-	        }
-	      });
-	     }
-	    
-
 /***/ })
 
 });
-//# sourceMappingURL=app-fbbdb82c14db7ddc4f67.js.map
+//# sourceMappingURL=app-9743616cf365f7212e68.js.map
