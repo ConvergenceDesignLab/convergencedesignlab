@@ -6,7 +6,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
-    "gatsby": "^1.9.153",
+    "gatsby": "^1.9.262",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-create-client-paths": "^1.0.3",
     "gatsby-plugin-react-helmet": "^2.0.3",
@@ -39,6 +39,6 @@
     "deploy": "gh-pages --dist public --branch gh-pages"
   },
   "devDependencies": {
-    "prettier": "^1.10.2"
+    "prettier": "^1.13.2"
   }
 }
