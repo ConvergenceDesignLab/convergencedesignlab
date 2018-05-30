@@ -15,5 +15,8 @@ exports.onCreatePage = ({ page, store, boundActionCreators }, { prefixes }) => {
     page.matchPath = "/work/:project";
     page.component = path.resolve("./src/pages/project.js");
     createPage(page);
+  } else if (page.path.match(/^\/$/)) {
+    page.layout = "home";
+    createPage(page);
   }
 };

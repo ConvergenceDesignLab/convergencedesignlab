@@ -10,8 +10,7 @@ import Nav from "../components/nav";
 import Footer from "../components/footer/";
 import style from "./index.module.scss";
 
-export default function TemplateWrapper({ children, location }) {
-  const isHomePage = location.pathname === process.env.BASE_PATH;
+export default function TemplateWrapper({ children, location, isHomePage = false }) {
   return (
     <div>
       <Helmet
