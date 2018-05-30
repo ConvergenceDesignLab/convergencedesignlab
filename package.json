@@ -23,9 +23,7 @@
     "typeface-open-sans": "0.0.54",
     "typi": "^3.1.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "prettier": {
@@ -34,6 +32,8 @@
   "scripts": {
     "clean": "rm -rf public/* .cache",
     "build": "gatsby build --prefix-paths",
+    "build:debug": "gatsby build --prefix-paths --noUglify",
+    "gatsby": "gatsby",
     "dev": "gatsby develop --open",
     "predeploy": "npm run clean && npm run build",
     "deploy": "gh-pages --dist public --branch gh-pages"
