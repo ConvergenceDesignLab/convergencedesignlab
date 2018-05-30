@@ -2426,7 +2426,6 @@ webpackJsonp([114276838955818,60335399758886],{
 	"use strict";
 	
 	exports.__esModule = true;
-	exports.default = TemplateWrapper;
 	
 	__webpack_require__(328);
 	
@@ -2460,27 +2459,54 @@ webpackJsonp([114276838955818,60335399758886],{
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function TemplateWrapper(_ref) {
-	  var children = _ref.children,
-	      location = _ref.location;
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	  var isHomePage = location.pathname === ("/convergencedesignlab/");
-	  return _react2.default.createElement(
-	    "div",
-	    null,
-	    _react2.default.createElement(_reactHelmet2.default, {
-	      title: "Convergence Design Lab",
-	      meta: [{ name: "description", content: "Convergence Design Lab" }, { name: "keywords", content: "" }]
-	    }),
-	    _react2.default.createElement(_nav2.default, { isHomePage: isHomePage }),
-	    _react2.default.createElement(
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var TemplateWrapper = function (_React$Component) {
+	  _inherits(TemplateWrapper, _React$Component);
+	
+	  function TemplateWrapper() {
+	    _classCallCheck(this, TemplateWrapper);
+	
+	    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
+	  }
+	
+	  TemplateWrapper.prototype.componentDidMount = function componentDidMount() {
+	    this.forceUpdate();
+	  };
+	
+	  TemplateWrapper.prototype.render = function render() {
+	    var _props = this.props,
+	        children = _props.children,
+	        location = _props.location;
+	
+	    var isHomePage = location.pathname === ("/convergencedesignlab/");
+	    console.log(location.pathname, ("/convergencedesignlab/"));
+	    return _react2.default.createElement(
 	      "div",
-	      { className: isHomePage ? "" : _indexModule2.default.navPadding },
-	      children()
-	    ),
-	    _react2.default.createElement(_footer2.default, null)
-	  );
-	}
+	      null,
+	      _react2.default.createElement(_reactHelmet2.default, {
+	        title: "Convergence Design Lab",
+	        meta: [{ name: "description", content: "Convergence Design Lab" }, { name: "keywords", content: "" }]
+	      }),
+	      _react2.default.createElement(_nav2.default, { isHomePage: isHomePage }),
+	      _react2.default.createElement(
+	        "div",
+	        { className: isHomePage ? "" : _indexModule2.default.navPadding },
+	        children()
+	      ),
+	      _react2.default.createElement(_footer2.default, null)
+	    );
+	  };
+	
+	  return TemplateWrapper;
+	}(_react2.default.Component);
+	
+	exports.default = TemplateWrapper;
+	
 	
 	TemplateWrapper.propTypes = {
 	  children: _propTypes2.default.func
@@ -2505,4 +2531,4 @@ webpackJsonp([114276838955818,60335399758886],{
 /***/ })
 
 });
-//# sourceMappingURL=component---src-layouts-index-js-45c7f110e628968e467a.js.map
+//# sourceMappingURL=component---src-layouts-index-js-3dafb8df02100493ccf8.js.map
