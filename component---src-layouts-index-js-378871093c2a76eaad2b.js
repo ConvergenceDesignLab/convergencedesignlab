@@ -2155,9 +2155,11 @@ webpackJsonp([114276838955818,60335399758886],{
 	
 	  var isWhite = !isHomePage || isScrolled;
 	  console.log(isHomePage, isScrolled);
+	  var className = "nav";
+	  if (!isHomePage || isScrolled) className += " isWhite";else className += "notIsWhite";
 	  return _react2.default.createElement(
 	    "nav",
-	    { className: "nav" + " " + (isWhite ? "isWhite" : "notIsWhite") },
+	    { className: className },
 	    _react2.default.createElement(
 	      "div",
 	      { className: "container" },
@@ -2502,4 +2504,4 @@ webpackJsonp([114276838955818,60335399758886],{
 /***/ })
 
 });
-//# sourceMappingURL=component---src-layouts-index-js-0a98767a736789646c44.js.map
+//# sourceMappingURL=component---src-layouts-index-js-378871093c2a76eaad2b.js.map
