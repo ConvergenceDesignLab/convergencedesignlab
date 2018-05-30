@@ -2154,7 +2154,7 @@ webpackJsonp([114276838955818,60335399758886],{
 	      isScrolled = _ref.isScrolled;
 	
 	  var isWhite = !isHomePage || isScrolled;
-	  debugger;
+	  console.log(isWhite, isWhite ? _indexModule2.default.isWhite : "");
 	  return _react2.default.createElement(
 	    "nav",
 	    { className: _indexModule2.default.nav + " " + (isWhite ? _indexModule2.default.isWhite : "") },
@@ -2502,4 +2502,4 @@ webpackJsonp([114276838955818,60335399758886],{
 /***/ })
 
 });
-//# sourceMappingURL=component---src-layouts-index-js-91eb172583bba0fe9a98.js.map
+//# sourceMappingURL=component---src-layouts-index-js-3c8908184aec9431ab88.js.map
