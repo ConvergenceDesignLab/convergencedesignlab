@@ -2157,7 +2157,7 @@ webpackJsonp([114276838955818,60335399758886],{
 	  console.log(isWhite, isWhite ? _indexModule2.default.isWhite : "");
 	  return _react2.default.createElement(
 	    "nav",
-	    { className: _indexModule2.default.nav + " " + (isWhite ? _indexModule2.default.isWhite : "") },
+	    { className: "nav" + " " + (isWhite ? "isWhite" : "notIsWhite") },
 	    _react2.default.createElement(
 	      "div",
 	      { className: "container" },
@@ -2502,4 +2502,4 @@ webpackJsonp([114276838955818,60335399758886],{
 /***/ })
 
 });
-//# sourceMappingURL=component---src-layouts-index-js-3c8908184aec9431ab88.js.map
+//# sourceMappingURL=component---src-layouts-index-js-3258f1f95a0878306f43.js.map
