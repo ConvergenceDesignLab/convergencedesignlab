@@ -90,7 +90,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "/convergencedesignlab/";
 /******/
 /******/ 	// expose the chunks object
 /******/ 	__webpack_require__.s = installedChunks;
@@ -196,8 +196,8 @@
 	
 	/*global __PREFIX_PATHS__, __PATH_PREFIX__ */
 	var pathPrefix = "/";
-	if (false) {
-	  pathPrefix = __PATH_PREFIX__;
+	if (true) {
+	  pathPrefix = ("/convergencedesignlab");
 	}
 	
 	function withPrefix(path) {
