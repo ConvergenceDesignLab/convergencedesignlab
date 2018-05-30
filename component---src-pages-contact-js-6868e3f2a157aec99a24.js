@@ -294,7 +294,7 @@ webpackJsonp([70144966829960],{
 
 /***/ }),
 
-/***/ 225:
+/***/ 226:
 /***/ (function(module, exports) {
 
 	// This code has been refactored for 140 bytes
@@ -328,11 +328,11 @@ webpackJsonp([70144966829960],{
 
 /***/ }),
 
-/***/ 370:
+/***/ 374:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// Load in dependencies
-	var computedStyle = __webpack_require__(225);
+	var computedStyle = __webpack_require__(226);
 	
 	/**
 	 * Calculate the `line-height` of a given node
@@ -432,7 +432,7 @@ webpackJsonp([70144966829960],{
 
 /***/ }),
 
-/***/ 453:
+/***/ 457:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -467,7 +467,7 @@ webpackJsonp([70144966829960],{
 	var React = __webpack_require__(1);
 	var PropTypes = __webpack_require__(2);
 	var autosize = __webpack_require__(174);
-	var _getLineHeight = __webpack_require__(370);
+	var _getLineHeight = __webpack_require__(374);
 	var getLineHeight = _getLineHeight;
 	var UPDATE = 'autosize:update';
 	var DESTROY = 'autosize:destroy';
@@ -560,25 +560,25 @@ webpackJsonp([70144966829960],{
 
 /***/ }),
 
-/***/ 454:
+/***/ 458:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	exports.__esModule = true;
-	var TextareaAutosize_1 = __webpack_require__(453);
+	var TextareaAutosize_1 = __webpack_require__(457);
 	exports["default"] = TextareaAutosize_1["default"];
 
 
 /***/ }),
 
-/***/ 528:
+/***/ 532:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "static/tilden-hands-cropped.bf2fb50a.png";
 
 /***/ }),
 
-/***/ 185:
+/***/ 186:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -594,7 +594,7 @@ webpackJsonp([70144966829960],{
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _reactAutosizeTextarea = __webpack_require__(454);
+	var _reactAutosizeTextarea = __webpack_require__(458);
 	
 	var _reactAutosizeTextarea2 = _interopRequireDefault(_reactAutosizeTextarea);
 	
@@ -602,11 +602,11 @@ webpackJsonp([70144966829960],{
 	
 	var _coverImage2 = _interopRequireDefault(_coverImage);
 	
-	var _indexModule = __webpack_require__(306);
+	var _indexModule = __webpack_require__(307);
 	
 	var _indexModule2 = _interopRequireDefault(_indexModule);
 	
-	var _tildenHandsCropped = __webpack_require__(528);
+	var _tildenHandsCropped = __webpack_require__(532);
 	
 	var _tildenHandsCropped2 = _interopRequireDefault(_tildenHandsCropped);
 	
@@ -837,7 +837,7 @@ webpackJsonp([70144966829960],{
 
 /***/ }),
 
-/***/ 306:
+/***/ 307:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -892,7 +892,7 @@ webpackJsonp([70144966829960],{
 
 /***/ }),
 
-/***/ 211:
+/***/ 212:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -907,7 +907,7 @@ webpackJsonp([70144966829960],{
 	
 	var _gatsbyLink2 = _interopRequireDefault(_gatsbyLink);
 	
-	var _contact = __webpack_require__(185);
+	var _contact = __webpack_require__(186);
 	
 	var _contact2 = _interopRequireDefault(_contact);
 	

@@ -939,7 +939,7 @@ webpackJsonp([23899280101116],{
 
 /***/ }),
 
-/***/ 195:
+/***/ 196:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -951,7 +951,7 @@ webpackJsonp([23899280101116],{
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _indexModule = __webpack_require__(315);
+	var _indexModule = __webpack_require__(316);
 	
 	var _indexModule2 = _interopRequireDefault(_indexModule);
 	
@@ -972,7 +972,7 @@ webpackJsonp([23899280101116],{
 
 /***/ }),
 
-/***/ 315:
+/***/ 316:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -980,7 +980,7 @@ webpackJsonp([23899280101116],{
 
 /***/ }),
 
-/***/ 207:
+/***/ 208:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1003,13 +1003,13 @@ webpackJsonp([23899280101116],{
 	
 	var _callToAction2 = _interopRequireDefault(_callToAction);
 	
-	var _loading = __webpack_require__(195);
+	var _loading = __webpack_require__(196);
 	
 	var _loading2 = _interopRequireDefault(_loading);
 	
 	var _fetchWp = __webpack_require__(64);
 	
-	var _indexModule = __webpack_require__(325);
+	var _indexModule = __webpack_require__(326);
 	
 	var _indexModule2 = _interopRequireDefault(_indexModule);
 	
@@ -1113,7 +1113,7 @@ webpackJsonp([23899280101116],{
 
 /***/ }),
 
-/***/ 325:
+/***/ 326:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -1121,7 +1121,7 @@ webpackJsonp([23899280101116],{
 
 /***/ }),
 
-/***/ 215:
+/***/ 216:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1136,7 +1136,7 @@ webpackJsonp([23899280101116],{
 	
 	var _gatsbyLink2 = _interopRequireDefault(_gatsbyLink);
 	
-	var _work = __webpack_require__(207);
+	var _work = __webpack_require__(208);
 	
 	var _work2 = _interopRequireDefault(_work);
 	
