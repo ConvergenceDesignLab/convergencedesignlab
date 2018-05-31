@@ -5,6 +5,7 @@ import get from "lodash.get";
 import { Redirect } from "react-router-dom";
 import classNames from "classnames";
 import Cover from "./cover/";
+import CoverImage from "../cover-image/";
 import RelatedWork from "./related-work/";
 import CallToAction from "../call-to-action/";
 import style from "./index.module.scss";
@@ -86,7 +87,7 @@ export default class Work extends React.Component {
 
     return (
       <div>
-        <Cover imageUrl={imageUrl} imageTitle={imageTitle} />
+        <CoverImage src={imageUrl} alt={imageTitle} />
         <div className="container">
           <div className="section">
             <div className={style.title}>{title}</div>
