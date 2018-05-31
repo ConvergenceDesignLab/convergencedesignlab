@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "../components/home";
 
-const IndexPage = () => <Home />;
+const IndexPage = props => <Home {...props} />;
 
 export default IndexPage;

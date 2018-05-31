@@ -1,6 +1,6 @@
 import React from "react";
 
-const NotFoundPage = () => (
+const NotFoundPage = props => (
   <div className="nav-offset">
     <div className="container">
       <div className="section">
