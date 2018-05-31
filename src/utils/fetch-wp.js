@@ -49,3 +49,9 @@ export function fetchProjectBySlug(slug) {
     array => (array.length === 0 ? null : array[0])
   );
 }
+
+export function fetchResourceBySlug(slug) {
+  return fetchJson(`${resourcesEndpoint}?slug=${slug}`).then(
+    array => (array.length === 0 ? null : array[0])
+  );
+}

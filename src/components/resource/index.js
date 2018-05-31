@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
-import { fetchProjectBySlug } from "../../utils/fetch-wp";
+import { fetchResourceBySlug } from "../../utils/fetch-wp";
 import get from "lodash.get";
 import { Redirect } from "react-router-dom";
 import classNames from "classnames";
@@ -21,23 +21,28 @@ const data = {
 export default class Resource extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { data: data };
+    this.state = { data: null, noValidData: false };
   }
 
   componentDidMount() {
     if (!this.state.data) {
       // TODO: fetch data from WP
-      // const path = this.props.location.pathname;
-      // const slug = path
-      //   .substring(6) // Everything after the leading "/work/"
-      //   .replace("/", ""); // Remove trailing slash
+      const path = this.props.location.pathname;
+      const slug = path
+        .substring(11) // Everything after the leading "/resources/"
+        .replace("/", ""); // Remove trailing slash
+
+      fetchResourceBySlug(slug).then(data => {
+        if (data === null || !data.acf) this.setState({ noValidData: true });
+        else this.setState({ data: data.acf });
+      });
     }
   }
 
   render() {
-    const { data } = this.state;
+    const { data, noValidData } = this.state;
 
-    if (data === null) return <Redirect to="/404" />;
+    if (noValidData) return <Redirect to="/404" />;
 
     if (!data) {
       return <div style={{ minHeight: "1200px" }} />;
