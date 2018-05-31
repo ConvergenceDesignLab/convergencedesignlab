@@ -4,9 +4,8 @@ import { fetchProjectBySlug } from "../../utils/fetch-wp";
 import get from "lodash.get";
 import { Redirect } from "react-router-dom";
 import classNames from "classnames";
-import Cover from "./cover/";
 import CoverImage from "../cover-image/";
-import RelatedWork from "./related-work/";
+import RelatedWork from "../related-work/";
 import CallToAction from "../call-to-action/";
 import style from "./index.module.scss";
 import image from "../../assets/images/publications/test-1.png";
@@ -19,37 +18,7 @@ const data = {
   image
 };
 
-const TextBlock = ({ title, text, imageName, imageUrl, reverseOrder }) => {
-  const textSection = (
-    <div
-      key={`text-block-text-${title}`}
-      className={classNames(style.blockText, "col--sm-12 col--md-6")}
-    >
-      <div className={style.sectionTitle}>{title}</div>
-      <div className={style.sectionText} dangerouslySetInnerHTML={{ __html: text }} />
-    </div>
-  );
-  const imageSection = (
-    <div
-      key={`text-block-image-${title}`}
-      className={classNames(style.blockImage, "col--sm-12 col--md-6")}
-    >
-      <img className={style.sectionImage} src={imageUrl} alt={imageName} />
-    </div>
-  );
-
-  return (
-    <div className="container">
-      <div className="section">
-        <div className="row--space-between">
-          {reverseOrder ? [textSection, imageSection] : [imageSection, textSection]}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default class Work extends React.Component {
+export default class Resource extends React.Component {
   constructor(props) {
     super(props);
     this.state = { data: data };

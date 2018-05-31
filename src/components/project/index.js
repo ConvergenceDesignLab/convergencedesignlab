@@ -7,7 +7,7 @@ import classNames from "classnames";
 import Cover from "./cover/";
 import ImageBlock from "./image-block/";
 import QuoteBlock from "./quote-block/";
-import RelatedWork from "./related-work/";
+import RelatedWork from "../related-work/";
 import CallToAction from "../call-to-action/";
 import style from "./index.module.scss";
 
