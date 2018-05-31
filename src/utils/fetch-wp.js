@@ -4,6 +4,7 @@
 const baseUrl = process.env.API_URL;
 const projectEndpoint = `${baseUrl}/wp/v2/projects`;
 const acfProjectEndpoint = `${baseUrl}/acf/v3/projects`;
+const resourcesEndpoint = `${baseUrl}/wp/v2/resources`;
 const partnersEndpoint = `${baseUrl}/wp/v2/partners`;
 const projectTagsEndpoint = `${baseUrl}/wp/v2/project_tags`;
 
@@ -13,6 +14,10 @@ export function fetchJson(url) {
 
 export function fetchProjects() {
   return fetchJson(projectEndpoint);
+}
+
+export function fetchResources() {
+  return fetchJson(resourcesEndpoint);
 }
 
 export function fetchAcfProjects() {
