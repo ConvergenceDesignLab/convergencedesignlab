@@ -1,7 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
-
-import Work from "../components/work/";
+import Work from "../components/work";
 
 const WorkPage = () => <Work />;
 
