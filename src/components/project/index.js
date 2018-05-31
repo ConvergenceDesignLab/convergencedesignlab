@@ -44,30 +44,27 @@ const TextBlock = ({ title, text, imageName, imageUrl, reverseOrder }) => {
 export default class Project extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { data: props.data };
+    this.state = { data: null, noValidData: false };
   }
 
   componentDidMount() {
     if (!this.state.data) {
-      // const path = this.props.location.pathname;
-      // const slug = path
-      //   .substring(6) // Everything after the leading "/work/"
-      //   .replace("/", ""); // Remove trailing slash
-
-      // For now, just always fetch the same page
-      const slug = "discoverdesign";
+      const path = this.props.location.pathname;
+      const slug = path
+        .substring(6) // Everything after the leading "/work/"
+        .replace("/", ""); // Remove trailing slash
 
       fetchProjectBySlug(slug).then(data => {
-        if (data === null || !data.acf) this.setState({ data: null });
+        if (data === null || !data.acf) this.setState({ noValidData: true });
         else this.setState({ data: data.acf });
       });
     }
   }
 
   render() {
-    const { data } = this.state;
+    const { data, noValidData } = this.state;
 
-    if (data === null) return <Redirect to="/404" />;
+    if (redirectTo404) return <Redirect to="/404" />;
 
     if (!data) {
       return <div style={{ minHeight: "1200px" }} />;
