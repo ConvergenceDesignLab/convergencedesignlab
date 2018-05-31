@@ -7,16 +7,17 @@ $caption-offset: 0.75rem;
 .title {
   text-align: center;
   font-weight: 700;
-  font-size: 2rem;
-  margin: 2rem 0 0 0;
+  font-size: 2.25rem;
+  margin: 3rem 0 0 0;
   color: $convergence-orange;
+  font-family: $heading-font-family;
 }
 
 .projectGrid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 2rem - $gutter;
+  margin-top: 3rem - $gutter;
   margin-left: -$gutter;
   margin-right: -$gutter;
   margin-bottom: 2rem - $gutter + $caption-offset;

@@ -1,15 +1,6 @@
 import React from "react";
-import CallToAction from "../components/call-to-action/";
+import Resources from "../components/resources";
 
-const Resources = () => (
-  <div>
-    <div className="container">
-      <div className="section" style={{ minHeight: "800px" }}>
-        <h1>Resources</h1>
-      </div>
-    </div>
-    <CallToAction />
-  </div>
-);
+const ResourcesPage = () => <Resources />;
 
-export default Resources;
+export default ResourcesPage;

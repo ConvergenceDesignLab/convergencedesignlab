@@ -1,0 +1,102 @@
+@import "../../style/shared/_variables.scss";
+@import "../../style/shared/_unstyle-link.scss";
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin: 3rem 0 0 0;
+  color: $convergence-orange;
+  font-family: $heading-font-family;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.75rem;
+  margin: 2rem auto 0 auto;
+  max-width: 900px;
+}
+
+.resource {
+  max-width: 800px;
+  margin: 4rem auto;
+  font-size: 1.125rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.resourceThumbnail {
+  max-width: 175px;
+  margin: 0 auto 1rem auto;
+  max-width: 100%;
+
+  a {
+    @extend %unstyle-link;
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.resourceTitle {
+  font-weight: 500;
+  font-family: $heading-font-family;
+}
+
+.resourceDescription {
+  font-weight: 300;
+}
+
+.resourceTitle,
+.resourceDescription {
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 500px) {
+  .resource {
+    display: flex;
+    margin: 3rem auto;
+    align-items: center;
+  }
+
+  .resourceThumbnail {
+    margin: 0 2rem 0 0;
+    flex: 0 0 120px;
+
+    img {
+      height: 150px;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .resource {
+    display: flex;
+    margin: 2rem auto;
+    align-items: center;
+  }
+
+  .resourceThumbnail {
+    margin: 0 2rem 0 0;
+    flex: 0 0 160px;
+
+    img {
+      height: 200px;
+    }
+  }
+}
