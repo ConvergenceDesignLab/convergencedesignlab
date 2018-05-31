@@ -22,7 +22,7 @@ class Resources extends React.Component {
           description:
             "Jelly-o macaroon gummi bears bonbon gummies topping topping oat cake. Chocolate bar marzipan biscuit tiramisu cookie lemon drops cotton candy. Sesame snaps donut sesame snaps pie jelly-o toffee. Cheesecake muffin toffee. Carrot cake dessert wafer candy canes macaroon cheesecake lollipop.",
           image: image3,
-          slug: "linkurl"
+          slug: "pudding"
         },
         {
           id: 2,
@@ -31,7 +31,7 @@ class Resources extends React.Component {
           description:
             "Jujubes cookie dragée powder dragée wafer candy pudding liquorice. Cotton candy apple pie powder sweet roll jelly croissant. Brownie pie sesame snaps.",
           image: image1,
-          slug: "linkurl"
+          slug: "powder"
         },
         {
           id: 3,
@@ -39,7 +39,7 @@ class Resources extends React.Component {
           description:
             "opping marshmallow muffin. Marzipan marzipan macaroon lollipop jelly-o ice cream.",
           image: image2,
-          slug: "linkurl"
+          slug: "muffin"
         }
       ]
     });
