@@ -41,7 +41,7 @@ const TextBlock = ({ title, text, imageName, imageUrl, reverseOrder }) => {
   );
 };
 
-export default class Work extends React.Component {
+export default class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = { data: props.data };
