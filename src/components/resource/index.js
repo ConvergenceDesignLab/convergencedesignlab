@@ -48,16 +48,14 @@ export default class Resource extends React.Component {
       return <div style={{ minHeight: "1200px" }} />;
     }
 
-    let narrative = get(data, "narrative"); // Defaults to false
-    if (!narrative) narrative = [];
+    const title = get(data, "title", "");
+    const imageTitle = title;
+    const description = get(data, "description", "");
+    const downloadUrl = get(data, "download", "");
+    const imageUrl = get(data, "image.sizes.large", "");
+    const authors = get(data, "authors", []).map(obj => obj.author);
 
-    const imageUrl = data.image;
-    const imageTitle = data.title;
-    const title = data.title;
     const date = "01/05/2015";
-    const authors = ["Mindy Faber", "Margaret Conway"];
-    const downloadUrl = "null";
-    const description = data.description;
 
     return (
       <div>
@@ -87,7 +85,9 @@ export default class Resource extends React.Component {
               </div>
             </div>
             <div className={style.download}>
-              <Link to={downloadUrl}>Download PDF</Link>
+              <a href={downloadUrl} download target="_blank">
+                Download PDF
+              </a>
             </div>
           </div>
         </div>

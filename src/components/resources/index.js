@@ -55,7 +55,6 @@ class Resources extends React.Component {
         const title = get(acf, "title", "");
         const description = get(acf, "description", "");
         const imageUrl = get(acf, "image.sizes.thumbnail", "");
-        // const authors = get(acf, "authors", []).map(obj => obj.author);
         return (
           <div key={`resource-${id}`} className={style.resource}>
             <div className={style.resourceThumbnail}>
