@@ -7,7 +7,7 @@ export default function QuoteBlock({ quote, attribution }) {
       <div className="container">
         <div className="section">
           <blockquote className={style.quote}>
-            <div className={style.text}>{quote}</div>
+            <div className={style.text} dangerouslySetInnerHTML={{ __html: quote }} />
             <div className={style.attribution}>&mdash; {attribution}</div>
           </blockquote>
         </div>

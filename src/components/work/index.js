@@ -24,9 +24,9 @@ class Work extends React.Component {
           <div key={`project-${id}`} className={style.projectContainer}>
             <Link className={style.projectLinkWrapper} to={`/work/${slug}/`}>
               <figure className={style.projectFigure}>
-                <img className={style.projectImage} src={get(acf, "banner.image.sizes.medium")} />
+                <img className={style.projectImage} src={get(acf, "image.sizes.medium")} />
                 <figcaption className={style.projectCaption}>
-                  <div>{get(acf, "heading.subtitle")}</div>
+                  <div dangerouslySetInnerHTML={{ __html: get(acf, "question") }} />
                 </figcaption>
               </figure>
             </Link>
