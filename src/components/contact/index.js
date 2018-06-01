@@ -74,7 +74,7 @@ export default function About() {
                   />
                 </label>
 
-                <input className={style.formSubmit} type="submit" value="Send" />
+                <input disabled className={style.formSubmit} type="submit" value="Send" />
               </form>
             </div>
           </div>
