@@ -50,9 +50,10 @@ export default class Resource extends React.Component {
 
     const title = get(data, "title", "");
     const imageTitle = title;
-    const description = get(data, "description", "");
+    const description = get(data, "overview", "");
     const downloadUrl = get(data, "download", "");
     const imageUrl = get(data, "image.sizes.large", "");
+    const tags = get(data, "tags", []).map(obj => obj.name);
     const authors = get(data, "authors", []).map(obj => obj.author);
 
     const date = "01/05/2015";
@@ -73,8 +74,10 @@ export default class Resource extends React.Component {
               </div>
               <div className={classNames(style.meta, "col--sm-12 col--md-5")}>
                 <div className={style.metaSection}>
-                  <div className={style.sectionTitle}>Date</div>
-                  <div className={style.date}>{date}</div>
+                  <div className={style.sectionTitle}>Tags</div>
+                  <ul className={style.metaList}>
+                    {tags.map(name => <li key={`author-${name}`}>{name}</li>)}
+                  </ul>
                 </div>
                 <div className={style.metaSection}>
                   <div className={style.sectionTitle}>Authors</div>
@@ -92,7 +95,7 @@ export default class Resource extends React.Component {
           </div>
         </div>
 
-        <RelatedWork data={data} />
+        {/* <RelatedWork data={data} /> */}
 
         <CallToAction title="Looking for a framework?" />
       </div>

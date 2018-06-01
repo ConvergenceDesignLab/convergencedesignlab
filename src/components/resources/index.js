@@ -53,7 +53,7 @@ class Resources extends React.Component {
       resourceList = resources.map(resource => {
         const { acf, slug, id } = resource;
         const title = get(acf, "title", "");
-        const description = get(acf, "description", "");
+        const description = get(acf, "overview", "");
         const imageUrl = get(acf, "image.sizes.thumbnail", "");
         return (
           <div key={`resource-${id}`} className={style.resource}>
