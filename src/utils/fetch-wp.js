@@ -6,22 +6,22 @@ const projectEndpoint = `${baseUrl}/wp/v2/projects`;
 const acfProjectEndpoint = `${baseUrl}/acf/v3/projects`;
 const resourcesEndpoint = `${baseUrl}/wp/v2/resources`;
 const partnersEndpoint = `${baseUrl}/wp/v2/partners`;
-const projectTagsEndpoint = `${baseUrl}/wp/v2/project_tags`;
+const projectTagsEndpoint = `${baseUrl}/wp/v2/tags`;
 
 export function fetchJson(url) {
   return fetch(url).then(res => res.json());
 }
 
 export function fetchProjects() {
-  return fetchJson(projectEndpoint);
+  return fetchJson(projectEndpoint + "?order=asc&orderby=menu_order");
 }
 
 export function fetchResources() {
-  return fetchJson(resourcesEndpoint);
+  return fetchJson(resourcesEndpoint + "?order=asc&orderby=menu_order");
 }
 
 export function fetchAcfProjects() {
-  return fetchJson(acfProjectEndpoint);
+  return fetchJson(acfProjectEndpoint + "?order=asc&orderby=menu_order");
 }
 
 export function fetchProjectAcfById(id) {
