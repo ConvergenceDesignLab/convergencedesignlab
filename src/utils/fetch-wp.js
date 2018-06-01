@@ -2,6 +2,8 @@
 // https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress
 
 const baseUrl = process.env.API_URL;
+const showcaseEndpoint = `${baseUrl}/cdl/v1/showcase`;
+const pageEndpoint = `${baseUrl}/wp/v2/pages`;
 const projectEndpoint = `${baseUrl}/wp/v2/projects`;
 const acfProjectEndpoint = `${baseUrl}/acf/v3/projects`;
 const resourcesEndpoint = `${baseUrl}/wp/v2/resources`;
@@ -10,6 +12,10 @@ const projectTagsEndpoint = `${baseUrl}/wp/v2/tags`;
 
 export function fetchJson(url) {
   return fetch(url).then(res => res.json());
+}
+
+export function fetchShowcase() {
+  return fetchJson(showcaseEndpoint);
 }
 
 export function fetchProjects() {
