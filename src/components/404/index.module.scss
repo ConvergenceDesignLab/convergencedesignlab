@@ -1,0 +1,27 @@
+@import "../../style/shared/_variables.scss";
+
+.page {
+  text-align: center;
+  max-width: 800px;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: 6rem;
+  font-weight: 700;
+  font-family: $heading-font-family;
+  color: $convergence-orange;
+}
+
+.subtitle {
+  font-size: 3rem;
+}
+
+.link {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
