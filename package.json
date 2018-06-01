@@ -19,11 +19,14 @@
     "react-autosize-textarea": "^3.0.3",
     "react-helmet": "^5.2.0",
     "react-twitter-widgets": "^1.7.1",
+    "striptags": "^3.1.1",
     "typeface-montserrat": "0.0.54",
     "typeface-open-sans": "0.0.54",
     "typi": "^3.1.2"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "prettier": {
