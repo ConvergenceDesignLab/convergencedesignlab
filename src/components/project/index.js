@@ -49,10 +49,10 @@ export default class Project extends React.Component {
 
   componentDidMount() {
     if (!this.state.data) {
+      // Extract the slug from the URL, assuming it is the last part of the pathname
       const path = this.props.location.pathname;
-      const slug = path
-        .substring(6) // Everything after the leading "/work/"
-        .replace("/", ""); // Remove trailing slash
+      const pathNoTrail = path.endsWith("/") ? path.slice(0, path.length - 1) : path;
+      const slug = pathNoTrail.split("/").pop();
 
       fetchProjectBySlug(slug).then(data => {
         const projectData = new ProjectData(data);

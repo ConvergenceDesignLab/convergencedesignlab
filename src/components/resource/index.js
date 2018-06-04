@@ -26,11 +26,10 @@ export default class Resource extends React.Component {
 
   componentDidMount() {
     if (!this.state.data) {
-      // TODO: fetch data from WP
+      // Extract the slug from the URL, assuming it is the last part of the pathname
       const path = this.props.location.pathname;
-      const slug = path
-        .substring(11) // Everything after the leading "/resources/"
-        .replace("/", ""); // Remove trailing slash
+      const pathNoTrail = path.endsWith("/") ? path.slice(0, path.length - 1) : path;
+      const slug = pathNoTrail.split("/").pop();
 
       fetchResourceBySlug(slug).then(data => {
         if (data === null || !data.acf) this.setState({ noValidData: true });
