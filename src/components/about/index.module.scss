@@ -21,14 +21,9 @@
   position: relative;
   max-width: 100%;
   flex: 0 0 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 1.25rem;
-
-  @media (min-width: 500px) {
-    margin-bottom: 0;
-    flex: 0 0 30%;
-    padding: 1rem;
-  }
+  padding: 1rem;
 
   &:after {
     $diameter: 3.5rem;
@@ -43,6 +38,16 @@
     border-radius: $diameter / 2;
     background-color: $convergence-orange;
     opacity: 0.2;
+  }
+
+  @media (min-width: 500px) {
+    margin-bottom: 0;
+    flex: 0 0 30%;
+    padding-left: 1.75rem;
+
+    &:after {
+      left: 1.75rem;
+    }
   }
 }
 
@@ -65,22 +70,36 @@
 }
 
 .colImage {
-  flex: 0 0 30%;
+  flex: 0 0 100%;
   padding: 1rem;
-  max-width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+
+  @media (min-width: 500px) {
+    flex: 0 0 30%;
+  }
 }
 
 .contentTitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   font-family: $heading-font-family;
 }
 
 .contentText {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 
   & > p:first-child {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 500px) {
+  .contentTitle {
+    font-size: 2rem;
+  }
+  .contentText {
+    font-size: 1.25rem;
   }
 }
 
