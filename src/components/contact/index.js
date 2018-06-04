@@ -150,7 +150,9 @@ export default class Contact extends React.Component {
                       onChange={this.onChange}
                     >
                       {subjectOptions.map(({ value, text }) => (
-                        <option value={value}>{text}</option>
+                        <option key={value} value={value}>
+                          {text}
+                        </option>
                       ))}
                     </select>
                   </label>
