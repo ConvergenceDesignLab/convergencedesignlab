@@ -3,14 +3,13 @@
 
 const baseUrl = process.env.API_URL;
 const showcaseEndpoint = `${baseUrl}/cdl/v1/showcase`;
-const pageEndpoint = `${baseUrl}/wp/v2/pages`;
-const projectEndpoint = `${baseUrl}/wp/v2/projects`;
-const acfProjectEndpoint = `${baseUrl}/acf/v3/projects`;
-const partnersEndpoint = `${baseUrl}/wp/v2/partners`;
-const projectTagsEndpoint = `${baseUrl}/wp/v2/tags`;
 const workEndpoint = `${baseUrl}/cdl/v1/work`;
 const resourcesEndpoint = `${baseUrl}/cdl/v1/resources`;
+
+const wpProjectsEndpoint = `${baseUrl}/wp/v2/projects`;
 const wpResourcesEndpoint = `${baseUrl}/wp/v2/resources`;
+const wpPartnersEndpoint = `${baseUrl}/wp/v2/partners`;
+const wpProjectTagsEndpoint = `${baseUrl}/wp/v2/tags`;
 
 export function fetchJson(url) {
   return fetch(url).then(res => res.json());
@@ -25,18 +24,11 @@ export function fetchWork() {
 }
 
 export function fetchResources() {
-
-export function fetchAcfProjects() {
-  return fetchJson(acfProjectEndpoint + "?order=asc&orderby=menu_order");
-}
-
-export function fetchProjectAcfById(id) {
-  return fetchJson(`${acfProjectEndpoint}/${id}`);
   return fetchJson(resourcesEndpoint);
 }
 
 export function fetchTaxonomies() {
-  return Promise.all([fetchJson(partnersEndpoint), fetchJson(projectTagsEndpoint)]).then(
+  return Promise.all([fetchJson(wpPartnersEndpoint), fetchJson(wpProjectTagsEndpoint)]).then(
     ([partnersJson, projectsJson]) => {
       const projectTags = projectsJson.reduce((obj, { id, count, name }) => {
         obj[name] = { id, count };
@@ -52,7 +44,7 @@ export function fetchTaxonomies() {
 }
 
 export function fetchProjectBySlug(slug) {
-  return fetchJson(`${projectEndpoint}?slug=${slug}`).then(
+  return fetchJson(`${wpProjectsEndpoint}?slug=${slug}`).then(
     array => (array.length === 0 ? null : array[0])
   );
 }
