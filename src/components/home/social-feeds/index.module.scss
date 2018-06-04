@@ -1,5 +1,18 @@
 .timeline {
-  max-width: 900px;
+  width: 80%;
+  max-width: 800px;
   min-height: 400px;
   margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.links {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  & > *:first-child {
+    margin-right: 0.75rem;
+  }
 }
