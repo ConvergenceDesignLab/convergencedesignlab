@@ -56,8 +56,6 @@ export default class Resource extends React.Component {
     const tags = get(data, "tags", []).map(obj => obj.name);
     const authors = get(data, "authors", []).map(obj => obj.author);
 
-    const date = "01/05/2015";
-
     return (
       <div>
         <CoverImage src={imageUrl} alt={imageTitle} />
