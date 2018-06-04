@@ -16,7 +16,7 @@ $caption-offset: 0.75rem;
 .projectGrid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 3rem - $gutter;
   margin-left: -$gutter;
   margin-right: -$gutter;
@@ -79,7 +79,7 @@ $caption-offset: 0.75rem;
   }
   .projectCaption {
     height: 5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -87,9 +87,5 @@ $caption-offset: 0.75rem;
   .projectContainer {
     flex: 0 0 33.33%;
     height: 350px;
-  }
-  .projectCaption {
-    font-size: 0.7rem;
-    height: 4rem;
   }
 }
