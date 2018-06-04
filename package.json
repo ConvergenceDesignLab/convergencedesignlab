@@ -7,13 +7,13 @@
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
-    "gatsby": "^1.9.262",
+    "gatsby": "^1.9.269",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-create-client-paths": "^1.0.3",
     "gatsby-plugin-react-helmet": "^2.0.3",
     "gatsby-plugin-react-next": "^1.0.11",
     "gatsby-plugin-sass": "^1.0.15",
-    "gh-pages": "^1.1.0",
+    "gh-pages": "^1.2.0",
     "lodash.get": "^4.4.2",
     "lodash.throttle": "^4.1.1",
     "modularscale-sass": "^3.0.4",
@@ -44,6 +44,6 @@
     "deploy": "gh-pages --dist public --branch gh-pages"
   },
   "devDependencies": {
-    "prettier": "^1.13.2"
+    "prettier": "^1.13.4"
   }
 }
