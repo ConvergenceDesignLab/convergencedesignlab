@@ -7,7 +7,7 @@ export default function VideoBanner() {
     <div className={`container ${style.banner}`}>
       <div className={style.background}>
         <div className={style.overlay} />
-        <video className={style.video} autoPlay loop muted playsInline>
+        <video className={style.video} data-object-fit="cover" autoPlay loop muted playsInline>
           <source src={video} type="video/mp4" />
         </video>
       </div>

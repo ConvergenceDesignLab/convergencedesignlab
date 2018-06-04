@@ -1,6 +1,7 @@
 import "typeface-open-sans";
 import "typeface-montserrat";
 import "../style/global/index.scss";
+import "objectFitPolyfill";
 
 import React from "react";
 import PropTypes from "prop-types";
