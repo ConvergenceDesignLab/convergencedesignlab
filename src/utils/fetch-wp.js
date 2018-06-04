@@ -9,6 +9,7 @@ const acfProjectEndpoint = `${baseUrl}/acf/v3/projects`;
 const resourcesEndpoint = `${baseUrl}/wp/v2/resources`;
 const partnersEndpoint = `${baseUrl}/wp/v2/partners`;
 const projectTagsEndpoint = `${baseUrl}/wp/v2/tags`;
+const workEndpoint = `${baseUrl}/cdl/v1/work`;
 
 export function fetchJson(url) {
   return fetch(url).then(res => res.json());
@@ -18,8 +19,8 @@ export function fetchShowcase() {
   return fetchJson(showcaseEndpoint);
 }
 
-export function fetchProjects() {
-  return fetchJson(projectEndpoint + "?order=asc&orderby=menu_order");
+export function fetchWork() {
+  return fetchJson(workEndpoint);
 }
 
 export function fetchResources() {

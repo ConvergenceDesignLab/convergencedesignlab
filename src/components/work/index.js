@@ -3,14 +3,14 @@ import Link from "gatsby-link";
 import get from "lodash.get";
 import CallToAction from "../call-to-action/";
 import Loading from "../loading/";
-import { fetchAcfProjects, fetchProjects, fetchTaxonomies } from "../../utils/fetch-wp";
+import { fetchWork } from "../../utils/fetch-wp";
 import style from "./index.module.scss";
 
 class Work extends React.Component {
   state = { projects: null };
 
   componentDidMount() {
-    fetchProjects().then(json => this.setState({ projects: json }));
+    fetchWork().then(json => this.setState({ projects: json }));
   }
 
   render() {
@@ -19,14 +19,14 @@ class Work extends React.Component {
     let projectGrid = null;
     if (projects) {
       projectGrid = projects.map(project => {
-        const { id, slug, acf } = project;
+        const { id, slug, question, image } = project;
         return (
           <div key={`project-${id}`} className={style.projectContainer}>
             <Link className={style.projectLinkWrapper} to={`/work/${slug}/`}>
               <figure className={style.projectFigure}>
-                <img className={style.projectImage} src={get(acf, "image.sizes.medium")} />
+                <img className={style.projectImage} src={image} />
                 <figcaption className={style.projectCaption}>
-                  <div dangerouslySetInnerHTML={{ __html: get(acf, "question") }} />
+                  <div dangerouslySetInnerHTML={{ __html: question }} />
                 </figcaption>
               </figure>
             </Link>
