@@ -19,22 +19,19 @@ class Resources extends React.Component {
     let resourceList = null;
     if (resources) {
       resourceList = resources.map(resource => {
-        const { acf, slug, id } = resource;
-        const title = get(acf, "title", "");
-        const description = get(acf, "overview", "");
-        const imageUrl = get(acf, "image.sizes.thumbnail", "");
+        const { slug, id, title, overview, image } = resource;
         return (
           <div key={`resource-${id}`} className={style.resource}>
             <div className={style.resourceThumbnail}>
               <Link to={`/resources/${slug}`}>
-                <img src={imageUrl} alt={title} />
+                <img src={image} alt={title} />
               </Link>
             </div>
             <div className={style.resourceDetails}>
               <div className={style.resourceTitle}>{title}</div>
               <div
                 className={style.resourceDescription}
-                dangerouslySetInnerHTML={{ __html: description }}
+                dangerouslySetInnerHTML={{ __html: overview }}
               />
               <div className={style.resourceLink}>
                 <Link to={`/resources/${slug}`}>More Information</Link>
