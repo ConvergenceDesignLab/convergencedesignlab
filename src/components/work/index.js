@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import get from "lodash.get";
+import striptags from "striptags";
 import CallToAction from "../call-to-action/";
 import Loading from "../loading/";
 import { fetchWork } from "../../utils/fetch-wp";
@@ -26,7 +27,7 @@ class Work extends React.Component {
               <figure className={style.projectFigure}>
                 <img className={style.projectImage} src={image} />
                 <figcaption className={style.projectCaption}>
-                  <div dangerouslySetInnerHTML={{ __html: question }} />
+                  <div dangerouslySetInnerHTML={{ __html: striptags(question) }} />
                 </figcaption>
               </figure>
             </Link>
