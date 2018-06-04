@@ -10,10 +10,10 @@ export default function WorkShowcase({ projects }) {
     <Section title="Our Work" hasBackground={true}>
       <Title>Our Work</Title>
 
-      <div className={classNames("row", style.showcase)}>
+      <div className={style.showcase}>
         {projects &&
           projects.map(({ slug, title, question, image }, i) => (
-            <div key={`showcase-${slug}`} className="col--xs-4">
+            <div key={`showcase-${slug}`} className={style.column}>
               <img className={style.projectImage} src={image} alt={title} />
               <div className={style.projectDetails}>
                 <div className={style.projectTitle}>{title}</div>
