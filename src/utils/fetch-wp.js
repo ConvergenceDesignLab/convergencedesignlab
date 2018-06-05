@@ -11,46 +11,57 @@ const wpResourcesEndpoint = `${baseUrl}/wp/v2/resources`;
 const wpPartnersEndpoint = `${baseUrl}/wp/v2/partners`;
 const wpProjectTagsEndpoint = `${baseUrl}/wp/v2/tags`;
 
-export function fetchJson(url) {
-  return fetch(url).then(res => res.json());
+const defaultNumAttempts = 1;
+
+export function fetchJson(url, numAttempts = defaultNumAttempts) {
+  return fetch(url)
+    .then(res => {
+      if (!res.ok) throw new Error(`Server responded with: ${res.status}`);
+      else return res.json();
+    })
+    .catch(err => {
+      if (numAttempts > 1) return fetchJson(url, numAttempts - 1);
+      else throw err;
+    });
 }
 
-export function fetchShowcase() {
-  return fetchJson(showcaseEndpoint);
+export function fetchShowcase(numAttempts = defaultNumAttempts) {
+  return fetchJson(showcaseEndpoint, numAttempts);
 }
 
-export function fetchWork() {
-  return fetchJson(workEndpoint);
+export function fetchWork(numAttempts = defaultNumAttempts) {
+  return fetchJson(workEndpoint, numAttempts);
 }
 
-export function fetchResources() {
-  return fetchJson(resourcesEndpoint);
+export function fetchResources(numAttempts = defaultNumAttempts) {
+  return fetchJson(resourcesEndpoint, numAttempts);
 }
 
-export function fetchTaxonomies() {
-  return Promise.all([fetchJson(wpPartnersEndpoint), fetchJson(wpProjectTagsEndpoint)]).then(
-    ([partnersJson, projectsJson]) => {
-      const projectTags = projectsJson.reduce((obj, { id, count, name }) => {
-        obj[name] = { id, count };
-        return obj;
-      }, {});
-      const partnerTags = partnersJson.reduce((obj, { id, count, name }) => {
-        obj[name] = { id, count };
-        return obj;
-      }, {});
-      return { projectTags, partnerTags };
-    }
-  );
+export function fetchTaxonomies(numAttempts = defaultNumAttempts) {
+  return Promise.all([
+    fetchJson(wpPartnersEndpoint, numAttempts),
+    fetchJson(wpProjectTagsEndpoint, numAttempts)
+  ]).then(([partnersJson, projectsJson]) => {
+    const projectTags = projectsJson.reduce((obj, { id, count, name }) => {
+      obj[name] = { id, count };
+      return obj;
+    }, {});
+    const partnerTags = partnersJson.reduce((obj, { id, count, name }) => {
+      obj[name] = { id, count };
+      return obj;
+    }, {});
+    return { projectTags, partnerTags };
+  });
 }
 
-export function fetchProjectBySlug(slug) {
-  return fetchJson(`${wpProjectsEndpoint}?slug=${slug}`).then(
+export function fetchProjectBySlug(slug, numAttempts = defaultNumAttempts) {
+  return fetchJson(`${wpProjectsEndpoint}?slug=${slug}`, numAttempts).then(
     array => (array.length === 0 ? null : array[0])
   );
 }
 
-export function fetchResourceBySlug(slug) {
-  return fetchJson(`${wpResourcesEndpoint}?slug=${slug}`).then(
+export function fetchResourceBySlug(slug, numAttempts = defaultNumAttempts) {
+  return fetchJson(`${wpResourcesEndpoint}?slug=${slug}`, numAttempts).then(
     array => (array.length === 0 ? null : array[0])
   );
 }
