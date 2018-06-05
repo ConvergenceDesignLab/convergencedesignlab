@@ -9,7 +9,7 @@ export default function AboutSection() {
       <div className={style.large}>
         <p>
           Convergence Design Lab is an applied research center and a learning design studio in the
-          school of media arts at Columbia College Chicago.
+          School of Media Arts at Columbia College Chicago.
         </p>
         <p>
           We partner with organizations to prepare youth to become future-ready, media fluent and
