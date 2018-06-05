@@ -9,3 +9,5 @@ npm run build
 
 # Commit and push the gh-pages changes
 cd public && git add --all && git commit -m "New build" && git push && cd ..
+
+git worktree remove --force public
