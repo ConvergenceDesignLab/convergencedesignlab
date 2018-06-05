@@ -13,23 +13,25 @@ export default function ResourcesShowcase({ resource }) {
         research in connected learning...
       </Description>
 
-      {resource && (
-        <div className={style.resource}>
-          <div className={style.thumbnail}>
-            <img src={resource.image} alt={resource.title} />
-          </div>
-          <div className={style.details}>
-            <div className={style.title}>{resource.title}</div>
-            <div
-              className={classNames("wordpress-content", style.description)}
-              dangerouslySetInnerHTML={{ __html: resource.overview }}
-            />
-            <div className={style.link}>
-              <Link to={`resources/${resource.slug}`}>Download the paper</Link>
+      <div className={style.resource}>
+        {resource && (
+          <React.Fragment>
+            <div className={style.thumbnail}>
+              <img src={resource.image} alt={resource.title} />
             </div>
-          </div>
-        </div>
-      )}
+            <div className={style.details}>
+              <div className={style.title}>{resource.title}</div>
+              <div
+                className={classNames("wordpress-content", style.description)}
+                dangerouslySetInnerHTML={{ __html: resource.overview }}
+              />
+              <div className={style.link}>
+                <Link to={`resources/${resource.slug}`}>Download the paper</Link>
+              </div>
+            </div>
+          </React.Fragment>
+        )}
+      </div>
 
       <CallToActionLink to="/resources/">See all resources →</CallToActionLink>
     </Section>
