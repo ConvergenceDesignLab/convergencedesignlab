@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
+    "dotenv": "^6.0.0",
     "font-awesome": "^4.7.0",
     "gatsby": "^1.9.269",
     "gatsby-link": "^1.6.34",
@@ -16,6 +17,7 @@
     "gh-pages": "^1.2.0",
     "lodash.get": "^4.4.2",
     "lodash.throttle": "^4.1.1",
+    "minimist": "^1.2.0",
     "modularscale-sass": "^3.0.4",
     "objectFitPolyfill": "^2.1.1",
     "react-autosize-textarea": "^3.0.3",
@@ -24,7 +26,9 @@
     "striptags": "^2.0.0",
     "typeface-montserrat": "0.0.54",
     "typeface-open-sans": "0.0.54",
-    "typi": "^3.1.2"
+    "typi": "^3.1.2",
+    "vinyl-fs": "^3.0.3",
+    "vinyl-ftp": "^0.6.1"
   },
   "keywords": [
     "gatsby"
@@ -35,15 +39,20 @@
     "printWidth": 100
   },
   "scripts": {
+    "test": "node ./scripts/deploy-ftp.js --src ./public/** --dest /usr/home/convergence/public_html/convergencedesignlab.org/new-site",
     "clean": "rm -rf public/* .cache",
     "build": "gatsby build --prefix-paths",
+    "clean-build": "npm run clean && npm run build",
     "build:debug": "gatsby build --prefix-paths --noUglify",
     "gatsby": "gatsby",
     "dev": "gatsby develop --open",
-    "predeploy": "npm run clean && npm run build",
-    "deploy": "gh-pages --dist public --branch gh-pages"
+    "push:ftp": "node ./scripts/deploy-ftp.js --src ./public/** --dest /usr/home/convergence/public_html/convergencedesignlab.org/new-site",
+    "deploy:ftp": "set \"DEPLOY_TARGET=ftp\" && npm run clean-build && npm run push:ftp",
+    "deploy:gh-pages": "set \"DEPLOY_TARGET=gh-pages\" && npm run clean-build && gh-pages --dist public --branch gh-pages",
+    "deploy": "npm run deploy:gh-pages && npm run deploy:ftp"
   },
   "devDependencies": {
+    "cross-env": "^5.1.6",
     "prettier": "^1.13.4"
   }
 }
