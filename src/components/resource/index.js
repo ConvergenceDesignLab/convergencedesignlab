@@ -7,16 +7,8 @@ import classNames from "classnames";
 import CoverImage from "../cover-image/";
 import RelatedWork from "../related-work/";
 import CallToAction from "../call-to-action/";
+import Loading from "../loading";
 import style from "./index.module.scss";
-import image from "../../assets/images/publications/test-1.png";
-
-const data = {
-  id: 1,
-  title: "Pudding pudding gummi bears chocolate brownie dessert candy",
-  description:
-    "Jelly-o macaroon gummi bears bonbon gummies topping topping oat cake. Chocolate bar marzipan biscuit tiramisu cookie lemon drops cotton candy. Sesame snaps donut sesame snaps pie jelly-o toffee. Cheesecake muffin toffee. Carrot cake dessert wafer candy canes macaroon cheesecake lollipop.",
-  image
-};
 
 export default class Resource extends React.Component {
   constructor(props) {
@@ -43,9 +35,7 @@ export default class Resource extends React.Component {
 
     if (noValidData) return <Redirect to="/404" />;
 
-    if (!data) {
-      return <div style={{ minHeight: "1200px" }} />;
-    }
+    if (!data) return <Loading height="100vh" />;
 
     const title = get(data, "title", "");
     const imageTitle = title;

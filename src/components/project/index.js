@@ -9,6 +9,7 @@ import ImageBlock from "./image-block/";
 import QuoteBlock from "./quote-block/";
 import RelatedWork from "../related-work/";
 import CallToAction from "../call-to-action/";
+import Loading from "../loading";
 import style from "./index.module.scss";
 
 const TextBlock = ({ title, text, imageName, imageUrl, reverseOrder, className }) => {
@@ -69,9 +70,7 @@ export default class Project extends React.Component {
 
     if (noValidData) return <Redirect to="/404" />;
 
-    if (!data) {
-      return <div style={{ minHeight: "1200px" }} />;
-    }
+    if (!data) return <Loading height="100vh" />;
 
     const { designQuestion, coverImageUrl, title, challengeSection, partners, tags } = data;
 
