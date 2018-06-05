@@ -15,9 +15,17 @@
 .title {
   font-family: $heading-font-family;
   font-weight: 700;
-  font-size: 2rem;
   text-align: center;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
+
+  @media (min-width: 700px) {
+    font-size: 1.75rem;
+  }
+
+  @media (min-width: 900px) {
+    font-size: 2rem;
+  }
 }
 
 .sectionTitle {
