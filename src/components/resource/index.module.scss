@@ -1,5 +1,16 @@
 @import "../../style/shared/_variables.scss";
 @import "../../style/global/_breakpoints.scss";
+@import "../../style/global/_grid.scss";
+
+.row {
+  @extend %row;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 .title {
   font-family: $heading-font-family;

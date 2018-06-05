@@ -34,7 +34,7 @@ const TextBlock = ({ title, text, imageName, imageUrl, reverseOrder, className }
   return (
     <div className="container">
       <div className="section">
-        <div className="row--space-between">
+        <div className={style.row}>
           {reverseOrder ? [textSection, imageSection] : [imageSection, textSection]}
         </div>
       </div>
@@ -116,15 +116,15 @@ export default class Project extends React.Component {
         <div className="container">
           <div className="section">
             <div className={style.title}>{title}</div>
-            <div className="row--space-between">
-              <div className="col--sm-12 col--md-6">
+            <div className={style.row}>
+              <div className="col--md-6">
                 <div className={style.sectionTitle}>Challenge</div>
                 <div
                   className={classNames(style.sectionText, "wordpress-content")}
                   dangerouslySetInnerHTML={{ __html: challengeSection }}
                 />
               </div>
-              <div className={classNames(style.meta, "col--sm-12 col--md-5")}>
+              <div className={classNames(style.meta, "col--md-5")}>
                 <div>
                   <div className={style.sectionTitle}>Partners</div>
                   <ul className={style.metaList}>

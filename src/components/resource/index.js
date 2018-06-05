@@ -51,15 +51,15 @@ export default class Resource extends React.Component {
         <div className="container">
           <div className="section">
             <div className={style.title}>{title}</div>
-            <div className="row--space-between">
-              <div className="col--sm-12 col--md-6">
+            <div className={style.row}>
+              <div className="col--md-6">
                 <div className={style.sectionTitle}>Overview</div>
                 <div
                   className={style.sectionText}
                   dangerouslySetInnerHTML={{ __html: description }}
                 />
               </div>
-              <div className={classNames(style.meta, "col--sm-12 col--md-5")}>
+              <div className={classNames(style.meta, "col--md-5")}>
                 <div className={style.metaSection}>
                   <div className={style.sectionTitle}>Tags</div>
                   <ul className={style.metaList}>
