@@ -4,7 +4,7 @@ import CoverImage from "../cover-image/";
 import CallToAction from "../call-to-action/";
 import Team from "./team/";
 import style from "./index.module.scss";
-import image from "../../assets/images/da-opening-cropped.jpg";
+import image from "../../assets/images/da-opening-cropped.png";
 import placeholderImage from "../../assets/images/placeholder.png";
 import designProcessImage from "../../assets/images/placeholder-design-cycle.png";
 
