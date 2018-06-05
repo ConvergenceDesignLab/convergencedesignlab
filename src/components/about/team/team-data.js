@@ -42,7 +42,7 @@ const team = {
       linkedin: "https://www.linkedin.com/in/nataliasmirnov"
     },
     {
-      name: "Jabaru Evans",
+      name: "Jabari Evans",
       image: require("../../../assets/images/team/jabari-evans-square.jpg"),
       title: "Research Fellow",
       twitter: "https://twitter.com/naledgeevans?lang=en",
