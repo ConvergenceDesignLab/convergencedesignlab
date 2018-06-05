@@ -3,11 +3,6 @@ import { Timeline, Follow, Mention } from "react-twitter-widgets";
 import Section, { Title, Description } from "../home-section/";
 import style from "./index.module.scss";
 
-// We can hide the header and add some custom framing, potentially also adding a follow and/or
-// mention button:
-// <Follow username="ConvergenceDLab" />
-// <Mention username="ConvergenceDLab" />
-
 export default function SocialFeeds() {
   return (
     <Section>
@@ -28,8 +23,8 @@ export default function SocialFeeds() {
             screenName: "ConvergenceDLab"
           }}
           options={{
-            chrome: "nofooter,noheader", //noheader,nofooter
-            height: "550",
+            chrome: "nofooter,noheader",
+            height: "100%",
             dnt: true,
             linkColor: "#ff9a21"
           }}

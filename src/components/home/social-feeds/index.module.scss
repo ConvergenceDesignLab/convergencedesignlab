@@ -1,9 +1,13 @@
 .timeline {
   width: 80%;
   max-width: 800px;
-  min-height: 400px;
+  height: 50vh;
   margin: 0 auto;
   margin-top: 2rem;
+
+  & > div {
+    height: 100%;
+  }
 }
 
 .links {
@@ -12,7 +16,7 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  & > *:first-child {
-    margin-right: 0.75rem;
+  & > * {
+    margin: 0.1rem 0.25rem;
   }
 }
