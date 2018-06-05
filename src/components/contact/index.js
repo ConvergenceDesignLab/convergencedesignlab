@@ -192,7 +192,9 @@ export default class Contact extends React.Component {
             <div className={style.content}>
               <div className="font-weight-700">Convergence Design Lab</div>
               <div>Columbia College Chicago</div>
-              <div>33 East Congress, Suite 600</div>
+              <div>Office of the Dean of the School of Media Arts</div>
+              <div>Mail: 600 S Michigan Avenue</div>
+              <div>Office: 33 East Congress, Suite 600</div>
               <div>Chicago, IL 60605</div>
               <a href="https://goo.gl/maps/drufjZexbpQ2">Directions</a>
 
