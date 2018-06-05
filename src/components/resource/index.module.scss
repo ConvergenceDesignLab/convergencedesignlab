@@ -76,4 +76,8 @@
 .download {
   text-align: center;
   font-size: 1.5rem;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 2rem;
+  }
 }
