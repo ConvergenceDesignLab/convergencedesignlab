@@ -9,7 +9,6 @@ export default function Columbia() {
       <div className="container">
         <div className="section">
           <div className={style.join}>Join the Conversation</div>
-          <div className={style.email}>hello@convergencedesignlab.org</div>
           <div className={classNames(style.social, "social-links")}>
             <a href="https://www.flickr.com/photos/convergenceacademies/">
               <span className="stacked-icon">
@@ -42,11 +41,8 @@ export default function Columbia() {
               </span>
             </a>
           </div>
-          <div className={style.contact}>
-            <div>312.369.8883</div>
-            <div>33 East Congress, Suite 600</div>
-            <div>Chicago, IL 60605</div>
-          </div>
+          <div className={style.email}>hello@convergencedesignlab.org</div>
+          <div className={style.email}>312.369.8883</div>
         </div>
       </div>
     </footer>
