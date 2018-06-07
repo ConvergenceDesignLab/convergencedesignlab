@@ -26,6 +26,12 @@ export default function About() {
                 We partner with organizations to prepare youth to become future-ready, media fluent
                 and active participants in public life.
               </p>
+              <p>
+                As part of the School of Media Arts at Columbia College Chicago, we aim to be an
+                animating force in our Chicago communities and in the larger world beyond by
+                fostering deep connections between the college and cultural, media and learning
+                ecosystems locally, nationally and globally.
+              </p>
             </div>
           </div>
         </div>
@@ -41,14 +47,19 @@ export default function About() {
               </div>
               <div className={style.contentText}>
                 <p>
-                  Brownie tart jelly gummies cake. Pudding cheesecake cake halvah chupa chups.
-                  Cheesecake caramels muffin bear claw sesame snaps candy canes donut tart.
-                  Chocolate cake pastry toffee sugar plum macaroon oat cake marzipan tiramisu wafer.
-                  Topping gummies chocolate bar marzipan ice cream.
+                  We began in 2013 with a multi-million, three-year grant from the U.S. Department
+                  of Education’s Investing In Innovation program. Working inside two high-need
+                  Chicago Public Schools, we developed, tested and researched a new 21st century
+                  education model based on connected learning theory which suggests that youth learn
+                  best when they are pursuing their interests and passions among a community of
+                  their peers.
                 </p>
                 <p>
-                  Cake jelly beans marshmallow toffee. Jelly beans pie brownie biscuit. Brownie
-                  wafer marzipan bear claw bear claw candy gummi bears lollipop halvah.
+                  By putting connected learning theory into practice under our tenure, both schools
+                  experienced whole school improvement, increasing attendance, teacher technology
+                  proficiency and student academic performance and engagement. We are committed to
+                  integrating rigorous research, participatory reflection and actionable evaluation
+                  into all aspects of our work.
                 </p>
               </div>
             </div>
@@ -64,19 +75,28 @@ export default function About() {
           <div className={style.sectionTitle}>Our Process</div>
           <div className={classNames(style.content, style.col)}>
             <div className={style.contentTitle}>
-              Brownie tart jelly gummies cake, pudding cheesecake.
+              Human-centered design and the ‘community of practice’ concept guide our approach.
             </div>
-            <div className={style.contentText}>
+            <div className={classNames(style.contentText, "wordpress-content")}>
               <p>
-                Gummi bears chocolate pastry wafer croissant cotton candy. Bonbon jujubes pie icing
-                candy canes. Chocolate cake croissant dessert sweet roll brownie dragée. Dragée
-                cookie gummi bears cupcake.
+                Convergence specializes in designing for participation, equity and engagement. We
+                believe that the design thinking process, with its emphasis on discovery, play,
+                collaboration and active reflection, can empower participants to produce creative
+                solutions that endure into the future. We also find that vibrant communities of
+                practice are key to building long-term capacity and sustainability of civic,
+                cultural and learning organizations. Through each of our projects and partnerships,
+                we ask:
               </p>
-              <p>
-                Jelly sweet dragée apple pie pie powder toffee fruitcake. Gummies ice cream candy
-                macaroon jelly beans candy canes sweet roll brownie marzipan. Pudding gingerbread
-                biscuit lollipop cake bonbon cotton candy cake.
-              </p>
+              <ul>
+                <li>
+                  How might we design solutions by engaging the voices, perspectives and experiences
+                  of people most directly impacted?
+                </li>
+                <li>
+                  How might we design routines and structures that enable strong communities of
+                  practice to take root and thrive?
+                </li>
+              </ul>
             </div>
           </div>
           <div className={style.designImage}>
@@ -88,14 +108,42 @@ export default function About() {
       <div className={style.isOrange}>
         <div className="container">
           <div className={style.section}>
-            <div className={style.sectionTitle}>The Team</div>
+            <div className={style.sectionTitle}>Our Allies</div>
             <div className={classNames(style.content, style.col)}>
               <div className={style.contentTitle}>
-                We are a team of learning designers, researchers and creative technologists.
+                We build long-term, sustainable partnerships.
+              </div>
+              <div className={style.contentText}>
+                <p>
+                  We are deeply invested in exploring how innovative technologies and digital
+                  economies can advance equity in civic society, culture and educational ecosystems.
+                  That is why we work to form partnerships that support our strategic vision for
+                  Chicago as a connected city with leading innovators such as Chicago Hive
+                  Network/Chicago Learning Exchange, City Tech Collaborative and Chicago Cultural
+                  Alliance.
+                </p>
+                <p>
+                  It also drives our collaboration with networks supporting digital literacy, youth
+                  media education and community activism on a national and global level with
+                  organizations such as Participate.com, The National Writing Project, Spy Hop,
+                  LRNG, NAMLE, Free Spirit Media, The Alliance and many academic research
+                  institutions.
+                </p>
               </div>
             </div>
-            <Team />
           </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className={style.section}>
+          <div className={style.sectionTitle}>The Team</div>
+          <div className={classNames(style.content, style.col)}>
+            <div className={style.contentTitle}>
+              We are a team of learning designers, researchers and creative technologists.
+            </div>
+          </div>
+          <Team />
         </div>
       </div>
 
