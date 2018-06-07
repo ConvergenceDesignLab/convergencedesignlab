@@ -10,7 +10,7 @@ const team = {
     },
     {
       name: "Mindy Faber",
-      image: require("../../../assets/images/team/mindy-faber.jpg"),
+      image: require("../../../assets/images/team/mindy-faber.png"),
       title: "Program Director",
       email: "mfaber@colum.edu",
       twitter: "https://twitter.com/mindyfaber",
