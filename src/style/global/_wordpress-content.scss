@@ -1,15 +1,18 @@
 .wordpress-content {
+  ul,
+  ol {
+    list-style: none;
+    margin-left: 1.3rem;
+    // font-size: 1.1rem;
+  }
   ul {
-    list-style: disc inside;
-    margin-left: 1rem;
-    font-size: 1.1rem;
+    list-style: disc outside;
   }
   ol {
     list-style: decimal;
-    margin-left: 1rem;
-    font-size: 1.1rem;
   }
   li {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    padding-left: 0.75rem;
   }
 }
