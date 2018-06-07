@@ -14,7 +14,8 @@ export default function VideoBanner() {
       <div className={style.text}>
         <div className={style.title}>Convergence Design Lab</div>
         <div className={style.subtitle}>
-          Advancing Equity and Engagement Through Learner-Centered Design
+          Advancing Equity and Engagement Through<span className={style.break}> </span>Learner-Centered
+          Design
         </div>
       </div>
     </div>

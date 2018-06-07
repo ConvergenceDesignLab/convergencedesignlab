@@ -1,5 +1,13 @@
 @import "../../../style/shared/_variables.scss";
 
+.break {
+  display: inline;
+
+  @media (min-width: 900px) {
+    display: block;
+  }
+}
+
 .banner {
   width: 100%;
   height: 100vh;
