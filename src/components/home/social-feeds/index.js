@@ -3,6 +3,8 @@ import { Timeline, Follow, Mention } from "react-twitter-widgets";
 import Section, { Title, Description } from "../home-section/";
 import style from "./index.module.scss";
 
+// Twitter errors, see: https://github.com/andrewsuzuki/react-twitter-widgets/issues/10
+
 export default function SocialFeeds() {
   return (
     <Section>
