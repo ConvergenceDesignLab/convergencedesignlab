@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "gatsby-link";
 
 import ScrollTracker from "../scroll-tracker/";
 import NavLogo from "./nav-logo";
