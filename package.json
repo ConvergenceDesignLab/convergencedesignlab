@@ -8,7 +8,7 @@
     "classnames": "^2.2.5",
     "dotenv": "^6.0.0",
     "font-awesome": "^4.7.0",
-    "gatsby": "^1.9.269",
+    "gatsby": "^1.9.270",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-create-client-paths": "^1.0.3",
     "gatsby-plugin-react-helmet": "^2.0.3",
