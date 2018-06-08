@@ -1,5 +1,37 @@
 @import "../style/shared/_variables.scss";
 
+$fadeInDuration: 250;
+$fadeOutDuration: 250;
+$fadeInDelay: 400;
+
+:export {
+  fadeInDuration: $fadeInDuration;
+  fadeOutDuration: $fadeOutDuration;
+  fadeInDelay: $fadeInDelay;
+}
+
 .navPadding {
   padding-top: $nav-height;
+}
+
+.fadeIn {
+  opacity: 0;
+}
+
+.fadeInActive {
+  transition: opacity #{$fadeInDuration}ms ease-out #{$fadeInDelay}ms;
+  opacity: 1;
+}
+
+.fadeOut {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  pointer-events: none; /* Stop interactivity on fading page */
+}
+
+.fadeOutActive {
+  transition: opacity #{$fadeOutDuration}ms ease-in;
+  opacity: 0;
 }
