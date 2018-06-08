@@ -6,8 +6,17 @@ const config = {
 };
 
 let pathPrefix;
-if (process.env.DEPLOY_TARGET === "ftp") pathPrefix = "/new-site";
-else if (process.env.DEPLOY_TARGET === "gh-pages") pathPrefix = "/convergencedesignlab";
-if (pathPrefix) config.pathPrefix = pathPrefix;
+
+if (process.env.DEPLOY_TARGET === "ftp") {
+  pathPrefix = "/new-site";
+} else if (process.env.DEPLOY_TARGET === "gh-pages") {
+  pathPrefix = "/convergencedesignlab";
+}
+
+if (pathPrefix) {
+  config.pathPrefix = pathPrefix;
+}
+
+process.env.GATSBY_BASEURL = pathPrefix ? `${pathPrefix}` : "";
 
 module.exports = config;
