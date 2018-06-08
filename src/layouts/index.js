@@ -11,7 +11,12 @@ import Nav from "../components/nav";
 import Footer from "../components/footer/";
 import style from "./index.module.scss";
 
-export default function TemplateWrapper({ children, location, isHomePage = false }) {
+export default function TemplateWrapper({ children, location }) {
+  // Gatsby's HTML rendering doesn't use the pathPrefix so we need to check the real URL (which has
+  // the pathPrefix) and the URL without the pathPrefix
+  const isHomePage =
+    location.pathname === `${process.env.GATSBY_BASEURL}/` || location.pathname === "/";
+
   return (
     <div>
       <Helmet
