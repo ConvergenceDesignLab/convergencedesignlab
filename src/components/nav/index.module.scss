@@ -2,19 +2,23 @@
 
 .nav {
   color: white;
+  background-color: transparent;
   height: $nav-height;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999999;
-  transition: background-color 0.2s ease-in, color 0.2s ease-in;
   font-family: $heading-font-family;
   font-weight: 500;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0);
+  transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in, color 0.2s ease-in-out 0.1s;
+}
 
-  &.isWhite {
-    background-color: white;
-    color: black;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
-  }
+.isWhite {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
+}
+
 }
