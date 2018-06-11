@@ -47,19 +47,22 @@ export default function About() {
               </div>
               <div className={style.contentText}>
                 <p>
-                  We began in 2013 with a multi-million, three-year grant from the U.S. Department
-                  of Education’s Investing In Innovation program. Working inside two high-need
-                  Chicago Public Schools, we developed, tested and researched a new 21st century
-                  education model based on connected learning theory which suggests that youth learn
-                  best when they are pursuing their interests and passions among a community of
-                  their peers.
+                  We began in 2013 with a multi-million dollar grant from the U.S. Department of
+                  Education to develop innovative practices to improve Chicago education. Working
+                  inside two high-need Chicago Public Schools, we developed, tested and researched a
+                  new 21st century education model based on connected learning theory which serves
+                  as the foundation for all the work we do.
                 </p>
                 <p>
-                  By putting connected learning theory into practice under our tenure, both schools
-                  experienced whole school improvement, increasing attendance, teacher technology
-                  proficiency and student academic performance and engagement. We are committed to
-                  integrating rigorous research, participatory reflection and actionable evaluation
-                  into all aspects of our work.
+                  The theory posits that youth learn best when pursuing their interests and passions
+                  among a community of their peers. Through putting this into practice and
+                  evaluating the outcomes over the course of three years, both schools experienced
+                  whole school improvement – from increased attendance, to teacher technology
+                  proficiency and student academic performance and engagement.
+                </p>
+                <p>
+                  We are committed to integrating rigorous research, participatory reflection and
+                  actionable evaluation into all aspects of our work.
                 </p>
               </div>
             </div>
@@ -79,13 +82,15 @@ export default function About() {
             </div>
             <div className={classNames(style.contentText, "wordpress-content")}>
               <p>
-                Convergence specializes in designing for participation, equity and engagement. We
-                believe that the design thinking process, with its emphasis on discovery, play,
-                collaboration and active reflection, can empower participants to produce creative
-                solutions that endure into the future. We also find that vibrant communities of
-                practice are key to building long-term capacity and sustainability of civic,
-                cultural and learning organizations. Through each of our projects and partnerships,
-                we ask:
+                We apply a participatory design thinking process to co-create custom solutions in
+                partnership with civic, cultural and learning organizations. This process, with its
+                emphasis on discovery, play, collaboration and active reflection, leads to creative
+                solutions that promote participation, equity and engagement.
+              </p>
+              <p>
+                Through building strong communities of practice, we work to strengthen the long-term
+                capacity and the sustainability of civic, cultural and learning organizations.
+                Through each of our projects and partnerships, we ask:
               </p>
               <ul>
                 <li>
@@ -115,19 +120,21 @@ export default function About() {
               </div>
               <div className={style.contentText}>
                 <p>
-                  We are deeply invested in exploring how innovative technologies and digital
-                  economies can advance equity in civic society, culture and educational ecosystems.
-                  That is why we work to form partnerships that support our strategic vision for
-                  Chicago as a connected city with leading innovators such as Chicago Hive
+                  We don’t work in isolation. Designing for equity in civic, culture and educational
+                  spaces requires many, diverse voices to work together. We aim to be the connector
+                  that fosters a connected ecosystem of partners working towards a shared vision.
+                </p>
+                <p>
+                  Within Chicago, that is why we work to form local partnerships that support our
+                  strategic vision for a connected city with leading innovators such as Chicago Hive
                   Network/Chicago Learning Exchange, City Tech Collaborative and Chicago Cultural
                   Alliance.
                 </p>
                 <p>
-                  It also drives our collaboration with networks supporting digital literacy, youth
-                  media education and community activism on a national and global level with
-                  organizations such as Participate.com, The National Writing Project, Spy Hop,
-                  LRNG, NAMLE, Free Spirit Media, The Alliance and many academic research
-                  institutions.
+                  At a national and global level, we collaborate with networks supporting digital
+                  literacy, youth media education and community activism with organizations such as
+                  Participate.com, The National Writing Project, Spy Hop, LRNG, NAMLE, Free Spirit
+                  Media, The Alliance and many academic research institutions.
                 </p>
               </div>
             </div>
