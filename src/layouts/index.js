@@ -24,6 +24,10 @@ const transitionClassnames = {
   exitActive: style.fadeOutActive
 };
 
+function freezeScrollForTransition(element) {
+  element.style.top = `${element.getBoundingClientRect().top}px`;
+}
+
 export default function TemplateWrapper({ children, location }) {
   // Gatsby's HTML rendering doesn't use the pathPrefix so we need to check the real URL (which has
   // the pathPrefix) and the URL without the pathPrefix
@@ -42,7 +46,12 @@ export default function TemplateWrapper({ children, location }) {
       <Nav isHomePage={isHomePage} />
 
       <TransitionGroup>
-        <CSSTransition key={location.pathname} classNames={transitionClassnames} timeout={timing}>
+        <CSSTransition
+          key={location.pathname}
+          classNames={transitionClassnames}
+          timeout={timing}
+          onExit={freezeScrollForTransition}
+        >
           <TransitionHandler location={location}>
             <div className={isHomePage ? "" : style.navPadding}>{children()}</div>
           </TransitionHandler>
