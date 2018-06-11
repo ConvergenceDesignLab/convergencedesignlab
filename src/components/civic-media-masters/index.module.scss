@@ -1,7 +1,9 @@
 @import "../../style/shared/_variables.scss";
 
 .cover {
-  object-position: 0 40%;
+  img {
+    object-position: 0 40%;
+  }
 }
 
 .section {

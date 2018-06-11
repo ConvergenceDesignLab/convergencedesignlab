@@ -72,7 +72,7 @@ export default class Contact extends React.Component {
 
     return (
       <div>
-        <CoverImage src={image} className={style.cover} />
+        <CoverImage className={style.cover} sizes={this.props.data.cover.childImageSharp.sizes} />
 
         <div className="container">
           <div className={style.section}>

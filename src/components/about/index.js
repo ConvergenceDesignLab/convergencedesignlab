@@ -1,17 +1,17 @@
 import React from "react";
 import classNames from "classnames";
+import Img from "gatsby-image";
 import CoverImage from "../cover-image/";
 import CallToAction from "../call-to-action/";
 import Team from "./team/";
 import style from "./index.module.scss";
-import image from "../../assets/images/da-opening-cropped.png";
 import placeholderImage from "../../assets/images/placeholder.png";
 import designProcessImage from "../../assets/images/placeholder-design-cycle.png";
 
-export default function About() {
+export default function About(props) {
   return (
     <div>
-      <CoverImage src={image} className={style.cover} />
+      <CoverImage className={style.cover} sizes={props.data.cover.childImageSharp.sizes} />
 
       <div className="container">
         <div className={style.section}>

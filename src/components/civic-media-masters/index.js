@@ -1,12 +1,11 @@
 import React from "react";
 import CoverImage from "../cover-image/";
 import style from "./index.module.scss";
-import image from "../../assets/images/civic-media-masters.jpg";
 
-export default function CivicMediaMasters() {
+export default function CivicMediaMasters(props) {
   return (
     <div>
-      <CoverImage src={image} className={style.cover} />
+      <CoverImage className={style.cover} sizes={props.data.cover.childImageSharp.sizes} />
 
       <div className="container">
         <div className={style.section}>
