@@ -2,7 +2,6 @@
 @import "../../style/shared/_unstyle-link.scss";
 
 $gutter: 1.2rem;
-$caption-offset: 0.75rem;
 
 .title {
   text-align: center;
@@ -20,72 +19,79 @@ $caption-offset: 0.75rem;
   margin-top: 3rem - $gutter;
   margin-left: -$gutter;
   margin-right: -$gutter;
-  margin-bottom: 2rem - $gutter + $caption-offset;
+  margin-bottom: 2rem - $gutter;
 }
 
 .projectContainer {
   flex: 0 0 100%;
-  height: 350px;
   padding: $gutter;
-  padding-bottom: $gutter + $caption-offset;
-  padding-right: $gutter + $caption-offset;
+  padding-bottom: $gutter;
+  padding-right: $gutter;
 }
 
 .projectLinkWrapper {
   width: 100%;
-  height: 100%;
   @extend %unstyle-link;
 }
 
 .projectFigure {
   position: relative;
   width: 100%;
-  height: 100%;
 }
 
 .projectImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-  transition: all 0.2s;
-
+  transition: all 0.4s;
+  vertical-align: top;
+  height: 300px;
   &:hover {
     transform: scale(1.05);
   }
 }
 
+.imageWrapper {
+  overflow: hidden;
+}
+
 .projectCaption {
-  position: absolute;
-  bottom: -$caption-offset;
-  right: -$caption-offset;
-  height: 6rem;
-  width: 100%;
-  padding: 0.75rem;
-  font-style: italic;
-  color: white;
-  background-color: $convergence-purple;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  margin-top: 0.5rem;
+}
+
+.captionTitle {
+  font-family: $heading-font-family;
   font-size: 1rem;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: $convergence-orange;
+  transition: color 0.25s ease-in-out;
+  &:hover {
+    color: darken($convergence-orange, 15%);
+  }
+}
+
+.captionQuestion {
+  margin-top: 0.1rem;
+  font-size: 0.85rem;
+  font-weight: 300;
+  font-style: italic;
 }
 
 @media (min-width: 550px) {
   .projectContainer {
     flex: 0 0 50%;
-    height: 300px;
   }
-  .projectCaption {
-    height: 5rem;
-    font-size: 0.9rem;
+  .projectImage {
+    height: 250px;
   }
 }
 
 @media (min-width: 1000px) {
   .projectContainer {
     flex: 0 0 33.33%;
-    height: 350px;
+  }
+  .projectImage {
+    height: 250px;
   }
 }

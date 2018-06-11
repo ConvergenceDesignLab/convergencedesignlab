@@ -20,14 +20,20 @@ class Work extends React.Component {
     let projectGrid = null;
     if (projects) {
       projectGrid = projects.map(project => {
-        const { id, slug, question, image } = project;
+        const { id, slug, question, title, image } = project;
         return (
           <div key={`project-${id}`} className={style.projectContainer}>
             <Link className={style.projectLinkWrapper} to={`/work/${slug}/`}>
               <figure className={style.projectFigure}>
-                <img className={style.projectImage} src={image} />
+                <div className={style.imageWrapper}>
+                  <img className={style.projectImage} src={image} />
+                </div>
                 <figcaption className={style.projectCaption}>
-                  <div dangerouslySetInnerHTML={{ __html: striptags(question) }} />
+                  <div className={style.captionTitle}>{title}</div>
+                  <div
+                    className={style.captionQuestion}
+                    dangerouslySetInnerHTML={{ __html: striptags(question) }}
+                  />
                 </figcaption>
               </figure>
             </Link>
