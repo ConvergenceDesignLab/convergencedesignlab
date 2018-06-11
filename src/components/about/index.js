@@ -75,7 +75,7 @@ export default function About() {
           <div className={style.sectionTitle}>Our Process</div>
           <div className={classNames(style.content, style.col)}>
             <div className={style.contentTitle}>
-              Human-centered design and the ‘community of practice’ concept guide our approach.
+              We apply human-centered design and build communities of practice
             </div>
             <div className={classNames(style.contentText, "wordpress-content")}>
               <p>
@@ -108,7 +108,7 @@ export default function About() {
       <div className={style.isOrange}>
         <div className="container">
           <div className={style.section}>
-            <div className={style.sectionTitle}>Our Allies</div>
+            <div className={style.sectionTitle}>Our Partners</div>
             <div className={classNames(style.content, style.col)}>
               <div className={style.contentTitle}>
                 We build long-term, sustainable partnerships.
