@@ -4,7 +4,7 @@ import video from "../../../assets/video/banner.mp4";
 
 export default function VideoBanner() {
   return (
-    <div className={`container ${style.banner}`}>
+    <div className={style.banner}>
       <div className={style.background}>
         <div className={style.overlay} />
         <video className={style.video} data-object-fit="cover" autoPlay loop muted playsInline>
