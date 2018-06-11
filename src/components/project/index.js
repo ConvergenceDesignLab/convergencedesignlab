@@ -77,12 +77,15 @@ export default class Project extends React.Component {
     let sections = [];
     if (data.imageBreakUrl) {
       const { imageBreakUrl, imageBreakCaption } = data;
-      sections.push(<ImageBlock src={imageBreakUrl} caption={imageBreakCaption} />);
+      sections.push(
+        <ImageBlock key="image-break" src={imageBreakUrl} caption={imageBreakCaption} />
+      );
     }
     if (data.processSectionText) {
       const { processSectionText, processSectionImage } = data;
       sections.push(
         <TextBlock
+          key="process"
           title="Process"
           className="wordpress-content"
           text={processSectionText}
@@ -94,13 +97,18 @@ export default class Project extends React.Component {
     if (data.testimonialBreakText) {
       const { testimonialBreakText, testimonialBreakAttribution } = data;
       sections.push(
-        <QuoteBlock quote={testimonialBreakText} attribution={testimonialBreakAttribution} />
+        <QuoteBlock
+          key="quote-break"
+          quote={testimonialBreakText}
+          attribution={testimonialBreakAttribution}
+        />
       );
     }
     if (data.resultsSectionText) {
       const { resultsSectionText, resultsSectionImage } = data;
       sections.push(
         <TextBlock
+          key="results"
           className="wordpress-content"
           title="Results"
           text={resultsSectionText}
