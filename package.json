@@ -40,7 +40,6 @@
     "printWidth": 100
   },
   "scripts": {
-    "test": "node ./scripts/deploy-ftp.js --src ./public/** --dest /usr/home/convergence/public_html/convergencedesignlab.org/new-site",
     "clean": "rm -rf public/* .cache",
     "build": "gatsby build --prefix-paths",
     "clean-build": "npm run clean && npm run build",
