@@ -27,3 +27,20 @@ export default function CoverImage({ className, ...props }) {
     />
   );
 }
+
+// Sizes: [{ width, height, url }, ...]
+export function WpCoverImage({ sizes, className, ...props }) {
+  const sortedSizes = Object.values(sizes).sort((obj1, obj2) => obj1.width - obj2.width);
+  const fallbackSrc = sortedSizes[sortedSizes.length - 1].url;
+  const srcSet = sortedSizes.map(({ width, url }) => `${url} ${width}w`).join(",\n");
+
+  return (
+    <img
+      className={classNames(style.cover, className)}
+      src={fallbackSrc}
+      srcSet={srcSet}
+      sizes="100vw"
+      {...props}
+    />
+  );
+}
