@@ -1,5 +1,38 @@
 import get from "lodash.get";
 
+// WP valid sizes. TODO: make /projects?slug=XX endpoints that only expose these sizes in a nice way
+const wpImageSizes = [
+  { name: "width_200", width: 200 },
+  { name: "width_400", width: 400 },
+  { name: "width_800", width: 800 },
+  { name: "width_1200", width: 1200 },
+  { name: "width_1600", width: 1600 },
+  { name: "width_2400", width: 2400 }
+];
+
+const processImageData = wpImageData => {
+  if (!wpImageData) return null;
+
+  const data = {
+    id: wpImageData.id,
+    title: wpImageData.title,
+    sizes: {}
+  };
+
+  const sizeData = [];
+  wpImageSizes.forEach(({ name }) => {
+    if (wpImageData.sizes[name]) {
+      data.sizes[name] = {
+        width: wpImageData.sizes[`${name}-width`],
+        height: wpImageData.sizes[`${name}-height`],
+        url: wpImageData.sizes[name]
+      };
+    }
+  });
+
+  return data;
+};
+
 export default class ProjectData {
   constructor(wpApiData) {
     this.hasValidData = wpApiData && wpApiData.acf;
@@ -14,16 +47,30 @@ export default class ProjectData {
       this.designQuestion = get(wpApiData, "acf.question", "");
       this.partners = get(wpApiData, "acf.meta.partners", []).map(obj => obj.name);
       this.tags = get(wpApiData, "acf.meta.tags", []).map(obj => obj.name);
-      this.coverImageUrl = get(wpApiData, "acf.image.url", ""); // TODO: srcset
+
+      this.coverImageData = processImageData(get(wpApiData, "acf.image"));
+
       this.challengeSection = get(wpApiData, "acf.challenge", "");
-      this.imageBreakUrl = get(wpApiData, "acf.image_break.image.url", ""); // TODO: srcset
-      this.imageBreakCaption = get(wpApiData, "acf.image_break.caption", ""); // TODO: srcset
-      this.processSectionText = get(wpApiData, "acf.process.text", "");
-      this.processSectionImage = get(wpApiData, "acf.process.image.url", ""); // TODO: srcset
-      this.testimonialBreakText = get(wpApiData, "acf.testimonial_break.text", "");
-      this.testimonialBreakAttribution = get(wpApiData, "acf.testimonial_break.attribution", "");
-      this.resultsSectionText = get(wpApiData, "acf.results.text", "");
-      this.resultsSectionImage = get(wpApiData, "acf.results.image.url", ""); // TODO: srcset
+
+      this.imageBreak = {
+        caption: get(wpApiData, "acf.image_break.caption", ""),
+        image: processImageData(get(wpApiData, "acf.image_break.image"))
+      };
+
+      this.processSection = {
+        text: get(wpApiData, "acf.process.text", ""),
+        image: processImageData(get(wpApiData, "acf.process.image"))
+      };
+
+      this.testimonialBreak = {
+        text: get(wpApiData, "acf.testimonial_break.text", ""),
+        attribution: get(wpApiData, "acf.testimonial_break.attribution", "")
+      };
+
+      this.resultsSection = {
+        text: get(wpApiData, "acf.results.text", ""),
+        image: processImageData(get(wpApiData, "acf.results.image"))
+      };
 
       this.relatedWork = [];
       const relatedWork = get(wpApiData, "acf.related_work", []).map(obj => ({
