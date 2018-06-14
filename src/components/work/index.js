@@ -27,7 +27,7 @@ class Work extends React.Component {
             <Link className={style.projectLinkWrapper} to={`/work/${slug}/`}>
               <figure className={style.projectFigure}>
                 <div className={style.imageWrapper}>
-                  <img className={style.projectImage} src={image} />
+                  <img className={style.projectImage} src={get(image, "sizes.width_800.url", "")} />
                 </div>
                 <figcaption className={style.projectCaption}>
                   <div className={style.captionTitle}>{title}</div>

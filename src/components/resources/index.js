@@ -25,7 +25,7 @@ class Resources extends React.Component {
           <div key={`resource-${id}`} className={style.resource}>
             <div className={style.resourceThumbnail}>
               <Link to={`/resources/${slug}`}>
-                <img src={image} alt={title} />
+                <img className={style.projectImage} src={get(image, "sizes.width_400.url", "")} />
               </Link>
             </div>
             <div className={style.resourceDetails}>
