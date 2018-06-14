@@ -6,6 +6,26 @@
   }
 }
 
+.coverContainer {
+  position: relative;
+}
+
+.coverCaption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.25rem 0.75rem;
+  font-style: italic;
+  font-size: 0.7rem;
+  max-width: 70%;
+
+  @media (min-width: 600px) {
+    font-size: 0.9rem;
+  }
+}
+
 .section {
   display: flex;
   flex-wrap: wrap;

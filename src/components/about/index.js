@@ -11,7 +11,12 @@ import designProcessImage from "../../assets/images/placeholder-design-cycle.png
 export default function About(props) {
   return (
     <div>
-      <CoverImage className={style.cover} sizes={props.data.cover.childImageSharp.sizes} />
+      <div className={style.coverContainer}>
+        <CoverImage className={style.cover} sizes={props.data.cover.childImageSharp.sizes} />
+        <div className={style.coverCaption}>
+          Convergence, friends & supporters at the Digital Atelier opening
+        </div>
+      </div>
 
       <div className="container">
         <div className={style.section}>
