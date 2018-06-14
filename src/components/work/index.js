@@ -4,6 +4,7 @@ import get from "lodash.get";
 import striptags from "striptags";
 import CallToAction from "../call-to-action/";
 import Loading from "../loading/";
+import PageHeader from "../page-header";
 import { fetchWork } from "../../utils/fetch-wp";
 import style from "./index.module.scss";
 
@@ -44,9 +45,11 @@ class Work extends React.Component {
 
     return (
       <div>
-        <div className="container">
-          <div className={style.title}>Selected Work</div>
-        </div>
+        <PageHeader
+          title="Selected Work"
+          caption="We apply a collaborative design thinking process to create custom solutions in
+            partnership with civic, cultural and learning organizations."
+        />
 
         <div className="container">
           {projects ? (

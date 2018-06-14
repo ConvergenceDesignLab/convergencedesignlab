@@ -3,6 +3,7 @@ import Link from "gatsby-link";
 import get from "lodash.get";
 import CallToAction from "../call-to-action/";
 import Loading from "../loading/";
+import PageHeader from "../page-header";
 import { fetchResources } from "../../utils/fetch-wp";
 import style from "./index.module.scss";
 
@@ -44,13 +45,11 @@ class Resources extends React.Component {
 
     return (
       <div>
-        <div className="container">
-          <div className={style.title}>Selected Resources</div>
-          <div className={style.heading}>
-            Through our publications, we aim to make our work transparent, actionable, and
-            replicable.
-          </div>
-        </div>
+        <PageHeader
+          title="Selected Resources"
+          caption="Through our publications, we aim to make our work transparent, actionable, and
+            replicable."
+        />
 
         <div className="container">
           <div className="section">
