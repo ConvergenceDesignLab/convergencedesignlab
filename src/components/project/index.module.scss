@@ -28,20 +28,6 @@
   margin-bottom: 0.2rem;
 }
 
-.sectionImage {
-  width: 100%;
-}
-
-.blockImage {
-  order: 2;
-  margin-top: 2rem;
-
-  @include media-breakpoint-up(md) {
-    order: initial;
-    margin-top: 0;
-  }
-}
-
 .sectionText {
   span,
   p,

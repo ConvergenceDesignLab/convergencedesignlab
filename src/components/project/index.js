@@ -10,37 +10,8 @@ import QuoteBlock from "./quote-block/";
 import RelatedWork from "../related-work/";
 import CallToAction from "../call-to-action/";
 import Loading from "../loading";
+import TextBlock from "./text-block";
 import style from "./index.module.scss";
-
-const TextBlock = ({ title, text, imageName, imageUrl, reverseOrder, className }) => {
-  const textSection = (
-    <div
-      key={`text-block-text-${title}`}
-      className={classNames(style.blockText, "col--sm-12 col--md-6", className)}
-    >
-      <div className={style.sectionTitle}>{title}</div>
-      <div className={style.sectionText} dangerouslySetInnerHTML={{ __html: text }} />
-    </div>
-  );
-  const imageSection = (
-    <div
-      key={`text-block-image-${title}`}
-      className={classNames(style.blockImage, "col--sm-12 col--md-6")}
-    >
-      <img className={style.sectionImage} src={imageUrl} alt={imageName} />
-    </div>
-  );
-
-  return (
-    <div className="container">
-      <div className="section">
-        <div className={style.row}>
-          {reverseOrder ? [textSection, imageSection] : [imageSection, textSection]}
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export default class Project extends React.Component {
   constructor(props) {
@@ -72,47 +43,37 @@ export default class Project extends React.Component {
 
     if (!data) return <Loading height="100vh" />;
 
-    const { designQuestion, coverImageUrl, title, challengeSection, partners, tags } = data;
+    const { designQuestion, coverImageData, title, challengeSection, partners, tags } = data;
 
     let sections = [];
-    if (data.imageBreakUrl) {
-      const { imageBreakUrl, imageBreakCaption } = data;
-      sections.push(
-        <ImageBlock key="image-break" src={imageBreakUrl} caption={imageBreakCaption} />
-      );
+    if (data.imageBreak.image) {
+      const { caption, image } = data.imageBreak;
+      sections.push(<ImageBlock key="image-break" imageData={image} caption={caption} />);
     }
-    if (data.processSectionText) {
-      const { processSectionText, processSectionImage } = data;
+    if (data.processSection.text) {
+      const { text, image } = data.processSection;
       sections.push(
         <TextBlock
           key="process"
           title="Process"
-          className="wordpress-content"
-          text={processSectionText}
-          imageUrl={processSectionImage}
+          text={text}
+          imageData={image}
           reverseOrder={false}
         />
       );
     }
-    if (data.testimonialBreakText) {
-      const { testimonialBreakText, testimonialBreakAttribution } = data;
-      sections.push(
-        <QuoteBlock
-          key="quote-break"
-          quote={testimonialBreakText}
-          attribution={testimonialBreakAttribution}
-        />
-      );
+    if (data.testimonialBreak.text) {
+      const { text, attribution } = data.testimonialBreak;
+      sections.push(<QuoteBlock key="quote-break" quote={text} attribution={attribution} />);
     }
-    if (data.resultsSectionText) {
-      const { resultsSectionText, resultsSectionImage } = data;
+    if (data.resultsSection.text) {
+      const { text, image } = data.resultsSection;
       sections.push(
         <TextBlock
           key="results"
-          className="wordpress-content"
           title="Results"
-          text={resultsSectionText}
-          imageUrl={resultsSectionImage}
+          text={text}
+          imageData={image}
           reverseOrder={true}
         />
       );
@@ -120,7 +81,8 @@ export default class Project extends React.Component {
 
     return (
       <div>
-        <Cover imageUrl={coverImageUrl} imageTitle={title} questionHtml={designQuestion} />
+        <Cover imageData={coverImageData} imageTitle={title} questionHtml={designQuestion} />
+
         <div className="container">
           <div className="section">
             <div className={style.title}>{title}</div>
@@ -150,7 +112,7 @@ export default class Project extends React.Component {
 
         {sections}
 
-        {/* <RelatedWork data={data} /> */}
+        <RelatedWork data={data} />
 
         <CallToAction title="Interested in partnering?" />
       </div>

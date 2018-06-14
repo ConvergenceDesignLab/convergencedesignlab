@@ -1,3 +1,9 @@
+@import "../../../style/shared/_variables.scss";
+
+:export {
+  maxWidth: $container-max-width;
+}
+
 .block {
   text-align: center;
 }
