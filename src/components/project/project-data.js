@@ -1,37 +1,5 @@
 import get from "lodash.get";
-
-// WP valid sizes. TODO: make /projects?slug=XX endpoints that only expose these sizes in a nice way
-const wpImageSizes = [
-  { name: "width_200", width: 200 },
-  { name: "width_400", width: 400 },
-  { name: "width_800", width: 800 },
-  { name: "width_1200", width: 1200 },
-  { name: "width_1600", width: 1600 },
-  { name: "width_2400", width: 2400 }
-];
-
-const processImageData = wpImageData => {
-  if (!wpImageData) return null;
-
-  const data = {
-    id: wpImageData.id,
-    title: wpImageData.title,
-    sizes: {}
-  };
-
-  const sizeData = [];
-  wpImageSizes.forEach(({ name }) => {
-    if (wpImageData.sizes[name]) {
-      data.sizes[name] = {
-        width: wpImageData.sizes[`${name}-width`],
-        height: wpImageData.sizes[`${name}-height`],
-        url: wpImageData.sizes[name]
-      };
-    }
-  });
-
-  return data;
-};
+import { processImageData } from "../../utils/process-wp-data";
 
 export default class ProjectData {
   constructor(wpApiData) {
