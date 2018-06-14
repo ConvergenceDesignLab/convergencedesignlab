@@ -4,10 +4,11 @@ import { fetchResourceBySlug } from "../../utils/fetch-wp";
 import get from "lodash.get";
 import { Redirect } from "react-router-dom";
 import classNames from "classnames";
-import CoverImage from "../cover-image/";
+import { WpCoverImage } from "../cover-image/";
 import RelatedWork from "../related-work/";
 import CallToAction from "../call-to-action/";
 import Loading from "../loading";
+import { processImageData } from "../../utils/process-wp-data";
 import style from "./index.module.scss";
 
 export default class Resource extends React.Component {
@@ -41,13 +42,13 @@ export default class Resource extends React.Component {
     const imageTitle = title;
     const description = get(data, "overview", "");
     const downloadUrl = get(data, "download", "");
-    const imageUrl = get(data, "image.sizes.large", "");
+    const imageData = processImageData(get(data, "image", ""));
     const tags = get(data, "tags", []).map(obj => obj.name);
     const authors = get(data, "authors", []).map(obj => obj.author);
 
     return (
       <div>
-        <CoverImage src={imageUrl} alt={imageTitle} />
+        <WpCoverImage sizes={imageData.sizes} alt={imageTitle} />
         <div className="container">
           <div className="section">
             <div className={style.title}>{title}</div>
