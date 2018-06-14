@@ -13,7 +13,7 @@ export default function RelatedWork({ data }) {
     <div className="subtle-background">
       <div className="container">
         <div className="section">
-          <div className={style.title}>Explore Other Work</div>
+          <div className={style.title}>Explore Similar Work</div>
           <div className={style.container}>
             <div className={style.project}>
               <figure className={style.figure}>
