@@ -33,8 +33,16 @@ export function fetchWork(numAttempts = defaultNumAttempts) {
   return fetchJson(workEndpoint, numAttempts);
 }
 
+export function fetchProject(name, numAttempts = defaultNumAttempts) {
+  return fetchJson(`${workEndpoint}/${name}`, numAttempts);
+}
+
 export function fetchResources(numAttempts = defaultNumAttempts) {
   return fetchJson(resourcesEndpoint, numAttempts);
+}
+
+export function fetchResource(name, numAttempts = defaultNumAttempts) {
+  return fetchJson(`${resourcesEndpoint}/${name}`, numAttempts);
 }
 
 export function fetchTaxonomies(numAttempts = defaultNumAttempts) {
@@ -52,16 +60,4 @@ export function fetchTaxonomies(numAttempts = defaultNumAttempts) {
     }, {});
     return { projectTags, partnerTags };
   });
-}
-
-export function fetchProjectBySlug(slug, numAttempts = defaultNumAttempts) {
-  return fetchJson(`${wpProjectsEndpoint}?slug=${slug}`, numAttempts).then(
-    array => (array.length === 0 ? null : array[0])
-  );
-}
-
-export function fetchResourceBySlug(slug, numAttempts = defaultNumAttempts) {
-  return fetchJson(`${wpResourcesEndpoint}?slug=${slug}`, numAttempts).then(
-    array => (array.length === 0 ? null : array[0])
-  );
 }
