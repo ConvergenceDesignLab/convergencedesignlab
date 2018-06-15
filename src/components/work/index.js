@@ -31,6 +31,12 @@ class Work extends React.Component {
                 </div>
                 <figcaption className={style.projectCaption}>
                   <div className={style.captionTitle}>{title}</div>
+                  <div className={style.captionParnters}>
+                    {(partners || [])
+                      .map(p => p.name)
+                      .slice(0, 2)
+                      .join(", ")}
+                  </div>
                   <div
                     className={style.captionQuestion}
                     dangerouslySetInnerHTML={{ __html: striptags(question) }}
