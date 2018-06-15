@@ -112,7 +112,7 @@ export default class Project extends React.Component {
 
         {sections}
 
-        <RelatedWork data={data} />
+        {data.relatedWork && <RelatedWork data={data.relatedWork} />}
 
         <CallToAction title="Interested in partnering?" />
       </div>

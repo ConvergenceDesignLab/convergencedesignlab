@@ -45,6 +45,7 @@ export default class Resource extends React.Component {
     const imageData = processImageData(get(data, "acf.image", ""));
     const tags = get(data, "acf.tags", []).map(obj => obj.name);
     const authors = get(data, "acf.authors", []).map(obj => obj.author);
+    const relatedWork = get(data, "acf.related_work");
 
     return (
       <div>
@@ -83,7 +84,7 @@ export default class Resource extends React.Component {
           </div>
         </div>
 
-        {/* <RelatedWork data={data} /> */}
+        {relatedWork && <RelatedWork data={relatedWork} />}
 
         <CallToAction title="Looking for a framework?" />
       </div>

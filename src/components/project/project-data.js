@@ -40,12 +40,7 @@ export default class ProjectData {
         image: processImageData(get(wpApiData, "acf.results.image"))
       };
 
-      this.relatedWork = [];
-      const relatedWork = get(wpApiData, "acf.related_work", []).map(obj => ({
-        id: obj.ID,
-        title: obj.post_title,
-        type: obj.post_type
-      }));
+      this.relatedWork = get(wpApiData, "acf.related_work", null);
     }
   }
 }
