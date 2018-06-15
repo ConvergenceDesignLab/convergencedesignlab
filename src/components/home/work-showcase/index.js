@@ -9,7 +9,7 @@ import style from "./index.module.scss";
 const Project = ({ slug, title, question, image }) => {
   return (
     <div key={`showcase-${slug}`} className={style.column}>
-      <img className={style.projectImage} src={image} alt={title} />
+      <img className={style.projectImage} src={image.sizes.width_800.url} alt={title} />
       <div className={style.projectDetails}>
         <div className={style.projectTitle}>{title}</div>
         <div className={style.projectCaption}>{striptags(question)}</div>

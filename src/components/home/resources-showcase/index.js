@@ -9,7 +9,7 @@ const Resource = ({ data }) => {
   return (
     <div className={style.resource}>
       <div className={style.thumbnail}>
-        <img src={data.image} alt={data.title} />
+        <img src={data.image.sizes.width_400.url} alt={data.title} />
       </div>
       <div className={style.details}>
         <div className={style.title}>{data.title}</div>
