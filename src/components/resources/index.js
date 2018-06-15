@@ -20,12 +20,12 @@ class Resources extends React.Component {
     let resourceList = null;
     if (resources) {
       resourceList = resources.map(resource => {
-        const { slug, id, title, overview, image } = resource;
+        const { name: slug, id, title, overview, image } = resource;
         return (
           <div key={`resource-${id}`} className={style.resource}>
             <div className={style.resourceThumbnail}>
               <Link to={`/resources/${slug}`}>
-                <img className={style.projectImage} src={get(image, "sizes.width_400.url", "")} />
+                <img className={style.projectImage} src={get(image, "sizes.width_400", "")} />
               </Link>
             </div>
             <div className={style.resourceDetails}>

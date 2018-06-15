@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
-import { fetchProjectBySlug } from "../../utils/fetch-wp";
+import { fetchProject } from "../../utils/fetch-wp";
 import { Redirect } from "react-router-dom";
 import classNames from "classnames";
 import ProjectData from "./project-data";
@@ -26,7 +26,7 @@ export default class Project extends React.Component {
       const pathNoTrail = path.endsWith("/") ? path.slice(0, path.length - 1) : path;
       const slug = pathNoTrail.split("/").pop();
 
-      fetchProjectBySlug(slug).then(data => {
+      fetchProject(slug).then(data => {
         const projectData = new ProjectData(data);
         this.setState({
           noValidData: !projectData.hasValidData,

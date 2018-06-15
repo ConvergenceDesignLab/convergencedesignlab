@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
-import { fetchResourceBySlug } from "../../utils/fetch-wp";
+import { fetchResource } from "../../utils/fetch-wp";
 import get from "lodash.get";
 import { Redirect } from "react-router-dom";
 import classNames from "classnames";
@@ -24,9 +24,9 @@ export default class Resource extends React.Component {
       const pathNoTrail = path.endsWith("/") ? path.slice(0, path.length - 1) : path;
       const slug = pathNoTrail.split("/").pop();
 
-      fetchResourceBySlug(slug).then(data => {
+      fetchResource(slug).then(data => {
         if (data === null || !data.acf) this.setState({ noValidData: true });
-        else this.setState({ data: data.acf });
+        else this.setState({ data });
       });
     }
   }
@@ -38,13 +38,13 @@ export default class Resource extends React.Component {
 
     if (!data) return <Loading height="100vh" />;
 
-    const title = get(data, "title", "");
+    const title = get(data, "acf.title", "");
     const imageTitle = title;
-    const description = get(data, "overview", "");
-    const downloadUrl = get(data, "download", "");
-    const imageData = processImageData(get(data, "image", ""));
-    const tags = get(data, "tags", []).map(obj => obj.name);
-    const authors = get(data, "authors", []).map(obj => obj.author);
+    const description = get(data, "acf.overview", "");
+    const downloadUrl = get(data, "acf.download", "");
+    const imageData = processImageData(get(data, "acf.image", ""));
+    const tags = get(data, "acf.tags", []).map(obj => obj.name);
+    const authors = get(data, "acf.authors", []).map(obj => obj.author);
 
     return (
       <div>
