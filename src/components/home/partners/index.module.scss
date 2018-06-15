@@ -1,5 +1,4 @@
 @import "../../../style/shared/_variables.scss";
-@import "../../../style/shared/_unstyle-link.scss";
 @import "../../../style/global/_grid.scss";
 
 .col {
@@ -30,7 +29,6 @@
 }
 
 .partnerLink {
-  @extend %unstyle-link;
   display: flex;
   justify-content: center;
 }

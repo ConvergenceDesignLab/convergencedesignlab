@@ -196,7 +196,9 @@ export default class Contact extends React.Component {
               <div>Mail: 600 S Michigan Avenue</div>
               <div>Office: 33 East Congress, Suite 600</div>
               <div>Chicago, IL 60605</div>
-              <a href="https://goo.gl/maps/drufjZexbpQ2">Directions</a>
+              <a className="link" href="https://goo.gl/maps/drufjZexbpQ2">
+                Directions
+              </a>
 
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.815526331541!2d-87.628654984559!3d41.875315279222306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca2828800d1%3A0xe51126d097f1e665!2s33+E+Congress+Pkwy+%23600%2C+Chicago%2C+IL+60605!5e0!3m2!1sen!2sus!4v1527177735863"

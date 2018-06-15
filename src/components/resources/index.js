@@ -35,7 +35,9 @@ class Resources extends React.Component {
                 dangerouslySetInnerHTML={{ __html: overview }}
               />
               <div className={style.resourceLink}>
-                <Link to={`/resources/${slug}`}>More Information</Link>
+                <Link className="link" to={`/resources/${slug}`}>
+                  More Information
+                </Link>
               </div>
             </div>
           </div>

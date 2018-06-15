@@ -77,7 +77,7 @@ export default class Resource extends React.Component {
               </div>
             </div>
             <div className={style.download}>
-              <a href={downloadUrl} download target="_blank">
+              <a className="link" href={downloadUrl} download target="_blank">
                 Download PDF
               </a>
             </div>

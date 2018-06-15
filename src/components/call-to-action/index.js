@@ -16,7 +16,7 @@ export default function CallToAction({
           <div className={style.title}>{title}</div>
           <div className={style.text}>{body}</div>
           <div>
-            <Link className="white-link" to="/contact/">
+            <Link className="link--white" to="/contact/">
               {linkText}
             </Link>{" "}
             →

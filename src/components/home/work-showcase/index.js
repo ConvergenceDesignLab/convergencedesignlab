@@ -21,7 +21,9 @@ const Project = ({ slug, title, question, image }) => {
         <div className={style.projectTitle}>{title}</div>
         <div className={style.projectCaption}>{striptags(question)}</div>
         <div className={style.projectLink}>
-          <Link to={`/work/${slug}`}>See Case Study</Link>
+          <Link className="link" to={`/work/${slug}`}>
+            See Case Study
+          </Link>
         </div>
       </div>
     </div>

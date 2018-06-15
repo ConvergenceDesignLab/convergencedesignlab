@@ -7,7 +7,9 @@ export const Title = ({ children }) => <h1 className={style.title}>{children}</h
 export const Description = ({ children }) => <p className={style.description}>{children}</p>;
 export const CallToActionLink = ({ children, ...linkProps }) => (
   <div className={style.link}>
-    <Link {...linkProps}>{children}</Link>
+    <Link className="link" {...linkProps}>
+      {children}
+    </Link>
   </div>
 );
 

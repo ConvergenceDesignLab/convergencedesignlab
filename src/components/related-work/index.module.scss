@@ -1,5 +1,4 @@
 @import "../../style/shared/_variables.scss";
-@import "../../style/shared/_unstyle-link.scss";
 
 .title {
   font-family: $heading-font-family;
@@ -19,10 +18,6 @@
   font-weight: 500;
   margin: 0.5rem 0 0.3rem 0;
   font-size: 1.1rem;
-}
-
-.imageLink {
-  @extend %unstyle-link;
 }
 
 .imageWrapper {

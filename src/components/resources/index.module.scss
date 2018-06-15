@@ -1,5 +1,4 @@
 @import "../../style/shared/_variables.scss";
-@import "../../style/shared/_unstyle-link.scss";
 
 .title {
   text-align: center;
@@ -38,7 +37,6 @@
   max-width: 100%;
 
   a {
-    @extend %unstyle-link;
     transition: all 0.2s;
 
     &:hover {

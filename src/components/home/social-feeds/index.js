@@ -10,9 +10,12 @@ export default function SocialFeeds() {
     <Section>
       <Title>Join the Conversation</Title>
       <Description>
-        Put a bird on it <a href="https://twitter.com/convergencedlab">@ConvergenceDLab</a> iceland
-        trust fund, occupy poutine kogi sartorial XOXO la croix. Freegan portland kale chips, squid
-        four dollar toast fam photo booth.
+        Put a bird on it{" "}
+        <a className="link" href="https://twitter.com/convergencedlab">
+          @ConvergenceDLab
+        </a>{" "}
+        iceland trust fund, occupy poutine kogi sartorial XOXO la croix. Freegan portland kale
+        chips, squid four dollar toast fam photo booth.
       </Description>
       <div className={style.links}>
         <Mention username="ConvergenceDLab" options={{ dnt: true, size: "large" }} />

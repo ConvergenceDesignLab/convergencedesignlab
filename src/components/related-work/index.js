@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import get from "lodash.get";
+import classNames from "classnames";
 import ZoomingImage from "../zooming-image";
 import style from "./index.module.scss";
 
@@ -31,7 +32,7 @@ export default function RelatedWork({ data }) {
           </Link>
           <figcaption className={style.caption}>
             <div className={style.projectName}>{name}</div>
-            <Link to={url} className={style.link}>
+            <Link to={url} className={classNames("link", style.link)}>
               Learn more
             </Link>
           </figcaption>

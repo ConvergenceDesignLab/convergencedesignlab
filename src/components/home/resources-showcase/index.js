@@ -21,7 +21,9 @@ const Resource = ({ data }) => {
           dangerouslySetInnerHTML={{ __html: data.overview }}
         />
         <div className={style.link}>
-          <Link to={`resources/${data.slug}`}>Download the paper</Link>
+          <Link className="link" to={`resources/${data.slug}`}>
+            Download the paper
+          </Link>
         </div>
       </div>
     </div>

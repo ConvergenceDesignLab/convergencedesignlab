@@ -1,5 +1,4 @@
 @import "../../../style/shared/_variables.scss";
-@import "../../../style/shared/_unstyle-link.scss";
 
 $gutter: 0.5rem;
 
@@ -16,10 +15,6 @@ $gutter: 0.5rem;
   height: 250px;
   width: 100%;
   object-fit: cover;
-}
-
-.imageLink {
-  @extend %unstyle-link;
 }
 
 .column {

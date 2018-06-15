@@ -37,7 +37,9 @@ export default function CivicMediaMasters(props) {
               and media, information analysis, data visualization and user-experience design.
               Together, we will transform our communities and our cities.
             </p>
-            <a href="https://www.colum.edu/academics/programs/civic-media.html">More Information</a>
+            <a className="link" href="https://www.colum.edu/academics/programs/civic-media.html">
+              More Information
+            </a>
           </div>
         </div>
       </div>

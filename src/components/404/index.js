@@ -11,7 +11,7 @@ export default function NotFound() {
         <div className={style.subtitle}>
           Oops! Looks like the page you are looking for doesn't exist.
         </div>
-        <Link className={style.link} to="/">
+        <Link className={classNames(style.link, "link")} to="/">
           Back to Home →
         </Link>
       </div>

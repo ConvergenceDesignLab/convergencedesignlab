@@ -1,64 +1,23 @@
-a {
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-  color: $convergence-orange;
-
-  &:before {
-    content: "";
-    background-color: $convergence-orange;
-    height: 2px;
-    position: absolute;
-    bottom: -1px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: width 0.25s ease-in-out;
-    width: 100%;
-  }
+%base-link {
+  text-decoration: underline black;
+  transition: opacity 0.2s;
 
   &:hover {
-    &:before {
-      width: 0;
-    }
-  }
-
-  &:visited {
-    // color: darken($convergence-orange, 15%);
-
-    &:before {
-      // background-color: darken($convergence-orange, 15%);
-    }
-  }
-
-  &:active {
-    color: darken($convergence-orange, 25%);
-
-    &:before {
-      background-color: darken($convergence-orange, 25%);
-    }
+    cursor: pointer;
+    opacity: 0.75;
   }
 }
 
-a.white-link {
+.link {
+  @extend %base-link;
+
+  text-decoration-color: $convergence-orange;
+  color: $convergence-orange;
+}
+
+.link--white {
+  @extend %base-link;
+
+  text-decoration-color: white;
   color: white;
-
-  &:before {
-    background-color: white;
-  }
-
-  &:visited {
-    color: white;
-
-    &:before {
-      background-color: darken(white, 15%);
-    }
-  }
-
-  &:active {
-    color: darken(white, 10%);
-
-    &:before {
-      background-color: darken(white, 10%);
-    }
-  }
 }
