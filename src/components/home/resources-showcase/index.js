@@ -3,13 +3,16 @@ import Link from "gatsby-link";
 import classNames from "classnames";
 import Section, { Title, Description, CallToActionLink } from "../home-section";
 import Loading from "../../loading";
+import ZoomingImage from "../../zooming-image";
 import style from "./index.module.scss";
 
 const Resource = ({ data }) => {
   return (
     <div className={style.resource}>
       <div className={style.thumbnail}>
-        <img src={data.image.sizes.width_400.url} alt={data.title} />
+        <Link to={`resources/${data.slug}`} className={style.imageLink}>
+          <ZoomingImage src={data.image.sizes.width_400.url} />
+        </Link>
       </div>
       <div className={style.details}>
         <div className={style.title}>{data.title}</div>

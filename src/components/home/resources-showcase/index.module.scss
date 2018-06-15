@@ -1,4 +1,5 @@
 @import "../../../style/shared/_variables.scss";
+@import "../../../style/shared/_unstyle-link.scss";
 
 .resource {
   max-width: 950px;
@@ -8,10 +9,10 @@
 .thumbnail {
   max-width: 250px;
   margin: 0 auto 1rem auto;
+}
 
-  img {
-    width: 100%;
-  }
+.imageLink {
+  @extend %unstyle-link;
 }
 
 .title {
