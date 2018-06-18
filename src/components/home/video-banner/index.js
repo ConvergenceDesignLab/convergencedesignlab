@@ -1,13 +1,23 @@
 import React from "react";
 import style from "./index.module.scss";
-import video from "../../../assets/video/banner.mp4";
+import video from "../../../assets/video/banner-1280x720.mp4";
+import image from "../../../assets/video/first-frame.png";
 
 export default function VideoBanner() {
   return (
     <div className={style.banner}>
       <div className={style.background}>
         <div className={style.overlay} />
-        <video className={style.video} data-object-fit="cover" autoPlay loop muted playsInline>
+        <video
+          width="100%"
+          className={style.video}
+          poster={image}
+          data-object-fit="cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
           <source src={video} type="video/mp4" />
         </video>
       </div>
