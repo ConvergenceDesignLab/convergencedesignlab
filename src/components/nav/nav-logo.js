@@ -1,19 +1,15 @@
 import React from "react";
 import style from "./nav-logo.module.scss";
-import rings from "../../assets/images/logo/logo-ring.png";
+import Link from "gatsby-link";
+import classNames from "classnames";
+import Logo from "-!svg-react-loader?name=Logo&classIdPrefix=logo--!../../assets/images/logo/logo-lockup.svg";
 
-export default function NavLogo() {
+export default function NavLogo({ isBackgroundWhite }) {
   return (
-    <div className={`col--xs ${style.logo}`}>
-      <a href="/" className={style.link}>
-        <div className={style.container}>
-          <img className={style.rings} src={rings} alt="Convergence Logo" />
-          <div className={style.text}>
-            <div className={style.textTop}>Convergence</div>
-            <div className={style.textBottom}>Design Lab</div>
-          </div>
-        </div>
-      </a>
+    <div className={style.wrapper}>
+      <Link to="/" className={style.link}>
+        <Logo className={classNames(style.logo, { [style.fillBlack]: isBackgroundWhite })} />
+      </Link>
     </div>
   );
 }

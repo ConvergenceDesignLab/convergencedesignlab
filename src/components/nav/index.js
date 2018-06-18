@@ -12,9 +12,9 @@ function Nav({ isHomePage, isScrolled }) {
     <nav className={`${style.nav} ${isWhite ? style.isWhite : ""}`}>
       <div className="container">
         <div className="row">
-          <NavLogo />
-          <ExpandedNav />
-          <DropdownNav />
+          <div className="col--xs">
+            <NavLogo isBackgroundWhite={isWhite} />
+          </div>
           <div className="col--xs">
             <ExpandedNav />
             <DropdownNav />
