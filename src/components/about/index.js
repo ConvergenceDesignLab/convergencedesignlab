@@ -34,8 +34,8 @@ export default function About(props) {
               <p>
                 As part of the School of Media Arts at Columbia College Chicago, we aim to be an
                 animating force in our Chicago communities and in the larger world beyond by
-                fostering deep connections between the college and cultural, media and learning
-                ecosystems locally, nationally and globally.
+                fostering deep connections between the college and cultural, media, news/information
+                and learning ecosystems locally, nationally and globally.
               </p>
             </div>
           </div>
@@ -45,29 +45,40 @@ export default function About(props) {
       <div className={style.isOrange}>
         <div className="container">
           <div className={style.section}>
-            <div className={classNames(style.sectionTitle, style.sectionTitleAlt)}>The Theory</div>
+            <div className={classNames(style.sectionTitle, style.sectionTitleAlt)}>Our Process</div>
             <div className={classNames(style.content, style.col)}>
               <div className={style.contentTitle}>
-                Our work is grounded in years of applied research.
+                We collaboratively design sustainable solutions.
               </div>
-              <div className={style.contentText}>
+              <div className={classNames(style.contentText, "wordpress-content")}>
                 <p>
-                  We began in 2013 with a multi-million dollar grant from the U.S. Department of
-                  Education to develop innovative practices to improve Chicago education. Working
-                  inside two high-need Chicago Public Schools, we developed, tested and researched a
-                  new 21st century education model based on connected learning theory which serves
-                  as the foundation for all the work we do.
+                  We don’t work in isolation. Designing for equity in civic, culture and educational
+                  spaces requires that many, diverse voices join together. In that spirit, we begin
+                  our process by asking:{" "}
+                  <i>
+                    how might we design solutions by engaging the voices, perspectives and
+                    experiences of people most directly impacted?
+                  </i>
                 </p>
                 <p>
-                  The theory posits that youth learn best when pursuing their interests and passions
-                  among a community of their peers. Through putting this into practice and
-                  evaluating the outcomes over the course of three years, both schools experienced
-                  whole school improvement – from increased attendance, to teacher technology
-                  proficiency and student academic performance and engagement.
+                  With an emphasis on discovery, play and collaboration we can then use a highly
+                  structured human-centered design process to arrive at creative solutions that
+                  promote equity and engagement. In order to help make solution design sustainable
+                  over time, we take this process one step further to ask:{" "}
+                  <i>
+                    how might we design routines and structures that enable continuous learning and
+                    knowledge sharing to take root and thrive?
+                  </i>
                 </p>
                 <p>
-                  We are committed to integrating rigorous research, participatory reflection and
-                  actionable evaluation into all aspects of our work.
+                  We refer to this set of routines and structures as “communities of practice,”
+                  participatory spaces where people bound by a shared purpose form networked
+                  connections that strengthen ties and allow sustainable impact to take hold.
+                </p>
+                <p>
+                  By helping our partners cultivate vibrant communities of practice, we can
+                  strengthen public institutions and foster healthy civic learning ecosystems that
+                  truly support the needs of diverse communities.
                 </p>
               </div>
             </div>
@@ -80,37 +91,27 @@ export default function About(props) {
 
       <div className="container">
         <div className={style.section}>
-          <div className={style.sectionTitle}>Our Process</div>
+          <div className={style.sectionTitle}>The Theory</div>
           <div className={classNames(style.content, style.col)}>
-            <div className={style.contentTitle}>
-              We apply human-centered design and build communities of practice
-            </div>
-            <div className={classNames(style.contentText, "wordpress-content")}>
+            <div className={style.contentTitle}>We apply theory into practice.</div>
+            <div className={style.contentText}>
               <p>
-                We apply a participatory design thinking process to co-create custom solutions in
-                partnership with civic, cultural and learning organizations. This process, with its
-                emphasis on discovery, play, collaboration and active reflection, leads to creative
-                solutions that promote participation, equity and engagement.
+                Gochujang ethical art party man bun adaptogen, four loko blue bottle yuccie hell of
+                drinking vinegar blog bushwick snackwave hoodie vinyl. Lomo subway tile activated
+                charcoal bitters williamsburg, yuccie taiyaki tousled celiac +1 deep v. Gochujang
+                godard jianbing, lomo seitan pug pitchfork. Wayfarers kitsch venmo synth shabby chic
+                occupy. Skateboard taiyaki listicle forage ugh hella yr lyft kogi.
               </p>
               <p>
-                Through building strong communities of practice, we work to strengthen the long-term
-                capacity and the sustainability of civic, cultural and learning organizations.
-                Through each of our projects and partnerships, we ask:
+                Paleo umami knausgaard direct trade. Pickled copper mug prism lumbersexual tumeric
+                ugh, flannel knausgaard. Aesthetic tofu photo booth listicle. Offal meh everyday
+                carry poke butcher, farm-to-table hashtag tumblr scenester put a bird on it
+                chicharrones echo park succulents gochujang. Pabst fixie cornhole bespoke schlitz.
+                Flexitarian unicorn YOLO, vice jianbing seitan fingerstache hella bitters photo
+                booth. 8-bit vexillologist organic iceland, marfa shoreditch typewriter tote bag
+                godard live-edge.
               </p>
-              <ul>
-                <li>
-                  How might we design solutions by engaging the voices, perspectives and experiences
-                  of people most directly impacted?
-                </li>
-                <li>
-                  How might we design routines and structures that enable strong communities of
-                  practice to take root and thrive?
-                </li>
-              </ul>
             </div>
-          </div>
-          <div className={style.designImage}>
-            <img className="width-100" src={designProcessImage} alt="Placeholder" />
           </div>
         </div>
       </div>
@@ -118,17 +119,14 @@ export default function About(props) {
       <div className={style.isOrange}>
         <div className="container">
           <div className={style.section}>
-            <div className={style.sectionTitle}>Our Partners</div>
+            <div className={classNames(style.sectionTitle, style.sectionTitleAlt)}>
+              Our Partners
+            </div>
             <div className={classNames(style.content, style.col)}>
               <div className={style.contentTitle}>
                 We build long-term, sustainable partnerships.
               </div>
               <div className={style.contentText}>
-                <p>
-                  We don’t work in isolation. Designing for equity in civic, culture and educational
-                  spaces requires many, diverse voices to work together. We aim to be the connector
-                  that fosters a connected ecosystem of partners working towards a shared vision.
-                </p>
                 <p>
                   Within Chicago, that is why we work to form local partnerships that support our
                   strategic vision for a connected city with leading innovators such as Chicago Hive
@@ -142,6 +140,9 @@ export default function About(props) {
                   Media, The Alliance and many academic research institutions.
                 </p>
               </div>
+            </div>
+            <div className={style.colImage}>
+              <img className="max-width-100" src={placeholderImage} alt="Placeholder" />
             </div>
           </div>
         </div>
