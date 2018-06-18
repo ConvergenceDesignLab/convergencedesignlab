@@ -35,6 +35,13 @@ const team = {
   ],
   researchers: [
     {
+      name: "Yonty Friesem",
+      image: require("../../../assets/images/team/yonty-friesem.jpg"),
+      title: "Research Associate",
+      twitter: "https://twitter.com/yonty",
+      linkedin: "https://www.linkedin.com/in/yonty"
+    },
+    {
       name: "Natalia Smirnov",
       image: require("../../../assets/images/team/natalia-smirnov-square.jpg"),
       title: "Research Associate",
