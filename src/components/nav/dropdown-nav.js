@@ -23,7 +23,7 @@ export default class DropdownNav extends React.Component {
   render() {
     const { isOpen } = this.state;
     return (
-      <div className={`${style.nav} col--xs ${isOpen ? style.isOpen : ""}`}>
+      <div className={`${style.nav} ${isOpen ? style.isOpen : ""}`}>
         <i className={`${style.open} fa fa-navicon`} onClick={this.open} />
         <div className={style.overlay} />
         <div className={style.slider}>

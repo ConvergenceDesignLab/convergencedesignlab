@@ -15,6 +15,10 @@ function Nav({ isHomePage, isScrolled }) {
           <NavLogo />
           <ExpandedNav />
           <DropdownNav />
+          <div className="col--xs">
+            <ExpandedNav />
+            <DropdownNav />
+          </div>
         </div>
       </div>
     </nav>
