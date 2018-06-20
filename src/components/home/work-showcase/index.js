@@ -42,6 +42,10 @@ export default function WorkShowcase({ projects }) {
   return (
     <Section title="Our Work" hasBackground={true}>
       <Title>Our Work</Title>
+      <Description>
+        We work in many contexts. We design learning experiences for youth and educators, conduct
+        actionable research and build engagement strategies.
+      </Description>
       {projects ? <Gallery projects={projects} /> : <Loading height="300px" />}
       <CallToActionLink to="/work/">See all work →</CallToActionLink>
     </Section>

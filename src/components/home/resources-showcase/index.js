@@ -35,8 +35,7 @@ export default function ResourcesShowcase({ resource }) {
     <Section hasBackground={true}>
       <Title>Open Resources</Title>
       <Description>
-        We believe in working in the open and blah blah. Our work is rooted in years of applied
-        research in connected learning...
+        We build and share open resources, tools and frameworks based on applied research.
       </Description>
 
       {resource ? <Resource data={resource} /> : <Loading height="150px" />}

@@ -8,8 +8,8 @@ export default function Partners() {
     <Section title="Our Work">
       <Title>Our Partners & Funders</Title>
       <Description>
-        We partner with learning organizations, cultural groups and communities to advance
-        educational equity and civic engagement.
+        We partner with learning organizations and media & cultural groups to advance educational
+        equity and civic engagement.
       </Description>
       <div className="row--justify-center">
         {partners.map(({ link, image, name }) => (
