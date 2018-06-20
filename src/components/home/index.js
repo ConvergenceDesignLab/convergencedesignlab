@@ -16,13 +16,18 @@ export default class Home extends React.Component {
   }
 
   render() {
+    const partnerImageData = this.props.data.partnerImages.edges.map(e => ({
+      filename: e.node.resize.originalName,
+      src: e.node.resize.src
+    }));
+
     const { data } = this.state;
     return (
       <div>
         <VideoBanner />
         <About />
         <WorkShowcase projects={data ? data.projects : null} />
-        <Parnters />
+        <Parnters partnerImageData={partnerImageData} />
         <ResourcesShowcase resource={data ? data.resource : null} />
         <SocialFeeds />
         <CallToAction />
