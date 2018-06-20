@@ -49,8 +49,7 @@ class Resources extends React.Component {
       <div>
         <PageHeader
           title="Selected Resources"
-          caption="Through our publications, we aim to make our work transparent, actionable, and
-            replicable."
+          caption="We work openly by sharing educational resources, research studies, tools and frameworks."
         />
 
         <div className="container">

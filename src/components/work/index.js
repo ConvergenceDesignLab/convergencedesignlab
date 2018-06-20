@@ -6,6 +6,7 @@ import CallToAction from "../call-to-action/";
 import Loading from "../loading/";
 import PageHeader from "../page-header";
 import { fetchWork } from "../../utils/fetch-wp";
+import ZoomingImage from "../zooming-image";
 import style from "./index.module.scss";
 
 class Work extends React.Component {
@@ -53,8 +54,7 @@ class Work extends React.Component {
       <div>
         <PageHeader
           title="Selected Work"
-          caption="We apply a collaborative design thinking process to create custom solutions in
-            partnership with civic, cultural and learning organizations."
+          caption="We design participatory solutions that meet the needs of civic, cultural and learning organizations."
         />
 
         <div className="container">
