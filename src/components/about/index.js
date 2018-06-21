@@ -9,6 +9,11 @@ import placeholderImage from "../../assets/images/placeholder.png";
 import designProcessImage from "../../assets/images/placeholder-design-cycle.png";
 
 export default function About(props) {
+  const teamImageData = props.data.teamImages.edges.map(e => ({
+    filename: e.node.resize.originalName,
+    src: e.node.resize.src
+  }));
+
   return (
     <div>
       <div className={style.coverContainer}>
@@ -142,7 +147,7 @@ export default function About(props) {
               We are a team of learning designers, researchers and creative technologists.
             </div>
           </div>
-          <Team />
+          <Team teamImageData={teamImageData} />
         </div>
       </div>
 

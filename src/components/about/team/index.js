@@ -136,10 +136,16 @@ export default class Team extends React.Component {
       }
     }
 
+    const teamImageData = this.props.teamImageData;
+    const teamInfoWithImages = team.map(info => {
+      const data = teamImageData.find(data => data.filename === info.image);
+      return { ...info, image: data ? data.src : "" };
+    });
+
     return (
       <div style={{ position: "relative" }} ref={this.wrapperRef}>
         <div className={classNames(style.row, "row--justify-center")}>
-          {team.map(info => (
+          {teamInfoWithImages.map(info => (
             <TeamMember
               ref={elem => this.setTeamRef(elem, info.name)}
               key={info.name}

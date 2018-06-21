@@ -1,8 +1,17 @@
+/**
+ * Each team member contains:
+ *  name - text to be displayed in the Team section
+ *  bio - the component that contains the content of their bio
+ *  image - the name of the image file (without path), used to match data here with GraphQL results
+ *  email - the contact address
+ *  twitter - link to twitter profile
+ *  linkedin - link to linkedin profile
+ */
 const team = [
   {
     name: "Eric Freedman, Ph.D.",
     bio: require("./bios/eric-freedman"),
-    image: require("../../../assets/images/team/eric-freedman.jpg"),
+    image: "eric-freedman.jpg",
     title: "Dean of the School of Media Arts",
     email: "efreedman@colum.edu",
     twitter: "https://twitter.com/ericmfreedman",
@@ -11,7 +20,7 @@ const team = [
   {
     name: "Mindy Faber",
     bio: require("./bios/mindy-faber"),
-    image: require("../../../assets/images/team/mindy-faber.png"),
+    image: "mindy-faber.png",
     title: "Program Director",
     email: "mfaber@colum.edu",
     twitter: "https://twitter.com/mindyfaber",
@@ -20,7 +29,7 @@ const team = [
   {
     name: "Margaret Conway",
     bio: require("./bios/margaret-conway"),
-    image: require("../../../assets/images/team/margaret-conway.jpg"),
+    image: "margaret-conway.jpg",
     title: "Program Manager",
     email: "mconway@colum.edu",
     twitter: "https://twitter.com/margaretkconway",
@@ -29,7 +38,7 @@ const team = [
   {
     name: "Michael Hadley",
     bio: require("./bios/michael-hadley"),
-    image: require("../../../assets/images/team/mike-hadley-alt.jpg"),
+    image: "mike-hadley-alt.jpg",
     title: "Learning Product Developer",
     email: "mhadley@colum.edu",
     twitter: "https://twitter.com/mikewesthad",
@@ -38,7 +47,7 @@ const team = [
   {
     name: "Yonty Friesem",
     bio: require("./bios/yonty-friesem"),
-    image: require("../../../assets/images/team/yonty-friesem.jpg"),
+    image: "yonty-friesem.jpg",
     title: "Research Associate",
     twitter: "https://twitter.com/yonty",
     linkedin: "https://www.linkedin.com/in/yonty"
@@ -46,7 +55,7 @@ const team = [
   {
     name: "Natalia Smirnov",
     bio: require("./bios/natalia-smirnov"),
-    image: require("../../../assets/images/team/natalia-smirnov-square.jpg"),
+    image: "natalia-smirnov-square.jpg",
     title: "Research Associate",
     twitter: "https://twitter.com/marginatalia?lang=en",
     linkedin: "https://www.linkedin.com/in/nataliasmirnov"
@@ -54,7 +63,7 @@ const team = [
   {
     name: "Jabari Evans",
     bio: require("./bios/jabari-evans"),
-    image: require("../../../assets/images/team/jabari-evans-square.jpg"),
+    image: "jabari-evans-square.jpg",
     title: "Research Associate",
     twitter: "https://twitter.com/naledgeevans?lang=en",
     linkedin: "https://www.linkedin.com/in/naledge-jabari-evans-msw-04433660/"
@@ -62,7 +71,7 @@ const team = [
   {
     name: "Virginia Killian Lund",
     bio: require("./bios/virginia-lund"),
-    image: require("../../../assets/images/team/virigina-lund-square.jpg"),
+    image: "virigina-lund-square.jpg",
     title: "Research Associate",
     twitter: "https://twitter.com/virginiaklund",
     linkedin: "https://www.linkedin.com/in/virginia-killian-lund-b9b393a"

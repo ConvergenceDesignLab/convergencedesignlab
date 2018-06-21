@@ -10,5 +10,17 @@ export const query = graphql`
     cover: file(relativePath: { eq: "images/da-opening-cropped.png" }) {
       ...fluidImageFragment
     }
+    teamImages: allImageSharp(filter: { id: { glob: "**/images/team/**" } }) {
+      edges {
+        node {
+          ... on ImageSharp {
+            resize(width: 400) {
+              src
+              originalName
+            }
+          }
+        }
+      }
+    }
   }
 `;
