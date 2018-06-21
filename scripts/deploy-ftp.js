@@ -18,10 +18,11 @@ const conn = ftp.create({
   host: process.env.FTP_HOST,
   user: process.env.FTP_USER,
   password: process.env.FTP_PASS,
+  timeOffset: process.env.FTP_TIMEOFFSET ? parseFloat(process.env.FTP_TIMEOFFSET) : 0,
   parallel: 6,
   log: console.log
 });
 
-fs.src([src], { buffer: false })
+fs.src([src], { buffer: false, dot: true })
   .pipe(conn.newer(dest))
   .pipe(conn.dest(dest));
