@@ -46,7 +46,7 @@
 
   img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
   }
 }
@@ -81,7 +81,7 @@
 
   .resourceThumbnail {
     margin: 0 2rem 0 0;
-    flex: 0 0 120px;
+    flex: 0 0 150px;
 
     img {
       height: 150px;
@@ -98,10 +98,10 @@
 
   .resourceThumbnail {
     margin: 0 2rem 0 0;
-    flex: 0 0 160px;
+    flex: 0 0 180px;
 
     img {
-      height: 200px;
+      height: 180px;
     }
   }
 }
