@@ -51,7 +51,7 @@ export default class Team extends React.Component {
     this.tween = null;
   }
 
-  componentWillMount() {
+  componentDidMount() {
     resizeEvent.addListener(this.onResize);
   }
 
