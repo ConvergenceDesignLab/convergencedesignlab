@@ -5,8 +5,7 @@ import CoverImage from "../cover-image/";
 import CallToAction from "../call-to-action/";
 import Team from "./team/";
 import style from "./index.module.scss";
-import placeholderImage from "../../assets/images/placeholder.png";
-import designProcessImage from "../../assets/images/placeholder-design-cycle.png";
+import partnersImage from "../../assets/images/partners-composite.png";
 
 export default function About(props) {
   const teamImageData = props.data.teamImages.edges.map(e => ({
@@ -72,7 +71,7 @@ export default function About(props) {
               </div>
             </div>
             <div className={style.colImage}>
-              <img className="max-width-100" src={placeholderImage} alt="Placeholder" />
+              <img className="max-width-100" src="" alt="" />
             </div>
           </div>
         </div>
@@ -80,27 +79,29 @@ export default function About(props) {
 
       <div className="container">
         <div className={style.section}>
-          <div className={style.sectionTitle}>Our Expertise</div>
+          <div className={style.sectionTitle}>Theories of Change</div>
           <div className={classNames(style.content, style.col)}>
             <div className={style.contentTitle}>
               We are experts in the field of participatory media and learning.
             </div>
             <div className={style.contentText}>
               <p>
-                Gochujang ethical art party man bun adaptogen, four loko blue bottle yuccie hell of
-                drinking vinegar blog bushwick snackwave hoodie vinyl. Lomo subway tile activated
-                charcoal bitters williamsburg, yuccie taiyaki tousled celiac +1 deep v. Gochujang
-                godard jianbing, lomo seitan pug pitchfork. Wayfarers kitsch venmo synth shabby chic
-                occupy. Skateboard taiyaki listicle forage ugh hella yr lyft kogi.
+                We aim to produce long-lasting change. We do this by helping to build vibrant civic
+                media and learning ecosystems that support educational equity and participatory
+                democracy.
               </p>
               <p>
-                Paleo umami knausgaard direct trade. Pickled copper mug prism lumbersexual tumeric
-                ugh, flannel knausgaard. Aesthetic tofu photo booth listicle. Offal meh everyday
-                carry poke butcher, farm-to-table hashtag tumblr scenester put a bird on it
-                chicharrones echo park succulents gochujang. Pabst fixie cornhole bespoke schlitz.
-                Flexitarian unicorn YOLO, vice jianbing seitan fingerstache hella bitters photo
-                booth. 8-bit vexillologist organic iceland, marfa shoreditch typewriter tote bag
-                godard live-edge.
+                Our research and design practices are shaped by social impact theories like
+                Connected Learning and Participatory Media. Connected Learning positing that youth
+                learn best when pursuing interests and passions among a community of peers.
+                Participatory Media flips consumers in active producers who create, remix and share
+                media.
+              </p>
+              <p>
+                These theories influence our work in learning experience design, audience
+                engagement, research and community building. In turn, the projects we carry out
+                generate shareable data, frameworks and tools that help grow the collective
+                knowledge and capacity of our field.
               </p>
             </div>
           </div>
@@ -119,21 +120,19 @@ export default function About(props) {
               </div>
               <div className={style.contentText}>
                 <p>
-                  Within Chicago, that is why we work to form local partnerships that support our
-                  strategic vision for a connected city with leading innovators such as Chicago Hive
-                  Network/Chicago Learning Exchange, City Tech Collaborative and Chicago Cultural
-                  Alliance.
+                  Locally, we form partnerships that support our strategic vision for Chicago as a
+                  connected city with leading innovators such as Chicago Learning Exchange/Hive, The
+                  Real Chi and Chicago Cultural Alliance.
                 </p>
                 <p>
-                  At a national and global level, we collaborate with networks supporting digital
-                  literacy, youth media education and community activism with organizations such as
-                  Participate.com, The National Writing Project, Spy Hop, LRNG, NAMLE, Free Spirit
-                  Media, The Alliance and many academic research institutions.
+                  Nationally, we work to grow the field by collaborating with education, media, news
+                  and civic networks such as Participate, Media Education Lab, 22x20 and many
+                  academic research institutions.
                 </p>
               </div>
             </div>
             <div className={style.colImage}>
-              <img className="max-width-100" src={placeholderImage} alt="Placeholder" />
+              <img className="max-width-100" src={partnersImage} alt="Placeholder" />
             </div>
           </div>
         </div>

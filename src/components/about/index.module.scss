@@ -27,9 +27,7 @@
 }
 
 .section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  display: block;
   padding: 4rem 0;
 }
 
@@ -58,15 +56,27 @@
     background-color: $convergence-orange;
     opacity: 0.2;
   }
+}
 
-  @media (min-width: 500px) {
-    margin-bottom: 0;
+@media (min-width: 800px) {
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .sectionTitle {
     flex: 0 0 30%;
+    margin-bottom: 0;
     padding-left: 1.75rem;
 
     &:after {
       left: 1.75rem;
     }
+  }
+
+  .colImage {
+    flex: 0 0 30%;
   }
 }
 
@@ -93,10 +103,6 @@
   padding: 1rem;
   max-width: 300px;
   margin: 0 auto;
-
-  @media (min-width: 500px) {
-    flex: 0 0 30%;
-  }
 }
 
 .contentTitle {
