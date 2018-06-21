@@ -49,7 +49,7 @@ export default class Resource extends React.Component {
 
     return (
       <div>
-        <WpCoverImage sizes={imageData.sizes} alt={imageTitle} />
+        <WpCoverImage className={style.cover} sizes={imageData.sizes} alt={imageTitle} />
         <div className="container">
           <div className="section">
             <div className={style.title}>{title}</div>

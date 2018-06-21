@@ -2,6 +2,10 @@
 @import "../../style/global/_breakpoints.scss";
 @import "../../style/global/_grid.scss";
 
+.cover {
+  object-fit: contain;
+}
+
 .row {
   @extend %row;
   justify-content: space-between;
