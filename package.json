@@ -55,7 +55,7 @@
     "push:ftp": "node ./scripts/deploy-ftp.js --src ./public/** --dest /usr/home/convergence/public_html/convergencedesignlab.org/new-site",
     "deploy:ftp": "set \"DEPLOY_TARGET=ftp\" && npm run clean-build && npm run push:ftp",
     "deploy:gh-pages": "set \"DEPLOY_TARGET=gh-pages\" && npm run clean-build && gh-pages --dist public --branch gh-pages",
-    "deploy": "npm run deploy:gh-pages && npm run deploy:ftp"
+    "deploy": "npm run deploy:ftp"
   },
   "devDependencies": {
     "cross-env": "^5.1.6",
