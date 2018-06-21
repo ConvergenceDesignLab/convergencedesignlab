@@ -12,8 +12,17 @@
 
   .open,
   .close {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    @media (min-width: 470px) {
+      font-size: 1.8rem;
+    }
   }
 
   .overlay {
