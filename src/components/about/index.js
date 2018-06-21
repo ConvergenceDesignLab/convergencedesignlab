@@ -52,33 +52,17 @@ export default function About(props) {
               </div>
               <div className={classNames(style.contentText, "wordpress-content")}>
                 <p>
-                  We don’t work in isolation. Designing for equity in civic, culture and educational
-                  spaces requires that many, diverse voices join together. In that spirit, we begin
-                  our process by asking:{" "}
-                  <i>
-                    how might we design solutions by engaging the voices, perspectives and
-                    experiences of people most directly impacted?
-                  </i>
+                  We don’t work in isolation. To address complex challenges, we engage the voices,
+                  perspectives and experiences of the people most directly impacted.
                 </p>
                 <p>
-                  With an emphasis on discovery, play and collaboration we can then use a highly
-                  structured human-centered design process to arrive at creative solutions that
-                  promote equity and engagement. In order to help make solution design sustainable
-                  over time, we take this process one step further to ask:{" "}
-                  <i>
-                    how might we design routines and structures that enable continuous learning and
-                    knowledge sharing to take root and thrive?
-                  </i>
+                  Whether it’s designing learning playlists for Chicago youth or helping teachers
+                  build strong professional learning communities, we apply the human-centered design
+                  process to truly meet the needs of diverse communities.
                 </p>
                 <p>
-                  We refer to this set of routines and structures as “communities of practice,”
-                  participatory spaces where people bound by a shared purpose form networked
-                  connections that strengthen ties and allow sustainable impact to take hold.
-                </p>
-                <p>
-                  By helping our partners cultivate vibrant communities of practice, we can
-                  strengthen public institutions and foster healthy civic learning ecosystems that
-                  truly support the needs of diverse communities.
+                  Our participatory process helps strengthen community ties, foster engagement and
+                  build sustainable impact.
                 </p>
               </div>
             </div>
@@ -91,9 +75,11 @@ export default function About(props) {
 
       <div className="container">
         <div className={style.section}>
-          <div className={style.sectionTitle}>The Theory</div>
+          <div className={style.sectionTitle}>Our Expertise</div>
           <div className={classNames(style.content, style.col)}>
-            <div className={style.contentTitle}>We apply theory into practice.</div>
+            <div className={style.contentTitle}>
+              We are experts in the field of participatory media and learning.
+            </div>
             <div className={style.contentText}>
               <p>
                 Gochujang ethical art party man bun adaptogen, four loko blue bottle yuccie hell of
