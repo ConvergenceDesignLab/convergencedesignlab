@@ -1,5 +1,5 @@
 @import "../../../style/shared/_variables.scss";
-@import "../../../style/shared/_unstyle-link.scss";
+@import "../../../style/global/_links.scss";
 
 .figure {
   text-align: center;
@@ -8,7 +8,74 @@
 
 .image {
   border-radius: 50%;
-  width: 90%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.row {
+  align-items: flex-start;
+}
+
+.bio {
+  position: absolute;
+  padding: 1rem 2.25rem;
+  background: $convergence-orange;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+
+  width: 100%;
+  max-width: 800px;
+
+  opacity: 0;
+  display: none;
+}
+
+.bioArrow {
+  position: absolute;
+  z-index: 100;
+
+  // Generate the arrow
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0.7rem 0.7rem 0.7rem;
+  border-color: transparent transparent $convergence-orange transparent;
+
+  opacity: 0;
+  display: none;
+}
+
+.bioClose {
+  position: absolute;
+  top: 1rem;
+  right: 1.1rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+@media (min-width: 500px) {
+  .bio {
+    padding: 1.25rem 2.75rem;
+    font-size: 1.1rem;
+  }
+  .bioClose {
+    font-size: 1.5rem;
+  }
 }
 
 .name {
@@ -21,7 +88,7 @@
   font-weight: 400;
   font-style: italic;
   font-size: 0.9rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.05rem;
 }
 
 .links {
@@ -31,8 +98,9 @@
 }
 
 .iconLink {
-  @extend %unstyle-link;
   margin-right: 0.8rem;
+  cursor: pointer;
+  margin-bottom: 0.05rem;
 
   &:last-child {
     margin-right: 0;
@@ -40,11 +108,18 @@
 
   .icon {
     transition: color 0.2s ease-in-out;
-    color: black;
+    // color: $convergence-orange;
     font-size: 1rem;
   }
 
   &:hover .icon {
-    color: lighten(black, 25%);
+    opacity: 0.75;
   }
+}
+
+.bioLink {
+  @extend %base-link;
+  font-family: $text-font-family;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
