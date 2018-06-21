@@ -13,9 +13,10 @@
 
 .logo {
   height: 100%;
-  
+  max-width: 230px;
+
   :global #convergence *,
-  :global #columbia *, 
+  :global #columbia *,
   :global #separator {
     fill: white;
     transition: all 0.2s ease-in-out 0.1s;
@@ -23,10 +24,15 @@
 
   &.fillBlack {
     :global #convergence *,
-    :global #columbia *, 
+    :global #columbia *,
     :global #separator {
       fill: black;
     }
   }
+}
 
+@media (min-width: 470px) {
+  .logo {
+    max-width: 100%;
+  }
 }
