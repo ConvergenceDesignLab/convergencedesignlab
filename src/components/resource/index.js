@@ -57,7 +57,7 @@ export default class Resource extends React.Component {
               <div className="col--md-6">
                 <div className={style.sectionTitle}>Overview</div>
                 <div
-                  className={style.sectionText}
+                  className={classNames(style.sectionText, "wordpress-content")}
                   dangerouslySetInnerHTML={{ __html: description }}
                 />
               </div>

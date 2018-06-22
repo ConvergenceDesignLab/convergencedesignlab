@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import get from "lodash.get";
+import classNames from "classnames";
 import CallToAction from "../call-to-action/";
 import Loading from "../loading/";
 import PageHeader from "../page-header";
@@ -31,7 +32,7 @@ class Resources extends React.Component {
             <div className={style.resourceDetails}>
               <div className={style.resourceTitle}>{title}</div>
               <div
-                className={style.resourceDescription}
+                className={classNames(style.resourceDescription, "wordpress-content")}
                 dangerouslySetInnerHTML={{ __html: overview }}
               />
               <div className={style.resourceLink}>
