@@ -92,10 +92,10 @@ export default function About(props) {
               </p>
               <p>
                 Our research and design practices are shaped by social impact theories like
-                Connected Learning and Participatory Media. Connected Learning positing that youth
+                Connected Learning and Participatory Media. Connected Learning posits that youth
                 learn best when pursuing interests and passions among a community of peers.
-                Participatory Media flips consumers in active producers who create, remix and share
-                media.
+                Participatory Media flips consumers into active producers who create, remix and
+                share media.
               </p>
               <p>
                 These theories influence our work in learning experience design, audience
