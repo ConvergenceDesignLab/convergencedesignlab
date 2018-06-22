@@ -24,5 +24,5 @@ const conn = ftp.create({
 });
 
 fs.src([src], { buffer: false, dot: true })
-  .pipe(conn.newer(dest))
+  // .pipe(conn.newerOrDifferentSize(dest))
   .pipe(conn.dest(dest));
