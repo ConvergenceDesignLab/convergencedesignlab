@@ -26,13 +26,19 @@ export default class Project extends React.Component {
       const pathNoTrail = path.endsWith("/") ? path.slice(0, path.length - 1) : path;
       const slug = pathNoTrail.split("/").pop();
 
-      fetchProject(slug).then(data => {
-        const projectData = new ProjectData(data);
-        this.setState({
-          noValidData: !projectData.hasValidData,
-          data: projectData
-        });
-      });
+      fetchProject(slug)
+        .then(data => {
+          const projectData = new ProjectData(data);
+          this.setState({
+            noValidData: !projectData.hasValidData,
+            data: projectData
+          });
+        })
+        .catch(err =>
+          this.setState({
+            noValidData: true
+          })
+        );
     }
   }
 

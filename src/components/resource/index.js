@@ -24,10 +24,16 @@ export default class Resource extends React.Component {
       const pathNoTrail = path.endsWith("/") ? path.slice(0, path.length - 1) : path;
       const slug = pathNoTrail.split("/").pop();
 
-      fetchResource(slug).then(data => {
-        if (data === null || !data.acf) this.setState({ noValidData: true });
-        else this.setState({ data });
-      });
+      fetchResource(slug)
+        .then(data => {
+          if (data === null || !data.acf) this.setState({ noValidData: true });
+          else this.setState({ data });
+        })
+        .catch(err =>
+          this.setState({
+            noValidData: true
+          })
+        );
     }
   }
 
