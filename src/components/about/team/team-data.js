@@ -48,7 +48,7 @@ const team = [
     name: "Yonty Friesem",
     bio: require("./bios/yonty-friesem"),
     image: "yonty-friesem.jpg",
-    title: "Research Associate",
+    title: "Associated Faculty",
     twitter: "https://twitter.com/yonty",
     linkedin: "https://www.linkedin.com/in/yonty"
   },
@@ -64,7 +64,7 @@ const team = [
     name: "Arlana Shikongo",
     bio: require("./bios/arlana-shikongo"),
     image: "arlana-shikongo.png",
-    title: "Research Associate",
+    title: "Research Assistant",
     twitter: "http://twitter.com/ArlanaShikongo",
     linkedin: "https://www.linkedin.com/in/arlana-shikongo"
   },
