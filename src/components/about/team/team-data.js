@@ -53,14 +53,6 @@ const team = [
     linkedin: "https://www.linkedin.com/in/yonty"
   },
   {
-    name: "Natalia Smirnov",
-    bio: require("./bios/natalia-smirnov"),
-    image: "natalia-smirnov-square.jpg",
-    title: "Research Associate",
-    twitter: "https://twitter.com/marginatalia?lang=en",
-    linkedin: "https://www.linkedin.com/in/nataliasmirnov"
-  },
-  {
     name: "Jabari Evans",
     bio: require("./bios/jabari-evans"),
     image: "jabari-evans-square.jpg",
@@ -69,12 +61,28 @@ const team = [
     linkedin: "https://www.linkedin.com/in/naledge-jabari-evans-msw-04433660/"
   },
   {
+    name: "Arlana Shikongo",
+    bio: require("./bios/arlana-shikongo"),
+    image: "arlana-shikongo.png",
+    title: "Research Associate",
+    twitter: "http://twitter.com/ArlanaShikongo",
+    linkedin: "https://www.linkedin.com/in/arlana-shikongo"
+  },
+  {
     name: "Virginia Killian Lund",
     bio: require("./bios/virginia-lund"),
     image: "virigina-lund-square.jpg",
     title: "Research Associate",
     twitter: "https://twitter.com/virginiaklund",
     linkedin: "https://www.linkedin.com/in/virginia-killian-lund-b9b393a"
+  },
+  {
+    name: "Natalia Smirnov",
+    bio: require("./bios/natalia-smirnov"),
+    image: "natalia-smirnov-square.jpg",
+    title: "Research Associate",
+    twitter: "https://twitter.com/marginatalia?lang=en",
+    linkedin: "https://www.linkedin.com/in/nataliasmirnov"
   }
 ];
 
