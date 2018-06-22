@@ -18,5 +18,6 @@ ExpiresByType text/javascript "access plus 0 minutes"
 RewriteEngine On
 RewriteRule "^work/(.+)" "/project/index.html" [PT]
 RewriteRule "^resources/(.+)" "/resource/index.html" [PT]
+RewriteRule "^login" "https://api.convergencedesignlab.org/wp-admin/" [R,L]
 
 ErrorDocument 404 /404.html
