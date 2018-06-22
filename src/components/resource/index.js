@@ -90,7 +90,7 @@ export default class Resource extends React.Component {
           </div>
         </div>
 
-        {relatedWork && <RelatedWork data={relatedWork} />}
+        {/* {relatedWork && <RelatedWork data={relatedWork} />} */}
 
         <CallToAction title="Looking for a framework?" />
       </div>

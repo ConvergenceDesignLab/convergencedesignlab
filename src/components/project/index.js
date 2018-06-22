@@ -118,7 +118,7 @@ export default class Project extends React.Component {
 
         {sections}
 
-        {data.relatedWork && <RelatedWork data={data.relatedWork} />}
+        {/* {data.relatedWork && <RelatedWork data={data.relatedWork} />} */}
 
         <CallToAction title="Interested in partnering?" />
       </div>
