@@ -69,7 +69,7 @@ export default class Resource extends React.Component {
                   </ul>
                 </div>
                 <div className={style.metaSection}>
-                  <div className={style.sectionTitle}>Authors</div>
+                  <div className={style.sectionTitle}>Collaborators</div>
                   <ul className={style.metaList}>
                     {authors.map(name => <li key={`author-${name}`}>{name}</li>)}
                   </ul>
