@@ -12,6 +12,7 @@ import Nav from "../components/nav";
 import Footer from "../components/footer/";
 import TransitionHandler from "./transition-handler";
 import style from "./index.module.scss";
+import Analytics from "../components/analytics/analytics";
 
 const timing = {
   enter: Number(style.fadeInDuration) + Number(style.fadeInDelay),
@@ -51,6 +52,9 @@ export default function TemplateWrapper({ children, location }) {
         <meta name="msapplication-TileColor" content="#2d89ef" />
         <meta name="theme-color" content="#ffffff" />
       </Helmet>
+
+      <Analytics trackingId="UA-114340105-7" />
+
       <Nav isHomePage={isHomePage} />
 
       <TransitionGroup>

@@ -26,6 +26,7 @@
     "modularscale-sass": "^3.0.4",
     "objectFitPolyfill": "^2.1.1",
     "react-autosize-textarea": "^3.0.3",
+    "react-ga": "^2.5.3",
     "react-helmet": "^5.2.0",
     "react-transition-group": "^2.3.1",
     "react-twitter-widgets": "^1.7.1",
