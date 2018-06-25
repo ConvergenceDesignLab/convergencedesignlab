@@ -21,9 +21,11 @@ const config = {
 let pathPrefix;
 
 if (process.env.DEPLOY_TARGET === "ftp") {
-  pathPrefix = "/new-site";
+  // No path prefix needed here anymore
 } else if (process.env.DEPLOY_TARGET === "gh-pages") {
   pathPrefix = "/convergencedesignlab";
+} else {
+  // This is where more deploy targets can be added, e.g. a pathPrefx of "/staging" or "/testing"
 }
 
 if (pathPrefix) {
