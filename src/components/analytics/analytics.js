@@ -15,7 +15,6 @@ class Analytics extends Component {
   };
 
   componentDidMount() {
-    console.log("mounting");
     const isLocal = ["127.0.0.1", "localhost"].includes(location.hostname);
     const GA = isLocal ? MockGA : ReactGA;
     this.setState({ GA });
