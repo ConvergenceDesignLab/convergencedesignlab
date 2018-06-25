@@ -68,18 +68,22 @@ export default class Resource extends React.Component {
                 />
               </div>
               <div className={classNames(style.meta, "col--md-5")}>
-                <div className={style.metaSection}>
-                  <div className={style.sectionTitle}>Tags</div>
-                  <ul className={style.metaList}>
-                    {tags.map(name => <li key={`author-${name}`}>{name}</li>)}
-                  </ul>
-                </div>
-                <div className={style.metaSection}>
-                  <div className={style.sectionTitle}>Collaborators</div>
-                  <ul className={style.metaList}>
-                    {authors.map(name => <li key={`author-${name}`}>{name}</li>)}
-                  </ul>
-                </div>
+                {tags.length && (
+                  <div className={style.metaSection}>
+                    <div className={style.sectionTitle}>Tags</div>
+                    <ul className={style.metaList}>
+                      {tags.map(name => <li key={`author-${name}`}>{name}</li>)}
+                    </ul>
+                  </div>
+                )}
+                {authors.length && (
+                  <div className={style.metaSection}>
+                    <div className={style.sectionTitle}>Collaborators</div>
+                    <ul className={style.metaList}>
+                      {authors.map(name => <li key={`author-${name}`}>{name}</li>)}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
             <div className={style.download}>
