@@ -12,8 +12,8 @@ export default function AboutSection() {
           School of Media Arts at Columbia College Chicago.
         </p>
         <p>
-          We partner with organizations to prepare youth to become future-ready, media fluent and
-          active participants in public life.
+          We partner with organizations to prepare youth to become future-ready, media-fluent
+          participants in public life.
         </p>
       </div>
       <CallToActionLink to="/about/">Explore how →</CallToActionLink>

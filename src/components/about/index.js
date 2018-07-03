@@ -31,9 +31,9 @@ export default function About(props) {
             </div>
             <div className={style.contentText}>
               <p>
-                Convergence Design Lab is an applied research center and a learning design studio.
-                We partner with organizations to prepare youth to become future-ready, media fluent
-                and active participants in public life.
+                Convergence Design Lab is an applied research center and learning design studio. We
+                partner with organizations to prepare youth to become future-ready, media-fluent
+                participants in public life.
               </p>
               <p>
                 As part of the School of Media Arts at Columbia College Chicago, we aim to be an
