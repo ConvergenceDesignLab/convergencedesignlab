@@ -5,9 +5,6 @@ const baseUrl = process.env.API_URL;
 const showcaseEndpoint = `${baseUrl}/cdl/v1/showcase`;
 const workEndpoint = `${baseUrl}/cdl/v1/work`;
 const resourcesEndpoint = `${baseUrl}/cdl/v1/resources`;
-
-const wpProjectsEndpoint = `${baseUrl}/wp/v2/projects`;
-const wpResourcesEndpoint = `${baseUrl}/wp/v2/resources`;
 const wpPartnersEndpoint = `${baseUrl}/wp/v2/partners`;
 const wpProjectTagsEndpoint = `${baseUrl}/wp/v2/tags`;
 
