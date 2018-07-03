@@ -49,7 +49,15 @@ export default class Project extends React.Component {
 
     if (!data) return <Loading height="100vh" />;
 
-    const { designQuestion, coverImageData, title, challengeSection, partners, tags } = data;
+    const {
+      designQuestion,
+      coverImageData,
+      subtitle,
+      title,
+      challengeSection,
+      partners,
+      tags
+    } = data;
 
     let sections = [];
     if (data.imageBreak.image) {
@@ -92,6 +100,7 @@ export default class Project extends React.Component {
         <div className="container">
           <div className="section">
             <div className={style.title}>{title}</div>
+            <div className={style.subtitle}>{subtitle}</div>
             <div className={style.row}>
               <div className="col--md-6">
                 <div className={style.sectionTitle}>Challenge</div>

@@ -12,6 +12,7 @@ export default class ProjectData {
       this.menuOrder = wpApiData.menu_order;
 
       this.title = get(wpApiData, "acf.title", "");
+      this.subtitle = get(wpApiData, "acf.subtitle", "");
       this.designQuestion = get(wpApiData, "acf.question", "");
       this.partners = get(wpApiData, "acf.meta.partners", []).map(obj => obj.name);
       this.tags = get(wpApiData, "acf.meta.tags", []).map(obj => obj.name);
