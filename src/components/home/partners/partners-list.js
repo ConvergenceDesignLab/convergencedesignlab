@@ -17,7 +17,7 @@ const partners = [
   },
   {
     link: "https://www.chicagoculturalalliance.org/",
-    filename: "chicago-cultural-alliance.png",
+    filename: "chicago-cultural-alliance.jpg",
     name: "Chicago Cultural Alliance"
   },
   {
@@ -101,9 +101,9 @@ const partners = [
     name: "MHA Labs"
   },
   {
-    link: "https://freespiritmedia.org/therealchi/",
-    filename: "the-real-chi.png",
-    name: "The Real Chi"
+    link: "https://freespiritmedia.org/",
+    filename: "free-spirit.png",
+    name: "Free Spirit Media"
   },
   {
     link: "http://www.thealliance.media/",
