@@ -50,7 +50,7 @@ export default class Resource extends React.Component {
     const downloadUrl = get(data, "acf.download", "");
     const imageData = processImageData(get(data, "acf.image", ""));
     // Tags and collaborators can be false when empty so enforce an empty array
-    const tags = (get(data, "acf.collaborators") || []).map(obj => obj.name);
+    const tags = (get(data, "acf.tags") || []).map(obj => obj.name);
     const collaborators = (get(data, "acf.collaborators") || []).map(obj => obj.name);
     const relatedWork = get(data, "acf.related_work");
 
