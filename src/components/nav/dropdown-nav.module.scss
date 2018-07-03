@@ -70,28 +70,24 @@
 
     a {
       font-size: 1.5rem;
-      display: inline-block;
-      position: relative;
+      display: inline;
       text-decoration: none;
       color: inherit;
 
-      &:before {
-        content: "";
-        background-color: white;
-        height: 2px;
-        position: absolute;
-        bottom: -1px;
-        left: 50%;
-        transform: translateX(-50%);
-        transition: width 0.25s ease-in-out;
-        width: 0%;
-      }
+      background-image: linear-gradient(to bottom, white 0%, white 100%);
+      background-position: 50% 1.1em;
+      background-repeat: no-repeat;
+      background-size: 0 2px;
+
+      // Occlude the underline under text descenders
+      text-shadow: -2px -2px $convergence-orange, -2px 2px $convergence-orange,
+        2px -2px $convergence-orange, 2px 2px $convergence-orange;
+
+      transition: background-size 0.25s ease-in-out;
 
       &:hover,
       &.activeLink {
-        &:before {
-          width: 100%;
-        }
+        background-size: 100% 2px;
       }
     }
 
@@ -117,5 +113,6 @@
     background-color: $convergence-orange;
     transition: transform 0.5s ease-in-out;
     padding: 0 4rem;
+    width: 25rem;
   }
 }
