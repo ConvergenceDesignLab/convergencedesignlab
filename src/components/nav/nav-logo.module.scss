@@ -29,10 +29,12 @@
       fill: black;
     }
   }
-}
 
-@media (min-width: 470px) {
-  .logo {
+  @media (min-width: 470px) {
+    max-width: 300px;
+  }
+
+  @media (min-width: 1075px) {
     max-width: 100%;
   }
 }
