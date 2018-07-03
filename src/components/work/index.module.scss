@@ -50,7 +50,6 @@ $gutter: 1.2rem;
 
 .captionTitle {
   font-family: $heading-font-family;
-  font-size: 1rem;
   font-size: 1.15rem;
   font-weight: 500;
   color: $convergence-orange;
@@ -58,6 +57,11 @@ $gutter: 1.2rem;
   &:hover {
     color: darken($convergence-orange, 15%);
   }
+}
+
+.captionSubtitle {
+  font-size: 0.85rem;
+  font-weight: 300;
 }
 
 .captionParnters {
