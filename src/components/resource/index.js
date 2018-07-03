@@ -49,8 +49,9 @@ export default class Resource extends React.Component {
     const description = get(data, "acf.overview", "");
     const downloadUrl = get(data, "acf.download", "");
     const imageData = processImageData(get(data, "acf.image", ""));
-    const tags = get(data, "acf.tags", []).map(obj => obj.name);
-    const authors = get(data, "acf.authors", []).map(obj => obj.author);
+    // Tags and collaborators can be false when empty so enforce an empty array
+    const tags = (get(data, "acf.collaborators") || []).map(obj => obj.name);
+    const collaborators = (get(data, "acf.collaborators") || []).map(obj => obj.name);
     const relatedWork = get(data, "acf.related_work");
 
     return (
@@ -68,7 +69,7 @@ export default class Resource extends React.Component {
                 />
               </div>
               <div className={classNames(style.meta, "col--md-5")}>
-                {tags.length && (
+                {tags.length > 0 && (
                   <div className={style.metaSection}>
                     <div className={style.sectionTitle}>Tags</div>
                     <ul className={style.metaList}>
@@ -76,11 +77,11 @@ export default class Resource extends React.Component {
                     </ul>
                   </div>
                 )}
-                {authors.length && (
+                {collaborators.length > 0 && (
                   <div className={style.metaSection}>
                     <div className={style.sectionTitle}>Collaborators</div>
                     <ul className={style.metaList}>
-                      {authors.map(name => <li key={`author-${name}`}>{name}</li>)}
+                      {collaborators.map(name => <li key={`author-${name}`}>{name}</li>)}
                     </ul>
                   </div>
                 )}
