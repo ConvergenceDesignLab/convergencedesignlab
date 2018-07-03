@@ -54,7 +54,7 @@ class Work extends React.Component {
       <div>
         <PageHeader
           title="Selected Work"
-          caption="We design participatory solutions that meet the needs of civic, cultural and learning organizations."
+          caption="We design participatory solutions that meet the needs of civic, cultural and learning organizations. Check out selected case studies of our work below."
         />
 
         <div className="container">
