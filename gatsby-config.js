@@ -18,20 +18,32 @@ const config = {
   ]
 };
 
-let pathPrefix;
+const { FRONTEND_TARGET, BACKEND_TARGET } = process.env;
 
-if (process.env.DEPLOY_TARGET === "ftp") {
-  // No path prefix needed here anymore
-} else if (process.env.DEPLOY_TARGET === "gh-pages") {
-  pathPrefix = "/convergencedesignlab";
+let apiUrl = "";
+if (BACKEND_TARGET === "colum") {
+  apiUrl = "http://mediaarts.colum.edu/convergencedesignlab.org/api/wp-json";
+} else if (BACKEND_TARGET === "pair") {
+  apiUrl = "https://api2.convergencedesignlab.org/wp/wp-json";
+} else if (BACKEND_TARGET === "dev") {
+  apiUrl = "http://localhost/convergencedesignlab2/wp/wp-json";
 } else {
-  // This is where more deploy targets can be added, e.g. a pathPrefx of "/staging" or "/testing"
+  console.error(`Invalid back-end target: ${BACKEND_TARGET}`);
 }
+process.env.GATSBY_API_URL = apiUrl;
 
-if (pathPrefix) {
-  config.pathPrefix = pathPrefix;
+// No trailing slashes for gatsby's path prefixes
+let pathPrefix = "";
+if (FRONTEND_TARGET === "colum") {
+  pathPrefix = "/convergencedesignlab.org/front-end";
+} else if (FRONTEND_TARGET === "pair") {
+  pathPrefix = "";
+} else if (FRONTEND_TARGET === "dev") {
+  pathPrefix = "";
+} else {
+  console.error(`Invalid front-end target: ${FRONTEND_TARGET}`);
 }
-
-process.env.GATSBY_BASEURL = pathPrefix ? `${pathPrefix}` : "";
+process.env.GATSBY_BASEURL = pathPrefix;
+if (pathPrefix) config.pathPrefix = pathPrefix;
 
 module.exports = config;
