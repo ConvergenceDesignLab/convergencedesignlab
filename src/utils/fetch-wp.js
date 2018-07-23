@@ -1,7 +1,7 @@
 // https://github.com/airesvsg/acf-to-rest-api
 // https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress
 
-const baseUrl = process.env.API_URL;
+const baseUrl = process.env.GATSBY_API_URL;
 const showcaseEndpoint = `${baseUrl}/cdl/v1/showcase`;
 const workEndpoint = `${baseUrl}/cdl/v1/work`;
 const resourcesEndpoint = `${baseUrl}/cdl/v1/resources`;
