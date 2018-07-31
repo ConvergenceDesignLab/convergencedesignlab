@@ -35,7 +35,8 @@ process.env.GATSBY_API_URL = apiUrl;
 // No trailing slashes for gatsby's path prefixes
 let pathPrefix = "";
 if (FRONTEND_TARGET === "colum") {
-  pathPrefix = "/convergencedesignlab.org/front-end";
+  // Htaccess directs from here to front-end/ folder, so omit front-end/ from this path
+  pathPrefix = "/convergencedesignlab.org";
 } else if (FRONTEND_TARGET === "pair") {
   pathPrefix = "";
 } else if (FRONTEND_TARGET === "dev") {
