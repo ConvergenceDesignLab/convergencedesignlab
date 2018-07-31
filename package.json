@@ -49,7 +49,7 @@
     "clean": "rm -rf public/* .cache",
     "build": "gatsby build --prefixPaths",
     "clean-build": "npm run clean && npm run build",
-    "dev": "set \"FRONTEND_TARGET=dev\" && set \"BACKEND_TARGET=dev\" && gatsby develop --open",
+    "dev": "set \"FRONTEND_TARGET=dev\" && set \"BACKEND_TARGET=pair\" && gatsby develop --open",
     "push:ftp": "node ./scripts/deploy-ftp.js --src ./public/** --dest /usr/home/convergence/public_html/convergencedesignlab.org",
     "deploy:ftp": "set \"FRONTEND_TARGET=pair\" && set \"BACKEND_TARGET=pair\" && npm run clean-build && npm run push:ftp",
     "deploy:colum": "set \"FRONTEND_TARGET=colum\" && set \"BACKEND_TARGET=colum\" && npm run clean-build",
