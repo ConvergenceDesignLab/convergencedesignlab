@@ -7,8 +7,10 @@ RewriteEngine On
 # Relative path redirects for work and resources dynamic pages
 RewriteRule "^work/(.+)" "project/index.html" [PT]
 RewriteRule "^resources/(.+)" "resource/index.html" [PT]
-# Redirect to back-end login
-RewriteRule "^login" "http://mediaarts.colum.edu/convergencedesignlab.org/api/login/" [R,L]
+# Redirects
+RewriteRule "^login/?" "https://api2.convergencedesignlab.org/wp/login/" [R,L]
+RewriteRule "^p2p/?$" "/web-resources/passion-to-purpose" [R,L]
+RewriteRule "^mentor-hats/?$" "/resources/mentor-hats" [R,L]
 
 # Error document is an absolute path
 ErrorDocument 404 /convergencedesignlab.org/front-end/404.html
