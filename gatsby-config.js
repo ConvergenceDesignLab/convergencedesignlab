@@ -26,7 +26,7 @@ if (BACKEND_TARGET === "colum") {
 } else if (BACKEND_TARGET === "pair") {
   apiUrl = "https://api2.convergencedesignlab.org/wp/wp-json";
 } else if (BACKEND_TARGET === "dev") {
-  apiUrl = "http://localhost/convergencedesignlab2/wp/wp-json";
+  apiUrl = "http://localhost/convergencedesignlab2/wp-json";
 } else {
   console.error(`Invalid back-end target: ${BACKEND_TARGET}`);
 }
