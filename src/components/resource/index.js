@@ -9,6 +9,7 @@ import RelatedWork from "../related-work/";
 import CallToAction from "../call-to-action/";
 import Loading from "../loading";
 import { processImageData } from "../../utils/process-wp-data";
+import TextBlock from "./text-block";
 import style from "./index.module.scss";
 
 export default class Resource extends React.Component {
@@ -46,26 +47,32 @@ export default class Resource extends React.Component {
 
     const title = get(data, "acf.title", "");
     const imageTitle = title;
-    const description = get(data, "acf.overview", "");
+    const overview = get(data, "acf.overview", "");
     const downloadUrl = get(data, "acf.download", "");
     const imageData = processImageData(get(data, "acf.image", ""));
     // Tags and collaborators can be false when empty so enforce an empty array
     const tags = (get(data, "acf.tags") || []).map(obj => obj.name);
     const collaborators = (get(data, "acf.collaborators") || []).map(obj => obj.name);
     const relatedWork = get(data, "acf.related_work");
+    const sections = get(data, "acf.sections");
+
+    // Parse out the different types of resources (for now)
+    const overviewTitle = typeof overview === "string" ? "Overview" : overview.title;
+    const overviewHtml = typeof overview === "string" ? overview : overview.text;
 
     return (
       <div>
         <WpCoverImage className={style.cover} sizes={imageData.sizes} alt={imageTitle} />
+
         <div className="container">
           <div className="section">
             <div className={style.title}>{title}</div>
             <div className={style.row}>
               <div className="col--md-6">
-                <div className={style.sectionTitle}>Overview</div>
+                <div className={style.sectionTitle}>{overviewTitle}</div>
                 <div
                   className={classNames(style.sectionText, "wordpress-content")}
-                  dangerouslySetInnerHTML={{ __html: description }}
+                  dangerouslySetInnerHTML={{ __html: overviewHtml }}
                 />
               </div>
               <div className={classNames(style.meta, "col--md-5")}>
@@ -87,13 +94,27 @@ export default class Resource extends React.Component {
                 )}
               </div>
             </div>
-            <div className={style.download}>
-              <a className="link" href={downloadUrl} download target="_blank">
-                Download PDF
-              </a>
-            </div>
+            {downloadUrl && (
+              <div className={style.download}>
+                <a className="link" href={downloadUrl} download target="_blank">
+                  Download PDF
+                </a>
+              </div>
+            )}
           </div>
         </div>
+
+        {sections &&
+          sections.map((section, i) => {
+            const { image, title, text } = section;
+            const imageData = image && processImageData(image);
+            const isOdd = (i + 1) % 2 !== 0;
+            return (
+              <div className={classNames({ "subtle-background": isOdd })}>
+                <TextBlock title={title} text={text} imageData={imageData} reverseOrder={!isOdd} />
+              </div>
+            );
+          })}
 
         {/* {relatedWork && <RelatedWork data={relatedWork} />} */}
 
