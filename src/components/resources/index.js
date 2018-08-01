@@ -22,6 +22,11 @@ class Resources extends React.Component {
     if (resources) {
       resourceList = resources.map(resource => {
         const { name: slug, id, title, overview, image } = resource;
+
+        // "Extended Resource" pages have an overview object while "Resource" pages just have an
+        // HTML string
+        const overviewHtml = typeof overview === "string" ? overview : overview.text;
+
         return (
           <div key={`resource-${id}`} className={style.resource}>
             <div className={style.resourceThumbnail}>
@@ -33,7 +38,7 @@ class Resources extends React.Component {
               <div className={style.resourceTitle}>{title}</div>
               <div
                 className={classNames(style.resourceDescription, "wordpress-content")}
-                dangerouslySetInnerHTML={{ __html: overview }}
+                dangerouslySetInnerHTML={{ __html: overviewHtml }}
               />
               <div className={style.resourceLink}>
                 <Link className="link" to={`/resources/${slug}`}>
