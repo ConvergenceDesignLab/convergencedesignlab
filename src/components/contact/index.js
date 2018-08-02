@@ -7,7 +7,7 @@ import CoverImage from "../cover-image/";
 import style from "./index.module.scss";
 import image from "../../assets/images/tilden-hands-cropped.png";
 
-const postUrl = `${process.env.API_URL}/cdl/v1/contact`;
+const postUrl = `${process.env.GATSBY_API_URL}/cdl/v1/contact`;
 const cdlEmail = "hello@convergencedesignlab.org";
 const requireEnabled = true;
 const subjectOptions = [
