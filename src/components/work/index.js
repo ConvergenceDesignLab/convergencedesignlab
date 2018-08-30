@@ -6,8 +6,8 @@ import CallToAction from "../call-to-action/";
 import Loading from "../loading/";
 import PageHeader from "../page-header";
 import { fetchWork } from "../../utils/fetch-wp";
-import ZoomingImage from "../zooming-image";
 import style from "./index.module.scss";
+import Compendium from "./compendium";
 
 class Work extends React.Component {
   state = { projects: null };
@@ -54,7 +54,7 @@ class Work extends React.Component {
     return (
       <div>
         <PageHeader
-          title="Selected Work"
+          title="Case Studies"
           caption="We design participatory solutions that meet the needs of civic, cultural and learning organizations. Check out selected case studies of our work below."
         />
 
@@ -65,6 +65,8 @@ class Work extends React.Component {
             <Loading height="65vh" />
           )}
         </div>
+
+        <Compendium />
 
         <CallToAction alternateColor={true} />
       </div>

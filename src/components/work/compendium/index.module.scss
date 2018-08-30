@@ -1,0 +1,117 @@
+@import "../../../style/shared/_variables.scss";
+
+$gutter: 1.2rem;
+
+.section {
+  display: block;
+  padding: 4rem 0;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 2rem 0 0 0;
+  color: $convergence-orange;
+  font-family: $heading-font-family;
+
+  @media (min-width: 400px) {
+    font-size: 1.9rem;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 2.1rem;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 2.25rem;
+  }
+}
+
+.caption {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 1rem auto 0 auto;
+  max-width: 900px;
+
+  @media (min-width: 400px) {
+    font-size: 1.3rem;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 1.4rem;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 1.7rem;
+  }
+}
+
+.tag {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: text-decoration-color 0.2s;
+  // white-space: nowrap;
+
+  &:nth-child(1) {
+    text-decoration-color: rgba($convergence-green, 0.25);
+    &:hover {
+      text-decoration-color: rgba($convergence-green, 1);
+    }
+  }
+  &:nth-child(2) {
+    text-decoration-color: rgba($convergence-purple, 0.25);
+    &:hover {
+      text-decoration-color: rgba($convergence-purple, 1);
+    }
+  }
+  &:nth-child(3) {
+    text-decoration-color: rgba($convergence-orange, 0.25);
+    &:hover {
+      text-decoration-color: rgba($convergence-orange, 1);
+    }
+  }
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$gutter;
+  margin-top: 2rem - $gutter;
+}
+
+.project {
+  flex: 0 0 50%;
+  margin-top: 0.5rem;
+  padding: $gutter;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.projectActive {
+  opacity: 1;
+}
+
+.projectTitle {
+  font-family: $heading-font-family;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.projectPartners {
+  font-size: 0.85rem;
+  font-weight: 300;
+  margin: 0.25rem 0;
+}
+
+.projectDescription {
+  font-size: 0.85rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.projectTags {
+  display: inline;
+  padding-left: 0.25rem;
+}

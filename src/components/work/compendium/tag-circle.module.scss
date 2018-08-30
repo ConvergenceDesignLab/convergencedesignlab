@@ -1,0 +1,21 @@
+@import "../../../style/shared/_variables.scss";
+
+.circle {
+  border-radius: 50%;
+  display: inline-block;
+  width: 10px; // REM is no good here - pixel clipping looks bad
+  height: 10px;
+  vertical-align: middle;
+}
+
+.lxd {
+  background-color: $convergence-purple;
+}
+
+.pd {
+  background-color: $convergence-orange;
+}
+
+.par {
+  background-color: $convergence-green;
+}
