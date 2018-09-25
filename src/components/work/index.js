@@ -66,7 +66,7 @@ class Work extends React.Component {
           )}
         </div>
 
-        <Compendium />
+        {/* <Compendium /> */}
 
         <CallToAction alternateColor={true} />
       </div>
