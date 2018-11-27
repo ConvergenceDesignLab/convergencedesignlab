@@ -13,4 +13,4 @@ RewriteRule "^p2p/?$" "/web-resources/passion-to-purpose" [R,L]
 RewriteRule "^mentor-hats/?$" "/resources/mentor-hats" [R,L]
 
 # Error document is an absolute path
-ErrorDocument 404 /convergencedesignlab.org/front-end/404.html
+ErrorDocument 404 /404.html
