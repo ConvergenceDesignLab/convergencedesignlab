@@ -53,7 +53,8 @@
     "push:ftp": "node ./scripts/deploy-ftp.js --src ./public/** --dest /usr/home/convergence/public_html/convergencedesignlab.org",
     "deploy:ftp": "set \"FRONTEND_TARGET=pair\" && set \"BACKEND_TARGET=pair\" && npm run clean-build && npm run push:ftp",
     "deploy:colum": "set \"FRONTEND_TARGET=colum\" && set \"BACKEND_TARGET=colum\" && npm run clean-build",
-    "deploy": "npm run deploy:ftp"
+    "deploy": "npm run deploy:ftp",
+    "postinstall": "cp -n sample.env .env"
   },
   "devDependencies": {
     "cross-env": "^5.1.6",
