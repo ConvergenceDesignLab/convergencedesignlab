@@ -19,6 +19,7 @@ const conn = ftp.create({
   user: process.env.FTP_USER,
   password: process.env.FTP_PASS,
   timeOffset: process.env.FTP_TIMEOFFSET ? parseFloat(process.env.FTP_TIMEOFFSET) : 0,
+  port: process.env.FTP_PORT || 22,
   parallel: 6,
   log: console.log
 });
