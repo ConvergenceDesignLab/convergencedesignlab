@@ -12,7 +12,7 @@ RewriteRule "^work/(.+)" "project/index.html" [PT]
 RewriteRule "^resources/(.+)" "resource/index.html" [PT]
 # Redirects
 RewriteRule "^login/?" "https://api2.convergencedesignlab.org/wp/login/" [R,L]
-RewriteRule "^p2p/?$" "/web-resources/passion-to-purpose" [R,L]
+RewriteRule "^p2p(\/.*)?$" "/web-resources/passion-to-purpose$1" [R,L]
 RewriteRule "^mentor-hats/?$" "/resources/mentor-hats" [R,L]
 
 # Error document is an absolute path
