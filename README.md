@@ -44,18 +44,22 @@ You can create your own branch off of develop, work on a new feature and then me
 
 ### Deploying
 
-**TODO: update this section**
-
-Fill out the info in the .env file and then run:
+Installing this repository should create a `.env` file. (If not, you can copy `sample.env` and rename it to `.env`.) Fill out the info in the .env file with credentials from Convergence, and then run:
 
 ```
 npm run deploy
 ```
 
-<!--
-Configure the .htaccess based on static/.htaccess.sample, so that:
+The front-end needs a litle server configuration so that:
 
 - HTML & JS are never cached
 - Dynamic work/resource pages are properly redirected
 - A login route is created
-- 404s are properly directed -->
+- 404s are properly directed
+
+See ./static/htaccess.sample for an example.
+
+### Contributors
+
+- [@mikewesthad](https://github.com/mikewesthad)
+- [@loreleim](https://github.com/loreleim)
