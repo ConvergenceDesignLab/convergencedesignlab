@@ -61,12 +61,12 @@ const team = [
     linkedin: "https://www.linkedin.com/in/naledge-jabari-evans-msw-04433660/"
   },
   {
-    name: "Arlana Shikongo",
-    bio: require("./bios/arlana-shikongo"),
-    image: "arlana-shikongo.png",
-    title: "Research Assistant",
-    twitter: "http://twitter.com/ArlanaShikongo",
-    linkedin: "https://www.linkedin.com/in/arlana-shikongo"
+    name: "Lorelei Miyamura",
+    bio: require("./bios/lorelei-miyamura"),
+    image: "lorelei-miyamura.png",
+    title: "Interaction Design Assistant",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/lorelei-miyamura/"
   },
   {
     name: "Virginia Killian Lund",
