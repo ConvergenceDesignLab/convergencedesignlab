@@ -83,6 +83,22 @@ const team = [
     title: "Research Associate",
     twitter: "https://twitter.com/marginatalia?lang=en",
     linkedin: "https://www.linkedin.com/in/nataliasmirnov"
+  },
+  {
+    name: "Jacob Watson",
+    bio: require("./bios/jacob-watson"),
+    image: "natalia-smirnov-square.jpg",
+    title: "Research Associate",
+    twitter: "https://twitter.com/marginatalia?lang=en",
+    linkedin: "https://www.linkedin.com/in/nataliasmirnov"
+  },
+  {
+    name: "New Person 2",
+    bio: require("./bios/natalia-smirnov"),
+    image: "natalia-smirnov-square.jpg",
+    title: "Research Associate",
+    twitter: "https://twitter.com/marginatalia?lang=en",
+    linkedin: "https://www.linkedin.com/in/nataliasmirnov"
   }
 ];
 
