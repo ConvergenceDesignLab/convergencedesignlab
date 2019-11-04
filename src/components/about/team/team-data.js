@@ -79,7 +79,7 @@ const team = [
   {
     name: "Jacob Watson",
     bio: require("./bios/jacob-watson"),
-    image: "natalia-smirnov-square.jpg",
+    image: "jacob-watson.jpg",
     title: "Research Associate",
     twitter: "https://twitter.com/marginatalia?lang=en",
     linkedin: "https://www.linkedin.com/in/nataliasmirnov"
