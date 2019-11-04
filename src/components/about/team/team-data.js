@@ -81,8 +81,7 @@ const team = [
     bio: require("./bios/jacob-watson"),
     image: "jacob-watson.jpg",
     title: "Research Associate",
-    twitter: "https://twitter.com/marginatalia?lang=en",
-    linkedin: "https://www.linkedin.com/in/nataliasmirnov"
+    twitter: "https://twitter.com/jacobcwatson?lang=en"
   },
   {
     name: "New Person 2",
