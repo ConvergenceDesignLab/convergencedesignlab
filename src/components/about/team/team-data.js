@@ -84,12 +84,10 @@ const team = [
     twitter: "https://twitter.com/jacobcwatson?lang=en"
   },
   {
-    name: "New Person 2",
-    bio: require("./bios/natalia-smirnov"),
-    image: "natalia-smirnov-square.jpg",
-    title: "Research Associate",
-    twitter: "https://twitter.com/marginatalia?lang=en",
-    linkedin: "https://www.linkedin.com/in/nataliasmirnov"
+    name: "Serene Alene",
+    bio: require("./bios/serene-alene"),
+    image: "serene-alene.jpg",
+    title: "Graduate Assistant"
   }
 ];
 
