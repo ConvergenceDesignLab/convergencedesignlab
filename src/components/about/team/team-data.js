@@ -77,14 +77,6 @@ const team = [
     linkedin: "https://www.linkedin.com/in/virginia-killian-lund-b9b393a"
   },
   {
-    name: "Natalia Smirnov",
-    bio: require("./bios/natalia-smirnov"),
-    image: "natalia-smirnov-square.jpg",
-    title: "Research Associate",
-    twitter: "https://twitter.com/marginatalia?lang=en",
-    linkedin: "https://www.linkedin.com/in/nataliasmirnov"
-  },
-  {
     name: "Jacob Watson",
     bio: require("./bios/jacob-watson"),
     image: "natalia-smirnov-square.jpg",
